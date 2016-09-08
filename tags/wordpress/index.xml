@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wordpress on T.Muroiのblog</title>
+    <link>http://intemous9.github.io/tags/wordpress/</link>
+    <description>Recent content in Wordpress on T.Muroiのblog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 28 Jun 2015 00:37:31 +0000</lastBuildDate>
+    <atom:link href="http://intemous9.github.io/tags/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>[WordPress]今更ながらgistを使い始めました</title>
+      <link>http://intemous9.github.io/2015/06/28/use_wp_gist/</link>
+      <pubDate>Sun, 28 Jun 2015 00:37:31 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2015/06/28/use_wp_gist/</guid>
+      <description>
+
+&lt;p&gt;ブログを書く際に記事にソースコードを載せるのですが、これまではシンタックスハイライトのプラグインを使っていたのですが、中々しっくり来るプラグインがなく。&lt;/p&gt;
+
+&lt;p&gt;シンタックスハイライトって読み込むの時間かかるし、ちょっと長くなると見づらかったりコピペもしにくいんですよね。&lt;/p&gt;
+
+&lt;p&gt;それでずっと何かいい方法はないかなと探してたのですが、仕事でもちょくちょく使ってたgistをブログ用にも利用して載せてみた所すごいしっくりきました！&lt;/p&gt;
+
+&lt;p&gt;いやgistっていいですね。&lt;/p&gt;
+
+&lt;p&gt;githubとは異なり、ファイル単位で扱えるので手軽に追加出来ますし。gitなんでメンテもしやすい。もっと早く利用しておけば良かった…。&lt;/p&gt;
+
+&lt;p&gt;まだブログでの利用は始めたばかりですがメリットも多々ありそうです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ブログに貼り付けやすい&lt;/li&gt;
+&lt;li&gt;ブログ上でコードが見やすい&lt;/li&gt;
+&lt;li&gt;記事の読み込み速度も多少良くなった&lt;/li&gt;
+&lt;li&gt;記事に載せているソースコードもメンテしやすくなった&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;ブログに貼り付けやすい:b41cec40607b190c9a070cc7ab260625&#34;&gt;ブログに貼り付けやすい&lt;/h4&gt;
+
+&lt;p&gt;これもすごい変わりそうです。&lt;/p&gt;
+
+&lt;p&gt;いままでは実際にサンプルを実装して、動作確認をしてからコピペして記事に貼り付けてたのですが、これからはローカルで実装して動作検証、確認できたらpushして完了。gistのIDをそのまま記事に設定すれば載せれます。&lt;/p&gt;
+
+&lt;p&gt;gistの方でもブログ貼り付け用のHTMLが発行されるのですが、WordPressではそのまま利用出来ないようなんで、プラグインを使うといいみたいです。&lt;/p&gt;
+
+&lt;p&gt;[Embed GitHub Gist][1]&lt;/p&gt;
+
+&lt;p&gt;あとは記事の中で下記の様なタグを入れるだけで完了でした。&lt;/p&gt;
+
+&lt;pre&gt;&amp;#091;gist id=gistのIDを設定する&amp;#093;
+&lt;/pre&gt;
+
+&lt;h4 id=&#34;ブログ上でコードが見やすい:b41cec40607b190c9a070cc7ab260625&#34;&gt;ブログ上でコードが見やすい&lt;/h4&gt;
+
+&lt;p&gt;下記は別記事用に書いたサンプルなんですが、行間がシンタックスハイライトのプラグインよりも見やすいですし、ファイル種別によって色分けもされていい感じで。&lt;/p&gt;
+
+&lt;noscript&gt;
+  &lt;pre&gt;&lt;code class=&#34;language-java java&#34;&gt;public static String rmBom(String xmlString) {
+    if (Integer.toHexString(xmlString.charAt(0)).equals(&#34;feff&#34;)) {
+        // 先頭一文字を除く
+        xmlString = xmlString.substring(1);
+    }
+    return xmlString;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/noscript&gt;
+
+&lt;h4 id=&#34;記事の読み込み速度も多少良くなった:b41cec40607b190c9a070cc7ab260625&#34;&gt;記事の読み込み速度も多少良くなった&lt;/h4&gt;
+
+&lt;p&gt;これは正確に測ったわけではないんですが…、気のせいかシンタックスハイライトのプラグインよりも体感で読み込み速度が早くなった感じがします。&lt;/p&gt;
+
+&lt;h4 id=&#34;記事に乗せているソースコードもメンテしやくなった:b41cec40607b190c9a070cc7ab260625&#34;&gt;記事に乗せているソースコードもメンテしやくなった&lt;/h4&gt;
+
+&lt;p&gt;なんだかんだで、一番のメリットはこれなのかなと思いました。&lt;/p&gt;
+
+&lt;p&gt;ブログの載せる以上は間違いは書かないように慎重に書いてるのですが、やはり間違いやもっといい書き方を思いついたりもしますし、そんな時に開発環境で再度確認して、記事を書き直す…これは結構面倒でした。&lt;/p&gt;
+
+&lt;p&gt;gistなら検証してプッシュするだけで記事側も変更せずに修正出来ます。&lt;/p&gt;
+
+&lt;p&gt;便利です。&lt;/p&gt;
+
+&lt;h3 id=&#34;まとめ:b41cec40607b190c9a070cc7ab260625&#34;&gt;まとめ&lt;/h3&gt;
+
+&lt;p&gt;WordPressで技術ブログを書いていたらgist使うと楽になりますね。&lt;/p&gt;
+
+&lt;p&gt;過去の記事とかも、ちょこちょことgistに移行していこうかなと考えてます。&lt;/p&gt;
+
+&lt;p&gt;関係ないですけど、qiitaとブログの使い分けもどうするか悩み中です。&lt;/p&gt;
+
+&lt;p&gt;自分の中ではqiitaは、使い回し可能な作業の記録とかで、ブログでは色々検証とかサンプルも載せていきたいなと考えてます。&lt;/p&gt;
+
+&lt;p&gt;[1]: &lt;a href=&#34;https://wordpress.org/plugins/embed-github-gist/&#34;&gt;https://wordpress.org/plugins/embed-github-gist/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>WordPressのデザインを変更する際に知っておくと良さそうな事</title>
+      <link>http://intemous9.github.io/2012/04/24/wordpress-customize/</link>
+      <pubDate>Tue, 24 Apr 2012 02:04:30 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2012/04/24/wordpress-customize/</guid>
+      <description>
+
+&lt;p&gt;&lt;span style=&#34;font-size:10px;&#34;&gt;&lt;img src=&#34;http://farm7.static.flickr.com/6030/5965186458_bf20305722_m.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;WordPress Pencil and Pins-05 / thisismyurl&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;WordPress、他ブログサービスと異なるのはカスタマイズのしやすさでしょうか。&lt;/p&gt;
+
+&lt;p&gt;サイドメニューはもちろん、デザインも多少のWordPressのお作法を覚えれば自分でカスタマイズ出来るので面白い！&lt;/p&gt;
+
+&lt;p&gt;とはいえ、自分はデザインが1から出来る訳ではないので、他の方が作ったデザインをベースに自分好みに直すしかできないのですが&amp;#8230;（泣）&lt;/p&gt;
+
+&lt;p&gt;デザインも自分で出来るようになりたいです！これを先の目標にしつつ&amp;#8230;。&lt;/p&gt;
+
+&lt;p&gt;今回はテーマを編集する際に調べた内容、またテーマ内の共通となるテンプレートの意味について理解した部分をまとめておこうと思います。&lt;/p&gt;
+
+&lt;p&gt;まだまだ勉強中でもあるので、間違っている箇所等があれば教えて頂けますと幸いです。&lt;/p&gt;
+
+&lt;p&gt;随時情報は更新していきたいと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;目次:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;目次&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;テーマを作るのに必要な最小構成ファイル&lt;/li&gt;
+&lt;li&gt;index.php&lt;/li&gt;
+&lt;li&gt;style.css&lt;/li&gt;
+&lt;li&gt;page.php&lt;/li&gt;
+&lt;li&gt;single.php&lt;/li&gt;
+&lt;li&gt;functions.php&lt;/li&gt;
+&lt;li&gt;まとめ&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;テーマをつくるのに必要な最小構成ファイル:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;テーマをつくるのに必要な最小構成ファイル&lt;/h2&gt;
+
+&lt;p&gt;他の方が作った色々なテーマを見てみると分かるのですが、テーマ毎に入っているファイル、またテーマ用で作成されたファイル等があり、1から作るには最低限何が必要か分かりませんでした。&lt;/p&gt;
+
+&lt;p&gt;そこで調べていき分かったのが、テーマを作成する際に必要最小限なファイルは&lt;/p&gt;
+
+&lt;p&gt;・index.php&lt;/p&gt;
+
+&lt;p&gt;・style.css&lt;/p&gt;
+
+&lt;p&gt;この2つがあればとりあえずのテーマインストールは行なう事ができました。&lt;/p&gt;
+
+&lt;p&gt;とはいえ、この2つだけだと投稿記事等を表示はできず、あくまでTOPページを表示するだけしかできません。&lt;/p&gt;
+
+&lt;p&gt;テーマをインスールするために必要な最低限のファイルですね。&lt;/p&gt;
+
+&lt;h2 id=&#34;index-php:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;index.php&lt;/h2&gt;
+
+&lt;p&gt;TOPページにあたるテンプレートとなります。&lt;/p&gt;
+
+&lt;p&gt;WordPressで作成されたページにアクセスすると初回はこのテンプレートが呼び出されます。&lt;/p&gt;
+
+&lt;p&gt;一番カスタマイズされるファイルとなりますね。&lt;/p&gt;
+
+&lt;p&gt;またheader.phpやfooter.phpなど、共通部分などを別途ファイルに切りだしておくと、下記に説明があります固定ページ、投稿用ページなどでも使い回す事ができ便利となります。&lt;/p&gt;
+
+&lt;h2 id=&#34;style-css:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;style.css&lt;/h2&gt;
+
+&lt;p&gt;これもテーマを構成する際に必須なファイルとなりますが、別にこれだけでCSSを定義する必要はなく&amp;#8230;(自分で好きにCSSファイルを追加することも可)&lt;/p&gt;
+
+&lt;p&gt;WordPress内部で共通に呼び出される等で必要になるのでしょうかね。&lt;/p&gt;
+
+&lt;p&gt;style.cssがないとテーマをインストールすることはできませんでした。&lt;/p&gt;
+
+&lt;h2 id=&#34;page-php:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;page.php&lt;/h2&gt;
+
+&lt;p&gt;このテンプレートは、WordPressで固定ページ(WordPress Ver3以降で追加されたもの)を使用すると呼び出されるファイルとなります。&lt;/p&gt;
+
+&lt;p&gt;固定ページとは、投稿記事とは異なり時系列に影響しないページを制作する際に使用するページとなるようです。&lt;/p&gt;
+
+&lt;p&gt;自己紹介など頻繁に更新のありそうなページを制作する際に使用されるものなんでしょうかね。まだ自分では使い分けができておりません。&lt;/p&gt;
+
+&lt;p&gt;この固定ページを使用したページにアクセスするとpage.phpが呼び出されるので、ページデザインを変更するにはこのファイルを編集します。&lt;/p&gt;
+
+&lt;h2 id=&#34;single-php:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;single.php&lt;/h2&gt;
+
+&lt;p&gt;これは、各記事(投稿毎)の単体ページ用のテンプレートとなります。&lt;/p&gt;
+
+&lt;p&gt;記事ページにアクセスするとこのテンプレートが呼び出されます。&lt;/p&gt;
+
+&lt;h2 id=&#34;functions-php:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;functions.php&lt;/h2&gt;
+
+&lt;p&gt;これがなかなか便利だなと思いました。&lt;/p&gt;
+
+&lt;p&gt;テンプレート内で独自の関数が必要になった際にこのファイルに定義しておくとテンプレート内で呼び出す事ができます。&lt;/p&gt;
+
+&lt;p&gt;既にWordPressでも沢山の関数は用意されてますが、それ以外でも例えばある特定の文字を別の文字に置換したい、またその処理は他のテンプレートでも使いそう、といった時にこのファイルはとても便利に使えました。&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;まだまだWordPressのテーマをカスタマイズするには覚える事も沢山あり、苦戦しそうですが、自分で好きにブログを作れると面白いですね！&lt;/p&gt;
+
+&lt;p&gt;また、カスタマイズする際は下記サイトを参考にさせて頂きました。&lt;/p&gt;
+
+&lt;p&gt;ファイル毎の詳細な説明もデモテーマを使いながら紹介があるのでとても分かりやすいです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.webcreatorbox.com/tech/wordpress3-original-theme/&#34; title=&#34;WordPress オリジナルテーマの作り方 3.0+ &#34; target=&#34;_blank&#34;&gt;WordPress オリジナルテーマの作り方 3.0+ &lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>WordPressを使ってブログを作成する</title>
+      <link>http://intemous9.github.io/2012/04/22/start-wordpress-blog/</link>
+      <pubDate>Sun, 22 Apr 2012 00:34:10 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2012/04/22/start-wordpress-blog/</guid>
+      <description>
+
+&lt;p&gt;&lt;span style=&#34;font-size:10px;&#34;&gt;&lt;img src=&#34;http://farm5.static.flickr.com/4099/4919659112_70f8836dfa_m.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;WordPress Logo / Phil Oakley&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;はじめまして！&lt;/p&gt;
+
+&lt;p&gt;一発目の記事になります！&lt;/p&gt;
+
+&lt;p&gt;最初の記事はずっと前から使ってみたかったWordPressについて。&lt;/p&gt;
+
+&lt;p&gt;せっかく導入してみたので、サイト公開までの手順を書きたいと思います。&lt;/p&gt;
+
+&lt;p&gt;様々なブログサービスがありますが、WordPressはカスタマイズの自由度が凄く高く。&lt;/p&gt;
+
+&lt;p&gt;また勉強のためと、いい機会でもあったので使ってみることにしました。&lt;/p&gt;
+
+&lt;p&gt;という事で、最初の記事はWordPressを使ったブログの作成方法からまとめておきたいと思います。&lt;/p&gt;
+
+&lt;p&gt;まとめといっても他サイト様の参照という形ではありますが&amp;#8230;。&lt;/p&gt;
+
+&lt;p&gt;最初はインストール、初期設定や参考にしたサイトをまとめておこうと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;wordpressをインストールしてみる:4066c6fab69e4dd4894c4f662e0813da&#34;&gt;WordPressをインストールしてみる&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.adminweb.jp/wordpress/install/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.adminweb.jp/wordpress/install/&#34;&gt;http://www.adminweb.jp/wordpress/install/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;基本は上記サイトを参考にインストールしました。&lt;/p&gt;
+
+&lt;p&gt;手順通り行えばそれ程難しくもなくインストールできるかと思います。&lt;/p&gt;
+
+&lt;p&gt;バージョンは公式サイトより、最新版を確認。&lt;/p&gt;
+
+&lt;p&gt;WordPress公式サイト(日本語)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ja.wordpress.org/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://ja.wordpress.org/&#34;&gt;http://ja.wordpress.org/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;インストール後に最初に行った事:4066c6fab69e4dd4894c4f662e0813da&#34;&gt;インストール後に最初に行った事&lt;/h2&gt;
+
+&lt;p&gt;SEO対策や、その他便利なプラグインの紹介、設定方法がまとまって&lt;/p&gt;
+
+&lt;p&gt;おりましたので下記のサイトを参考にプラグインを導入しました。&lt;/p&gt;
+
+&lt;p&gt;各記事のリンクの設定や細かい設定まで紹介されておりましたので大変参考に&lt;/p&gt;
+
+&lt;p&gt;なりました。&lt;/p&gt;
+
+&lt;p&gt;・WordPressをインストールしたら最初にやること&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://web.showjin.me/2011/02/firsttodo_install_wordpress.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://web.showjin.me/2011/02/firsttodo_install_wordpress.html&#34;&gt;http://web.showjin.me/2011/02/firsttodo_install_wordpress.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;・WordPressを公開する前にやっておきたい7つの事&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://webdesignrecipes.com/wordpress-start-up/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://webdesignrecipes.com/wordpress-start-up/&#34;&gt;http://webdesignrecipes.com/wordpress-start-up/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;最後に:4066c6fab69e4dd4894c4f662e0813da&#34;&gt;最後に&lt;/h2&gt;
+
+&lt;p&gt;WordPressはカスタマイズが色々と出来るようなのでとても面白そうです。&lt;/p&gt;
+
+&lt;p&gt;また自分でもデザインのテーマとか作れたらいいんですけど&amp;#8230;。&lt;/p&gt;
+
+&lt;p&gt;この辺も少しずつ勉強しながら自分で作っていきたいです！&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

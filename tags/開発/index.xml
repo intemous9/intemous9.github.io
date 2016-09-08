@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>開発 on T.Muroiのblog</title>
+    <link>http://intemous9.github.io/tags/%E9%96%8B%E7%99%BA/</link>
+    <description>Recent content in 開発 on T.Muroiのblog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 11 Aug 2016 05:32:42 +0000</lastBuildDate>
+    <atom:link href="http://intemous9.github.io/tags/%E9%96%8B%E7%99%BA/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GitHub緑化活動経過報告(1ヶ月くらい)</title>
+      <link>http://intemous9.github.io/2016/08/11/github-green-1-month/</link>
+      <pubDate>Thu, 11 Aug 2016 05:32:42 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2016/08/11/github-green-1-month/</guid>
+      <description>
+
+&lt;p&gt;[&lt;img src=&#34;http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green-300x116.png&#34; alt=&#34;github_green&#34; width=&#34;100%&#34; class=&#34;alignnone size-medium wp-image-421&#34; srcset=&#34;http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green-300x116.png 300w, http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green-768x298.png 768w, http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green-700x272.png 700w, http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green.png 1494w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;][1]&lt;/p&gt;
+
+&lt;p&gt;GitHub緑化活動自体は結構今更感があったのですが、ふと仕事以外でもコードを書く時間を意識的に持ちたいなと思い始めてみました。&lt;/p&gt;
+
+&lt;p&gt;報告も半年とか一年くらいしてから記事を書こうと思っていた所ですが、結構１ヶ月でも思うことはあったり、少しでも自分自身へ継続の力になればと思い、記事に書いておく事にしました。&lt;/p&gt;
+
+&lt;h3 id=&#34;やってよかったと思ったこと-h2:d57280c6d50944ceb327397503b111c1&#34;&gt;やってよかったと思ったこと&lt;/h2&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;いい感じにプレッシャーになるので、毎日少しでもコードに向きあうきっかけになった&lt;/li&gt;
+&lt;li&gt;個人で開発していたアプリをリリースするまでもっていけた&lt;/li&gt;
+&lt;li&gt;少しでもコミットを稼ごうと色々とサンプルを読んで試すようになった&lt;/li&gt;
+&lt;li&gt;ドットファイル等も管理するようにしたので複数マシンでの環境共有が楽になった&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;今後考えて何とかしたいこと-h2:d57280c6d50944ceb327397503b111c1&#34;&gt;今後考えて何とかしたいこと&lt;/h2&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;個人開発とはいえ、公開できないコードの修正もありグラフを緑に出来ない日があった&lt;/li&gt;
+&lt;li&gt;ドットファイルの変更に逃げる日もあった&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;まとめ-h2:d57280c6d50944ceb327397503b111c1&#34;&gt;まとめ&lt;/h2&gt;&lt;/h3&gt;
+
+&lt;p&gt;案外続けようと意識してやってみると楽しくできる。緑にするために色々とネタ探しに技術調べたりするきっかけになったのも良かったと思います。&lt;/p&gt;
+
+&lt;p&gt;※興味本位でgolangとか無駄に勉強しようとか色々おかしな方向に行きそうになったりもしたり・・・ｗ&lt;/p&gt;
+
+&lt;p&gt;何より、ちょこちょこ作ってはモチベーションが下がり放置したりと・・・そんな感じでいたアプリを、機能落ちしてるとはいえ公開まで出来たのは良かった！&lt;/p&gt;
+
+&lt;p&gt;※アプリについては別記事で紹介したいなと・・・。&lt;/p&gt;
+
+&lt;p&gt;後は、実際にグラフでも隙間が出来ているようにコードを書いていても公開出来ない内容が多い時もあり、完全に緑は難しいかなと思ったり・・・。&lt;/p&gt;
+
+&lt;p&gt;上記の事を考えつつ、もう少し半年・一年と継続してみようと思います！&lt;/p&gt;
+
+&lt;p&gt;緑が増えていくのは楽しい！&lt;/p&gt;
+
+&lt;p&gt;[1]: &lt;a href=&#34;http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green.png&#34;&gt;http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green.png&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[Android]XmlPullParserException: Unexpected tokenが発生した時の対処方法</title>
+      <link>http://intemous9.github.io/2015/06/17/android-xmlpullparserexception-unexpected-token/</link>
+      <pubDate>Tue, 16 Jun 2015 23:33:03 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2015/06/17/android-xmlpullparserexception-unexpected-token/</guid>
+      <description>
+
+&lt;p&gt;Androidアプリ開発の際、リソースファイルやHttp経由で取得したUTF-8なxmlファイルをStringReaderで読み込むと、下記の様なエラーが発生する場合、読み込んだファイルの先頭にBOMが付いている可能性があります。&lt;/p&gt;
+
+&lt;pre&gt;XmlPullParserException
+org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in java.io.StringReader@***) 
+     at org.kxml2.io.KXmlParser.next(KXmlParser.java:432)
+     at org.kxml2.io.KXmlParser.next(KXmlParser.java:313)
+・
+・
+・
+&lt;/pre&gt;
+
+&lt;h4 id=&#34;解決方法:7d33596006e6af95dde9f6df20e5121e&#34;&gt;解決方法&lt;/h4&gt;
+
+&lt;p&gt;StringReaderで読み込む前にBOM付きかチェックして除去することで回避できました。&lt;/p&gt;
+
+&lt;h5 id=&#34;サンプルコード:7d33596006e6af95dde9f6df20e5121e&#34;&gt;サンプルコード&lt;/h5&gt;
+
+&lt;noscript&gt;
+  &lt;pre&gt;&lt;code class=&#34;language-java java&#34;&gt;public static String rmBom(String xmlString) {
+    if (Integer.toHexString(xmlString.charAt(0)).equals(&#34;feff&#34;)) {
+        // 先頭一文字を除く
+        xmlString = xmlString.substring(1);
+    }
+    return xmlString;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/noscript&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[Android]URLConnectionでリダイレクトにも対応してみた</title>
+      <link>http://intemous9.github.io/2015/06/16/url-connection-redirect/</link>
+      <pubDate>Mon, 15 Jun 2015 23:52:57 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2015/06/16/url-connection-redirect/</guid>
+      <description>&lt;p&gt;org.apache.httpパッケージとAndroidHttpClientクラスがAndroid5.1(API Level 22)から非推奨になりましたね。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://developer.android.com/about/versions/android-5.1.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://developer.android.com/about/versions/android-5.1.html&#34;&gt;https://developer.android.com/about/versions/android-5.1.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これまでHttpClientで実装していたアプリはURLConnectionクラスを利用・変更しましょうとの事で。&lt;/p&gt;
+
+&lt;p&gt;それで今回はURLConnectionの実装に切り替えた際に、リダイレクト処理でうまく動作しなかったので、リダイレクトに対応したサンプルメソッドを作ってみました。&lt;/p&gt;
+
+&lt;p&gt;HttpClientなら特に30系のステータスコードでも意識する必要なかったんですけど、ちょっと面倒ですね。&lt;/p&gt;
+
+&lt;p&gt;ということで30系でも動作するように対応したサンプルメソッド&lt;/p&gt;
+
+&lt;noscript&gt;
+  &lt;pre&gt;&lt;code class=&#34;language-java java&#34;&gt;/**
+ * urlとcookieからbodyを取得する
+ */
+public static String getContents(String urlString, String cookies) throws IOException {
+ 
+    URL url = new URL(urlString);
+    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+ 
+    conn.setRequestMethod(&#34;GET&#34;);
+    conn.setConnectTimeout(5000);
+    conn.setDoOutput(true);
+    if (cookies != null) {
+        conn.setRequestProperty(&#34;Cookie&#34;, cookies);
+    }
+ 
+    try {
+ 
+        conn.connect();
+        int statuscode = conn.getResponseCode();
+ 
+        // check 20x
+        if (statuscode != HttpURLConnection.HTTP_OK
+                &amp;&amp; statuscode != HttpURLConnection.HTTP_CREATED) {
+            // check 30x
+            if (statuscode == HttpURLConnection.HTTP_MOVED_TEMP
+                    || statuscode == HttpURLConnection.HTTP_MOVED_PERM
+                    || statuscode == HttpURLConnection.HTTP_SEE_OTHER) {
+ 
+                String newUrlString = conn.getHeaderField(&#34;Location&#34;);
+                cookies = conn.getHeaderField(&#34;Set-Cookie&#34;);
+                conn = (HttpURLConnection) new URL(newUrlString).openConnection();
+ 
+                if (cookies != null) {
+                    conn.setRequestProperty(&#34;Cookie&#34;, cookies);
+                }
+ 
+            } else {
+                // 20x or 30x系でないので例外を送出
+                throw new IOException(&#34;Response code is &#34; + Integer.toString(statuscode));
+            }
+        }
+ 
+    } catch (RuntimeException e) {
+        throw e;
+    }
+ 
+    InputStream inputStream = new BufferedInputStream(conn.getInputStream());
+    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, &#34;UTF-8&#34;));
+    StringBuilder stringBuilder = new StringBuilder();
+    String line = &#34;&#34;;
+ 
+    while ((line = bufferedReader.readLine()) != null) {
+        stringBuilder.append(line);
+    }
+    bufferedReader.close();
+ 
+    return stringBuilder.toString();
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/noscript&gt;
+
+&lt;p&gt;一度レスポンスコードを受け取り、20x系なら正常処理、30x系の場合は再度connクラスを再生成して対応しました。&lt;/p&gt;
+
+&lt;p&gt;にしても、IO系クラス扱うのも少し苦手だ&amp;#8230;。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

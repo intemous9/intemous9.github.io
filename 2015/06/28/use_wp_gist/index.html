@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  
+  <meta charset="UTF-8">
+  <title>
+    [WordPress]今更ながらgistを使い始めました | T.Muroiのblog
+  </title>
+
+
+  
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+
+  
+  <link rel="canonical" href="http://intemous9.github.io/2015/06/28/use_wp_gist/"/>
+
+  
+  <link rel="stylesheet" href="/css/sanitize.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/highlight_monokai.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  
+  
+  <link href="http://intemous9.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="T.Muroiのblog" />
+  <link href="http://intemous9.github.ioindex.xml" rel="feed" type="application/rss+xml" title="T.Muroiのblog" />
+
+  
+  
+
+
+</head>
+
+
+
+<body>
+<div class="container">
+
+  
+  <header role="banner">
+    <div class="row gutters">
+      <div id="site-title" class="col span_6">
+        <h1><a href="http://intemous9.github.io">T.Muroiのblog</a></h1>
+        <h2>Androidやweb関連の事を書いたり、色々書いたり</h2>
+      </div>
+      <div id="social" class="col span_6">
+        <ul>
+          <li><a href="https://twitter.com/intemous9" target="_blank">Twitter</a></li>
+          
+          <li><a href="https://github.com/intemous9" target="_blank">GitHub</a></li>
+          <li><a href="http://intemous9.github.ioindex.xml" type="application/rss+xml" target="_blank">RSS</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <main id="single" role="main">
+    <div class="article-header">
+      <h1>[WordPress]今更ながらgistを使い始めました</h1>
+      <div class="meta">
+        Jun 28, 2015 &nbsp;
+        
+          #<a href="/tags/wordpress">WordPress</a>&nbsp;
+        
+      </div>
+    </div>
+    <article>
+      
+
+<p>ブログを書く際に記事にソースコードを載せるのですが、これまではシンタックスハイライトのプラグインを使っていたのですが、中々しっくり来るプラグインがなく。</p>
+
+<p>シンタックスハイライトって読み込むの時間かかるし、ちょっと長くなると見づらかったりコピペもしにくいんですよね。</p>
+
+<p>それでずっと何かいい方法はないかなと探してたのですが、仕事でもちょくちょく使ってたgistをブログ用にも利用して載せてみた所すごいしっくりきました！</p>
+
+<p>いやgistっていいですね。</p>
+
+<p>githubとは異なり、ファイル単位で扱えるので手軽に追加出来ますし。gitなんでメンテもしやすい。もっと早く利用しておけば良かった…。</p>
+
+<p>まだブログでの利用は始めたばかりですがメリットも多々ありそうです。</p>
+
+<ul>
+<li>ブログに貼り付けやすい</li>
+<li>ブログ上でコードが見やすい</li>
+<li>記事の読み込み速度も多少良くなった</li>
+<li>記事に載せているソースコードもメンテしやすくなった</li>
+</ul>
+
+<h4 id="ブログに貼り付けやすい:b41cec40607b190c9a070cc7ab260625">ブログに貼り付けやすい</h4>
+
+<p>これもすごい変わりそうです。</p>
+
+<p>いままでは実際にサンプルを実装して、動作確認をしてからコピペして記事に貼り付けてたのですが、これからはローカルで実装して動作検証、確認できたらpushして完了。gistのIDをそのまま記事に設定すれば載せれます。</p>
+
+<p>gistの方でもブログ貼り付け用のHTMLが発行されるのですが、WordPressではそのまま利用出来ないようなんで、プラグインを使うといいみたいです。</p>
+
+<p>[Embed GitHub Gist][1]</p>
+
+<p>あとは記事の中で下記の様なタグを入れるだけで完了でした。</p>
+
+<pre>&#091;gist id=gistのIDを設定する&#093;
+</pre>
+
+<h4 id="ブログ上でコードが見やすい:b41cec40607b190c9a070cc7ab260625">ブログ上でコードが見やすい</h4>
+
+<p>下記は別記事用に書いたサンプルなんですが、行間がシンタックスハイライトのプラグインよりも見やすいですし、ファイル種別によって色分けもされていい感じで。</p>
+
+<noscript>
+  <pre><code class="language-java java">public static String rmBom(String xmlString) {
+    if (Integer.toHexString(xmlString.charAt(0)).equals("feff")) {
+        // 先頭一文字を除く
+        xmlString = xmlString.substring(1);
+    }
+    return xmlString;
+}</code></pre>
+</noscript>
+
+<h4 id="記事の読み込み速度も多少良くなった:b41cec40607b190c9a070cc7ab260625">記事の読み込み速度も多少良くなった</h4>
+
+<p>これは正確に測ったわけではないんですが…、気のせいかシンタックスハイライトのプラグインよりも体感で読み込み速度が早くなった感じがします。</p>
+
+<h4 id="記事に乗せているソースコードもメンテしやくなった:b41cec40607b190c9a070cc7ab260625">記事に乗せているソースコードもメンテしやくなった</h4>
+
+<p>なんだかんだで、一番のメリットはこれなのかなと思いました。</p>
+
+<p>ブログの載せる以上は間違いは書かないように慎重に書いてるのですが、やはり間違いやもっといい書き方を思いついたりもしますし、そんな時に開発環境で再度確認して、記事を書き直す…これは結構面倒でした。</p>
+
+<p>gistなら検証してプッシュするだけで記事側も変更せずに修正出来ます。</p>
+
+<p>便利です。</p>
+
+<h3 id="まとめ:b41cec40607b190c9a070cc7ab260625">まとめ</h3>
+
+<p>WordPressで技術ブログを書いていたらgist使うと楽になりますね。</p>
+
+<p>過去の記事とかも、ちょこちょことgistに移行していこうかなと考えてます。</p>
+
+<p>関係ないですけど、qiitaとブログの使い分けもどうするか悩み中です。</p>
+
+<p>自分の中ではqiitaは、使い回し可能な作業の記録とかで、ブログでは色々検証とかサンプルも載せていきたいなと考えてます。</p>
+
+<p>[1]: <a href="https://wordpress.org/plugins/embed-github-gist/">https://wordpress.org/plugins/embed-github-gist/</a></p>
+
+      
+      
+      
+    </article>
+    
+ <aside><div id="disqus_thread"></div></aside>
+
+<script type="text/javascript">
+     
+    var disqus_shortname = 'intemous9';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+  </main>
+  
+  <nav class="pagination-single">
+    
+      <span class="previous">&larr; <a href="http://intemous9.github.io/2015/06/17/android-xmlpullparserexception-unexpected-token/" rel="prev">[Android]XmlPullParserException: Unexpected tokenが発生した時の対処方法</a></span>
+    
+    
+      <span class="next"><a href="http://intemous9.github.io/2015/12/23/android-mixed-content-mode/" rel="next">Androidのwebviewで画像が正しく表示されない時の対処法</a> &rarr;</span>
+    
+  </nav>
+
+
+  
+  <footer role="contentinfo">
+    <div style="text-align:center;">
+      <img src="/images/profile.png" width="64" height="64"><br>
+      Written by T.Muroi
+    </div>
+  </footer>
+
+
+</div>
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-39497186-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+</body>
+</html>
+

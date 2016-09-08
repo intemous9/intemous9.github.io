@@ -1,0 +1,185 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  
+  <meta charset="UTF-8">
+  <title>
+    [Android]FragmentでMapViewを使った時の問題と解決策 | T.Muroiのblog
+  </title>
+
+
+  
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+
+  
+  <link rel="canonical" href="http://intemous9.github.io/2015/03/31/fragment-mapview-v2/"/>
+
+  
+  <link rel="stylesheet" href="/css/sanitize.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/highlight_monokai.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  
+  
+  <link href="http://intemous9.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="T.Muroiのblog" />
+  <link href="http://intemous9.github.ioindex.xml" rel="feed" type="application/rss+xml" title="T.Muroiのblog" />
+
+  
+  
+
+
+</head>
+
+
+
+<body>
+<div class="container">
+
+  
+  <header role="banner">
+    <div class="row gutters">
+      <div id="site-title" class="col span_6">
+        <h1><a href="http://intemous9.github.io">T.Muroiのblog</a></h1>
+        <h2>Androidやweb関連の事を書いたり、色々書いたり</h2>
+      </div>
+      <div id="social" class="col span_6">
+        <ul>
+          <li><a href="https://twitter.com/intemous9" target="_blank">Twitter</a></li>
+          
+          <li><a href="https://github.com/intemous9" target="_blank">GitHub</a></li>
+          <li><a href="http://intemous9.github.ioindex.xml" type="application/rss+xml" target="_blank">RSS</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <main id="single" role="main">
+    <div class="article-header">
+      <h1>[Android]FragmentでMapViewを使った時の問題と解決策</h1>
+      <div class="meta">
+        Mar 30, 2015 &nbsp;
+        
+          #<a href="/tags/android">Android</a>&nbsp;
+        
+      </div>
+    </div>
+    <article>
+      <p>久しぶりの更新です。最近ぜんぜん更新しないまま、だいぶ経ってしまいました。</p>
+
+<p>書きたい事は結構あるのに、忙しいとかを理由にサボってしまい…。</p>
+
+<p>またちょいちょい更新していこう。</p>
+
+<p>今回は、AndroidのMapViewを使ったアプリ開発の際に起きた問題とその解決策について、自分なりですが対応した方法を書いてみました。</p>
+
+<p>問題の方は、Map表示のMapViewをロードする際に画面が黒や白っぽく一瞬チラッと表示される現象があり、動作上は特に問題ないのですが、ちょっと動きとして何か気持ち悪いなと思ったので対応出来ないかと調べて対応してみました。</p>
+
+<p>ちなみに発生する端末は、最近の端末では発生せず、API Level14/4.0系と、現在より3年くらい前の機種で現象が起きていたので、単純に端末のスペックが問題なんだろうなとも思ってます。</p>
+
+<p>実際に対応した方法ですが、Fragmentで利用するMapViewの上に透過したレイアウトを重ねておく事で、下に表示されたマップの描画処理を抑える事ができ、画面の黒表示などを消す事が出来ました。</p>
+
+<p>※ただ、今回の現象を抑える事は出来ましたが、これが本当に解決策として正しいのかかなり怪しいので、詳しく知っている方がいればぜひ教えて頂きたいです。</p>
+
+<p>レイアウトファイル: (fragment_map_sample.xml)</p>
+
+<p>[xml name=&#8221;fragment_map_sample.xml&#8221;]</p>
+
+<p><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout\_width="match\_parent" android:layout\_height="match\_parent" android:orientation="vertical" tools:context="com.dtdweb.mapfragmentsample.fragments.MapSampleFragment"></p>
+
+<p><FrameLayout android:layout\_width="fill\_parent" android:layout\_height="fill\_parent"></p>
+
+<p><com.google.android.gms.maps.MapView android:id="@+id/mapview" android:layout\_width="fill\_parent" android:layout\_height="fill\_parent" /></p>
+
+<p><TextView android:id="@+id/transparent\_layout" android:layout\_width="fill\_parent" android:layout\_height="fill\_parent" android:background="@drawable/translucent\_background" /></p>
+
+<p></FrameLayout></p>
+
+<p></LinearLayout></p>
+
+<p>[/xml]</p>
+
+<p>完成画面:</p>
+
+<p>[<img src="http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample-180x300.png" alt="20150331_fragment_mapview_sample" width="180" height="300" class="alignnone size-medium wp-image-341" srcset="http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample-180x300.png 180w, http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png 480w" sizes="(max-width: 180px) 100vw, 180px" />][1]</p>
+
+<p>画面の通り見かけ上は変わらず、またFragmentを切り替えた際も画面のチラつきを抑える事が出来ました。</p>
+
+<p>(ActivityやFragmentのソースコードについてはgitにアップしております)</p>
+
+<p>もうちょっと調べて、他に方法がないか調べてみる必要がありそうです…。</p>
+
+<p>サンプルで使っているMapViewはGoogle Map API v2を使用</p>
+
+<p><a href="https://developers.google.com/maps/documentation/android/?hl=ja" title="https://developers.google.com/maps/documentation/android/?hl=ja" target="_blank"><a href="https://developers.google.com/maps/documentation/android/?hl=ja">https://developers.google.com/maps/documentation/android/?hl=ja</a></a></p>
+
+<p>サンプルのソースコードは下記リポジトリに追加しております。</p>
+
+<p><a href="https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample" title="https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample" target="_blank"><a href="https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample">https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample</a></a></p>
+
+<p>[1]: <a href="http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png">http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png</a></p>
+
+      
+      
+      
+    </article>
+    
+ <aside><div id="disqus_thread"></div></aside>
+
+<script type="text/javascript">
+     
+    var disqus_shortname = 'intemous9';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+  </main>
+  
+  <nav class="pagination-single">
+    
+      <span class="previous">&larr; <a href="http://intemous9.github.io/2013/04/06/gps_desc/" rel="prev">[Android]GPSの使い方、プロバイダのメリット・デメリットと使い分け</a></span>
+    
+    
+      <span class="next"><a href="http://intemous9.github.io/2015/06/16/url-connection-redirect/" rel="next">[Android]URLConnectionでリダイレクトにも対応してみた</a> &rarr;</span>
+    
+  </nav>
+
+
+  
+  <footer role="contentinfo">
+    <div style="text-align:center;">
+      <img src="/images/profile.png" width="64" height="64"><br>
+      Written by T.Muroi
+    </div>
+  </footer>
+
+
+</div>
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-39497186-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+</body>
+</html>
+

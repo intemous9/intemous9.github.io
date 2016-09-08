@@ -1,0 +1,371 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  
+  <meta charset="UTF-8">
+  <title>
+    [Android]WiFi接続まわりで苦戦したのでメモ | T.Muroiのblog
+  </title>
+
+
+  
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+
+  
+  <link rel="canonical" href="http://intemous9.github.io/2013/03/08/android-wifi-network/"/>
+
+  
+  <link rel="stylesheet" href="/css/sanitize.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/highlight_monokai.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  
+  
+  <link href="http://intemous9.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="T.Muroiのblog" />
+  <link href="http://intemous9.github.ioindex.xml" rel="feed" type="application/rss+xml" title="T.Muroiのblog" />
+
+  
+  
+
+
+</head>
+
+
+
+<body>
+<div class="container">
+
+  
+  <header role="banner">
+    <div class="row gutters">
+      <div id="site-title" class="col span_6">
+        <h1><a href="http://intemous9.github.io">T.Muroiのblog</a></h1>
+        <h2>Androidやweb関連の事を書いたり、色々書いたり</h2>
+      </div>
+      <div id="social" class="col span_6">
+        <ul>
+          <li><a href="https://twitter.com/intemous9" target="_blank">Twitter</a></li>
+          
+          <li><a href="https://github.com/intemous9" target="_blank">GitHub</a></li>
+          <li><a href="http://intemous9.github.ioindex.xml" type="application/rss+xml" target="_blank">RSS</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <main id="single" role="main">
+    <div class="article-header">
+      <h1>[Android]WiFi接続まわりで苦戦したのでメモ</h1>
+      <div class="meta">
+        Mar 8, 2013 &nbsp;
+        
+          #<a href="/tags/android">Android</a>&nbsp;
+        
+      </div>
+    </div>
+    <article>
+      
+
+<p>AndroidのWiFi設定や変更において、色々と苦戦したのでその時の記録をメモ。</p>
+
+<p>(*2013年3月現在 : APILevel8~16にて動作確認)</p>
+
+<p>こちらの記事内容で動作確認は出来ましたが、動作保証はしかねますので、使用の際には再度ドキュメントを確認した方が良いかと思います。</p>
+
+<p>また、端末によって微妙に挙動が異なったり、WiFi切替まで時間もかかったりと、色々と下記以外にも調整しないといけない事が多かったです。</p>
+
+<p><a href="http://developer.android.com/reference/android/net/wifi/WifiManager.html" target="_blank">Androidリファレンス:WifiManager</a></p>
+
+<p><a href="http://developer.android.com/reference/android/net/wifi/WifiConfiguration.html" target="_blank">Androidリファレンス:WifiConfiguration</a></p>
+
+<h2 id="使用するために:506278074be7e994baf0f209d1456c13">使用するために</h2>
+
+<p>まずAndroidManifest.xmlに下記のパーミッション追加をする必要があります。</p>
+
+<p>[java]</p>
+
+<p><uses-permission android:name="android.permission.CHANGE\_WIFI\_STATE"></uses-permission></p>
+
+<p><uses-permission android:name="android.permission.ACCESS\_WIFI\_STATE"></uses-permission></p>
+
+<p>[/java]</p>
+
+<h2 id="wifi機能をonにする:506278074be7e994baf0f209d1456c13">WiFi機能をONにする</h2>
+
+<p>SSID登録の際は、WiFi機能が有効でないと出来ないので、もしプログラム内で有効にするには下記の方法で行う</p>
+
+<p>[java]</p>
+
+<p>WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);</p>
+
+<p>if (wifiManager.isWifiEnabled() == false) {</p>
+
+<p>wifiManager.setWifiEnabled(true);</p>
+
+<p>}</p>
+
+<p>[/java]</p>
+
+<p>上記のコードをActivityのonCreate等で実行しておくと良いかと思います。</p>
+
+<p>端末によっては、切り替わるまで少々時間もかかるようなんで注意も必要ですね。</p>
+
+<h2 id="ssidを端末に設定する:506278074be7e994baf0f209d1456c13">SSIDを端末に設定する</h2>
+
+<p>こちらもWiFi機能が無効の場合、正しく設定することができないので、先に有効にする処理を入れる必要があります。</p>
+
+<p>また、設定については認証方式毎に異なります。</p>
+
+<h2 id="セキュリティなしのssidを設定する:506278074be7e994baf0f209d1456c13">セキュリティなしのSSIDを設定する</h2>
+
+<p>[java]</p>
+
+<p>WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);</p>
+
+<p>String ssid = &#8220;SSID_NAME&#8221;;</p>
+
+<p>WifiConfiguration config = new WifiConfiguration();</p>
+
+<p>config.SSID = &#8220;&amp;#8221;&#8221; + ssid + &#8220;&amp;#8221;&#8221;;</p>
+
+<p>config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);</p>
+
+<p>config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);</p>
+
+<p>config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);</p>
+
+<p>config.allowedAuthAlgorithms.clear();</p>
+
+<p>config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);</p>
+
+<p>config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);</p>
+
+<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);</p>
+
+<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);</p>
+
+<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);</p>
+
+<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);</p>
+
+<p>int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります</p>
+
+<p>wifiManager.saveConfiguration();</p>
+
+<p>wifiManager.updateNetwork(config);</p>
+
+<p>[/java]</p>
+
+<h2 id="認証方式-wepのssid設定:506278074be7e994baf0f209d1456c13">認証方式 : WEPのSSID設定</h2>
+
+<p>[java]</p>
+
+<p>WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);</p>
+
+<p>String ssid = &#8220;SSID_NAME&#8221;;</p>
+
+<p>WifiConfiguration config = new WifiConfiguration();</p>
+
+<p>config.SSID = &#8220;&amp;#8221;&#8221; + ssid + &#8220;&amp;#8221;&#8221;;</p>
+
+<p>config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);</p>
+
+<p>config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);</p>
+
+<p>config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);</p>
+
+<p>config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);</p>
+
+<p>config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.SHARED);</p>
+
+<p>config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);</p>
+
+<p>config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);</p>
+
+<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);</p>
+
+<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);</p>
+
+<p>config.wepKeys[0] = &#8220;&amp;#8221;password&amp;#8221;&#8221;;</p>
+
+<p>config.wepTxKeyIndex = 0;</p>
+
+<p>int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります</p>
+
+<p>wifiManager.saveConfiguration();</p>
+
+<p>wifiManager.updateNetwork(config);</p>
+
+<p>[/java]</p>
+
+<h2 id="認証方式-wpa-wpa2-pskのssid設定:506278074be7e994baf0f209d1456c13">認証方式 : WPA/WPA2-PSKのSSID設定</h2>
+
+<p>[java]</p>
+
+<p>WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);</p>
+
+<p>String ssid = &#8220;SSID_NAME&#8221;;</p>
+
+<p>WifiConfiguration config = new WifiConfiguration();</p>
+
+<p>config.SSID = &#8220;&amp;#8221;&#8221; + ssid + &#8220;&amp;#8221;&#8221;;</p>
+
+<p>config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);</p>
+
+<p>config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);</p>
+
+<p>config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);</p>
+
+<p>config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);</p>
+
+<p>config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);</p>
+
+<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);</p>
+
+<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);</p>
+
+<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);</p>
+
+<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);</p>
+
+<p>config.preSharedKey = &#8220;&amp;#8221;password&amp;#8221;&#8221;;</p>
+
+<p>int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります</p>
+
+<p>wifiManager.saveConfiguration();</p>
+
+<p>wifiManager.updateNetwork(config);</p>
+
+<p>[/java]</p>
+
+<h2 id="上記で作成したssidに接続する:506278074be7e994baf0f209d1456c13">上記で作成したSSIDに接続する</h2>
+
+<p>networkIdが正しくとれていれば実際に接続を試してみます。</p>
+
+<p>[java]</p>
+
+<p>WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);</p>
+
+<p>int networkId = 0; // 上記設定で取得できたものを使用</p>
+
+<p>String targetSSID = &#8220;hoge-ssid&#8221;;</p>
+
+<p>// WiFi機能が無効の状態で呼び出されるとSSID検索の所でnullとなるので念のため例外処理を行なう</p>
+
+<p>try {</p>
+
+<p>// ssidの検索を開始</p>
+
+<p>wifiManager.startScan();</p>
+
+<p>for (ScanResult result : wifiManager.getScanResults()) {</p>
+
+<p>// Android4.2以降よりダブルクォーテーションが付いてくるので除去</p>
+
+<p>String resultSSID = result.SSID.replace(&#8220;&amp;#8221;&#8221;, &#8220;&#8221;);</p>
+
+<p>if (resultSSID.equals(targetSSID)) {</p>
+
+<p>// 接続を行う</p>
+
+<p>if (networkId &gt; 0) {</p>
+
+<p>// 先に既存接続先を無効にしてから接続します</p>
+
+<p>for (WifiConfiguration c0 : wifiManager.getConfiguredNetworks()) {</p>
+
+<p>wifiManager.enableNetwork(c0.networkId, false);</p>
+
+<p>}</p>
+
+<p>wifiManager.enableNetwork(networkId, true);</p>
+
+<p>}</p>
+
+<p>break;</p>
+
+<p>}</p>
+
+<p>}</p>
+
+<p>} catch (NullPointerException e) {</p>
+
+<p>// 適切な例外処理をしてください。</p>
+
+<p>}</p>
+
+<p>[/java]</p>
+
+<p>これでひと通りSSID設定と、接続まで出来るようになりました。</p>
+
+<p>接続タイミングやWiFi切替等、微妙に調整の必要があるため結構大変でした。</p>
+
+<p>また、認証方式毎の設定についても理解しきれていない所もあるんで、もっと勉強しないとなと思いました。</p>
+
+<p>詳しい方いましたら、ぜひアドバイスや間違いをご指摘頂けると嬉しいです。</p>
+
+      
+      
+      
+    </article>
+    
+ <aside><div id="disqus_thread"></div></aside>
+
+<script type="text/javascript">
+     
+    var disqus_shortname = 'intemous9';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+  </main>
+  
+  <nav class="pagination-single">
+    
+      <span class="previous">&larr; <a href="http://intemous9.github.io/2012/07/09/phonegap-ios-2/" rel="prev">PhoneGapで始めるスマホアプリ開発-iOS編　HelloWorldを表示！各種APIを試すまで</a></span>
+    
+    
+      <span class="next"><a href="http://intemous9.github.io/2013/03/19/android-sharedpreferences/" rel="next">[Android]SharedPreferencesを簡単に使うためのラッパークラスを作成してみました</a> &rarr;</span>
+    
+  </nav>
+
+
+  
+  <footer role="contentinfo">
+    <div style="text-align:center;">
+      <img src="/images/profile.png" width="64" height="64"><br>
+      Written by T.Muroi
+    </div>
+  </footer>
+
+
+</div>
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-39497186-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+</body>
+</html>
+

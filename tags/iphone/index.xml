@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iphone on T.Muroiのblog</title>
+    <link>http://intemous9.github.io/tags/iphone/</link>
+    <description>Recent content in Iphone on T.Muroiのblog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Sun, 08 Jul 2012 17:12:39 +0000</lastBuildDate>
+    <atom:link href="http://intemous9.github.io/tags/iphone/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>PhoneGapで始めるスマホアプリ開発-iOS編　HelloWorldを表示！各種APIを試すまで</title>
+      <link>http://intemous9.github.io/2012/07/09/phonegap-ios-2/</link>
+      <pubDate>Sun, 08 Jul 2012 17:12:39 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2012/07/09/phonegap-ios-2/</guid>
+      <description>
+
+&lt;p&gt;こんにちは！&lt;/p&gt;
+
+&lt;p&gt;前回の記事&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://intemous9.github.io/2012/06/26/phonegap-ios-1/&#34;&gt;PhoneGapで始めるスマホアプリ開発~iOS編(セットアップ)~&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;こちらでPhoneGapでの開発環境を作ったので、引き続き実際にコードを書きながら色々と試してみました。&lt;/p&gt;
+
+&lt;p&gt;この記事ではHello Worldを出すまでまとめようと思っていたのですが、表示までなら前回のでほぼ出来ていた事にこの記事を書きながら気づきました&amp;#8230;。&lt;/p&gt;
+
+&lt;p&gt;とういう事で今回は、用意されているAPIや実際にAPIを実行するために覚えておくと良さそうな事をまとめました。&lt;/p&gt;
+
+&lt;h2 id=&#34;hello-worldを表示してみる:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;Hello Worldを表示してみる&lt;/h2&gt;
+
+&lt;p&gt;早速Hello Worldを表示してみました。&lt;/p&gt;
+
+&lt;p&gt;前回と同様にXcodeを起動し、index.htmlを開きます。&lt;/p&gt;
+
+&lt;p&gt;本当に「Hello World」だけを表示するためindex.htmlの中身を最低限にしてみました。&lt;/p&gt;
+
+&lt;p&gt;index.html&lt;/p&gt;
+
+&lt;p&gt;[html]&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;hello-world-phonegap:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;Hello World!! PhoneGap!&lt;/h1&gt;
+
+&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/html&gt;&lt;/p&gt;
+
+&lt;p&gt;[/html]&lt;/p&gt;
+
+&lt;p&gt;実際にシミュレータで実行した結果はこちらになります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss2.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss2.png&#34; alt=&#34;&#34; title=&#34;ios2-ss2&#34; width=&#34;366&#34; height=&#34;704&#34; class=&#34;aligncenter size-full wp-image-152&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;本当にシンプルなHTMLで表示することが出来ました。&lt;/p&gt;
+
+&lt;p&gt;静的な画面を出すだけならHTMLの編集だけで表示することが出来るようですね。&lt;/p&gt;
+
+&lt;h3 id=&#34;apiを呼び出すために覚えたい事:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを呼び出すために覚えたい事&lt;/h3&gt;
+
+&lt;h4 id=&#34;アプリケーション上でドラッグを禁止する場合:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;アプリケーション上でドラッグを禁止する場合&lt;/h4&gt;
+
+&lt;p&gt;禁止する場合は、先程のindex.htmlのhead内に下記のコードを追記する事で設定する事が出来ます。&lt;/p&gt;
+
+&lt;p&gt;index.html&lt;/p&gt;
+
+&lt;p&gt;[javascript]&lt;/p&gt;
+
+&lt;p&gt;function preventBehavior(e)&lt;/p&gt;
+
+&lt;p&gt;{&lt;/p&gt;
+
+&lt;p&gt;e.preventDefault();&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;document.addEventListener(&amp;#8220;touchmove&amp;#8221;, preventBehavior, false);&lt;/p&gt;
+
+&lt;p&gt;[/javascript]&lt;/p&gt;
+
+&lt;h4 id=&#34;phonegapの各種apiを使うために重要な項目:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;PhoneGapの各種APIを使うために重要な項目&lt;/h4&gt;
+
+&lt;p&gt;PhoneGapのAPIを使用するためには、JavaScriptコードとネイティブコードのロードが完了した時点でAPIの処理を呼び出す必要があります。&lt;/p&gt;
+
+&lt;p&gt;なのでAPIを使う場合は下記のメソッド内で処理を記述していきます。&lt;/p&gt;
+
+&lt;p&gt;恐らく開発を行なう上で下記のメソッド一番重要になるのではないかと思います。&lt;/p&gt;
+
+&lt;p&gt;index.html(JS部分)&lt;/p&gt;
+
+&lt;p&gt;[javascript]&lt;/p&gt;
+
+&lt;p&gt;// ロード完了時点に呼び出す&lt;/p&gt;
+
+&lt;p&gt;function onBodyLoad()&lt;/p&gt;
+
+&lt;p&gt;{&lt;/p&gt;
+
+&lt;p&gt;document.addEventListener(&amp;#8220;deviceready&amp;#8221;, onDeviceReady, false);&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;// PhoneGapライブラリ/ネイティブコードのロード後に呼び出す&lt;/p&gt;
+
+&lt;p&gt;function onDeviceReady()&lt;/p&gt;
+
+&lt;p&gt;{&lt;/p&gt;
+
+&lt;p&gt;// この中でAPI処理を扱う&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;[/javascript]&lt;/p&gt;
+
+&lt;p&gt;index.html(html部分)&lt;/p&gt;
+
+&lt;p&gt;[html]&lt;/p&gt;
+
+&lt;!-- ロード完了時に呼び出すようにします --&gt;
+
+&lt;p&gt;[/html]&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;これで準備は完了となります。&lt;/p&gt;
+
+&lt;h3 id=&#34;apiを試してみました:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを試してみました&lt;/h3&gt;
+
+&lt;p&gt;せっかくなんで、簡単に使えるAPIを試してみました。&lt;/p&gt;
+
+&lt;h4 id=&#34;端末情報を取得するapi-device-api:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;端末情報を取得するAPI(Device API)&lt;/h4&gt;
+
+&lt;p&gt;端末の情報を取得API、Device APIを実験に使用してみました。&lt;/p&gt;
+
+&lt;p&gt;参考:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.phonegap.com/en/1.0.0/phonegap_device_device.md.html#Device&#34; target=&#34;_blank&#34; &gt;Device APIドキュメント&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;サンプルコード&lt;/p&gt;
+
+&lt;p&gt;[html]&lt;/p&gt;
+
+&lt;!-- ロード完了時に呼び出すようにします --&gt;
+
+&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;api-test:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;API Test&lt;/h1&gt;
+
+&lt;p id=&#34;deviceDesc&#34;&gt;
+  DeviceInfo
+&lt;/p&gt;
+
+&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/html&gt;&lt;/p&gt;
+
+&lt;p&gt;[/html]&lt;/p&gt;
+
+&lt;p&gt;実際に表示した画面が下記の通りとなります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss3.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss3.png&#34; alt=&#34;&#34; title=&#34;ios2-ss3&#34; width=&#34;336&#34; height=&#34;656&#34; class=&#34;aligncenter size-full wp-image-175&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;呼び出し方もとても簡単で、すぐに使用することが出来ました。&lt;/p&gt;
+
+&lt;h3 id=&#34;まとめ:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;まとめ&lt;/h3&gt;
+
+&lt;p&gt;まだまだ、これだけでは全然アプリを作れる状態ではないのですがAPIの呼び出し方と簡単ですが記述方法も覚える事が出来たので、引き続き色々と実験しながらやっていきたいと思います。&lt;/p&gt;
+
+&lt;p&gt;覚える事は沢山ありますが、HTMLベースで書けるという事はだいぶ敷居も低くなりますし、何よりデバイス共通で行けるというのは本当に強いですね。&lt;/p&gt;
+
+&lt;p&gt;もっともっと実験しながら勉強していきます。&lt;/p&gt;
+
+&lt;p&gt;参考URLまとめ:&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;http://docs.phonegap.com/en/1.0.0/&#34; target=&#34;_blank&#34;&gt;PhoneGap API Reference&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PhoneGapで始めるスマホアプリ開発~iOS編(セットアップ)~</title>
+      <link>http://intemous9.github.io/2012/06/26/phonegap-ios-1/</link>
+      <pubDate>Tue, 26 Jun 2012 00:32:09 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2012/06/26/phonegap-ios-1/</guid>
+      <description>
+
+&lt;p&gt;&lt;span style=&#34;font-size:10px;&#34;&gt;&lt;img src=&#34;http://farm6.static.flickr.com/5224/5682929553_7930aabc82_m.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;build.phonegap / doctorserone&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;スマホアプリの開発を行なう場合、それぞれ開発をするとなるとiPhoneならObjective-C、AndroidならJavaと言語も異なり、同時に開発を進めたい時とか色々と考える事ありますよね。&lt;/p&gt;
+
+&lt;p&gt;両言語を理解していればいいのですが、例えば自分の場合はJavaしか分かっておらず、Objective-Cはなかなか敷居の高いものでした。&lt;/p&gt;
+
+&lt;p&gt;上記も踏まえ、今回は出来るならなるべく同時にリリースしたい、メンテする上でも合わせて保守したいと考えまして、クロスプラットフォーム開発を行なう事のできるフレームワークを覚えてみようと思いました。&lt;/p&gt;
+
+&lt;p&gt;調べてみるとフレームワーク自体は沢山ある様で。&lt;/p&gt;
+
+&lt;p&gt;せっかくなんでひと通り試してみようと思い、最初はPhoneGapから手を出してみました。&lt;/p&gt;
+
+&lt;h2 id=&#34;phonegapとは:cd02f337e2fe8fb590505b5861d064de&#34;&gt;PhoneGapとは&lt;/h2&gt;
+
+&lt;p&gt;Adobeによって開発されているオープンソースのフレームワークです。&lt;/p&gt;
+
+&lt;p&gt;(MIT/BSDのデュアルライセンス)&lt;/p&gt;
+
+&lt;p&gt;公式サイト:&lt;a target=&#34;_blank&#34; href=&#34;http://phonegap.com/&#34;&gt;&lt;a href=&#34;http://phonegap.com/&#34;&gt;http://phonegap.com/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;(2012/6時点のversionは1.8.1が最新となっておりました)&lt;/p&gt;
+
+&lt;p&gt;このフレームワークでは、HTML+JavaScript+CSSを使ってWebアプリの開発を行なう様に開発を進める事ができます。&lt;/p&gt;
+
+&lt;p&gt;ネイティブで利用するようなAPIも下記の通り数多く用意されている様です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;モーションセンサ&lt;/li&gt;
+&lt;li&gt;カメラ&lt;/li&gt;
+&lt;li&gt;マイク&lt;/li&gt;
+&lt;li&gt;コンパス&lt;/li&gt;
+&lt;li&gt;回線情報&lt;/li&gt;
+&lt;li&gt;電話帳&lt;/li&gt;
+&lt;li&gt;デバイス情報&lt;/li&gt;
+&lt;li&gt;タッチ操作&lt;/li&gt;
+&lt;li&gt;ファイルシステム&lt;/li&gt;
+&lt;li&gt;GPS&lt;/li&gt;
+&lt;li&gt;プッシュ通知&lt;/li&gt;
+&lt;li&gt;ストレージアクセス&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(Supported Featuresより抜粋させて頂きました)&lt;/p&gt;
+
+&lt;h2 id=&#34;開発準備:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備&lt;/h2&gt;
+
+&lt;p&gt;では早速、開発までの準備をしていきたいと思います。&lt;/p&gt;
+
+&lt;p&gt;開発を行なうで必要になるものが&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;IntelベースのMacOS X&lt;/li&gt;
+&lt;li&gt;Xcode&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この2つとなります。&lt;/p&gt;
+
+&lt;h3 id=&#34;開発準備-ダウンロードとインストール:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(ダウンロードとインストール)&lt;/h3&gt;
+
+&lt;p&gt;それでは公式サイトよりダウンロードしてみます。&lt;/p&gt;
+
+&lt;p&gt;(トップからだと右上にDownLoadリンクがあります。)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://phonegap.com/download&#34; target=&#34;_blank&#34;&gt;ダウンロードページ&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;実際に私がダウンロードしたときは、最新が1.8.1でした。&lt;/p&gt;
+
+&lt;p&gt;zipファイルでダウンロードして解凍すると下記のファイル構成となっていました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss1.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss1.png&#34; alt=&#34;&#34; title=&#34;contents_1&#34; width=&#34;500&#34; height=&#34;151&#34; class=&#34;aligncenter size-full wp-image-82&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;libの中にそれぞれOS用のファイルが用意されていました。&lt;/p&gt;
+
+&lt;p&gt;今回はiOSの開発準備ということでCordova-1.8.1.dmgというファイルをマウントします。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss2.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss2.png&#34; alt=&#34;&#34; title=&#34;ss2&#34; width=&#34;500&#34; height=&#34;220&#34; class=&#34;aligncenter size-full wp-image-84&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;マウントしてみると、Cordova-1.8.1.pkgというファイルがあります。&lt;/p&gt;
+
+&lt;p&gt;今度はこれをインストールします。&lt;/p&gt;
+
+&lt;p&gt;基本的には手順に従うだけで簡単にインストールできました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss3.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss3.png&#34; alt=&#34;&#34; title=&#34;ss3&#34; width=&#34;500&#34; height=&#34;435&#34; class=&#34;aligncenter size-full wp-image-86&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;特に何も変更せず「続ける」を押していきます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss4.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss4.png&#34; alt=&#34;&#34; title=&#34;ss4&#34; width=&#34;500&#34; height=&#34;432&#34; class=&#34;aligncenter size-full wp-image-87&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これで完了です。&lt;/p&gt;
+
+&lt;p&gt;インストールを行なうことでXcodeを使って開発する準備が整いました。&lt;/p&gt;
+
+&lt;h3 id=&#34;開発準備-xcode:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(Xcode)&lt;/h3&gt;
+
+&lt;p&gt;インストールが完了したので、早速Xcodeを起動してみます。&lt;/p&gt;
+
+&lt;p&gt;起動して新規プロジェクト作成画面を開くと、PhoneGap開発用のプロジェクトが追加されていました。&lt;/p&gt;
+
+&lt;p&gt;(Cordova-based-Applicationというものですね)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss5.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss5.png&#34; alt=&#34;&#34; title=&#34;ss5&#34; width=&#34;500&#34; height=&#34;480&#34; class=&#34;aligncenter size-full wp-image-90&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上記プロジェクトを選択してまずサンプルでプロジェクトを作ってみます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss6.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss6.png&#34; alt=&#34;&#34; title=&#34;ss6&#34; width=&#34;500&#34; height=&#34;487&#34; class=&#34;aligncenter size-full wp-image-91&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ただ、このままでは実際に開発で使用するディレクトリがないため、開発用のｗｗｗディレクトリを追加します。&lt;/p&gt;
+
+&lt;p&gt;プロジェクトのルートよりshow Finderをクリックすることで、Finderが表示され、開いた所にｗｗｗディレクトリがありますので、これを先程作成したプロジェクトにドラッグ&amp;amp;ドロップします。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss8.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss8.png&#34; alt=&#34;&#34; title=&#34;ss8&#34; width=&#34;500&#34; height=&#34;204&#34; class=&#34;aligncenter size-full wp-image-98&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;「右クリック」で上記の様にメニューが表示されますので選択します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss9.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss9.png&#34; alt=&#34;&#34; title=&#34;ss9&#34; width=&#34;412&#34; height=&#34;140&#34; class=&#34;aligncenter size-full wp-image-100&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ディレクトリと、その中身「index.html」と「cordova-1.8.1.js」も追加します。&lt;/p&gt;
+
+&lt;p&gt;実際に追加してみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss10.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss10.png&#34; alt=&#34;&#34; title=&#34;ss10&#34; width=&#34;250&#34; height=&#34;147&#34; class=&#34;aligncenter size-full wp-image-101&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;追加してXcodeのプロジェクトより確認した画面が上記の通りとなります。&lt;/p&gt;
+
+&lt;p&gt;これでエミュレータを起動してみるとエラーも出ずに正常に起動することが出来ました。&lt;/p&gt;
+
+&lt;p&gt;ここまででiOSでの開発準備も出来ましたので、次回よりHello Worldの表示や実際にAPIなども使って色々と実験していきたいと思います。&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

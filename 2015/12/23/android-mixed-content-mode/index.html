@@ -1,0 +1,174 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  
+  <meta charset="UTF-8">
+  <title>
+    Androidのwebviewで画像が正しく表示されない時の対処法 | T.Muroiのblog
+  </title>
+
+
+  
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+
+  
+  <link rel="canonical" href="http://intemous9.github.io/2015/12/23/android-mixed-content-mode/"/>
+
+  
+  <link rel="stylesheet" href="/css/sanitize.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/highlight_monokai.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  
+  
+  <link href="http://intemous9.github.ioindex.xml" rel="alternate" type="application/rss+xml" title="T.Muroiのblog" />
+  <link href="http://intemous9.github.ioindex.xml" rel="feed" type="application/rss+xml" title="T.Muroiのblog" />
+
+  
+  
+
+
+</head>
+
+
+
+<body>
+<div class="container">
+
+  
+  <header role="banner">
+    <div class="row gutters">
+      <div id="site-title" class="col span_6">
+        <h1><a href="http://intemous9.github.io">T.Muroiのblog</a></h1>
+        <h2>Androidやweb関連の事を書いたり、色々書いたり</h2>
+      </div>
+      <div id="social" class="col span_6">
+        <ul>
+          <li><a href="https://twitter.com/intemous9" target="_blank">Twitter</a></li>
+          
+          <li><a href="https://github.com/intemous9" target="_blank">GitHub</a></li>
+          <li><a href="http://intemous9.github.ioindex.xml" type="application/rss+xml" target="_blank">RSS</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <main id="single" role="main">
+    <div class="article-header">
+      <h1>Androidのwebviewで画像が正しく表示されない時の対処法</h1>
+      <div class="meta">
+        Dec 23, 2015 &nbsp;
+        
+          #<a href="/tags/android">Android</a>&nbsp;
+        
+      </div>
+    </div>
+    <article>
+      <p>最近Androidアプリを開発している時に発生したのですが、webviewを表示する画面で一部画像が正しく表示されない問題が発生しました。</p>
+
+<p>何でだろうとエラーログを確認した所、下記の様なエラーが&#8230;。</p>
+
+<pre>[INFO:CONSOLE(0)] "Mixed Content: The page at 'https://***.com' was loaded over HTTPS, but requested an insecure image 'http://***.com/img/hoge.png'. This request has been blocked; the content must be served over HTTPS.", source: https://***.com (0)
+</pre>
+
+<p>どうもhttpsのページ内でURLがhttpの画像を表示しようとした所、httpへのリクエストが安全ではないとの理由ブロックされていた様でした。</p>
+
+<p>今までこんな事はなかったのに…。</p>
+
+<p>色々と原因を調べた所、Android L(API Level21)から一部仕様の変更があった様でした。</p>
+
+<p>Android Lから、httpとhttpsの混在しているページをwebviewで表示しようとするとブロックする様にデフォルトの設定が反対になったようでして…。</p>
+
+<p><a href='http://developer.android.com/intl/ja/reference/android/webkit/WebSettings.html#setMixedContentMode%28int%29' target='_blank'><a href="http://developer.android.com/intl/ja/reference/android/webkit/WebSettings.html#setMixedContentMode%28int%29">http://developer.android.com/intl/ja/reference/android/webkit/WebSettings.html#setMixedContentMode%28int%29</a></a></p>
+
+<p>この設定が変わっていたため画像も表示されませんでした。</p>
+
+<p>確かにセキュリティの観点から見ると対応として正しいと思うのですが、こんな罠が…。</p>
+
+<p>対応方法としては、セキュリティの理由から変更されているので、可能ならwebページ側のコンテンツを直すのが一番良さそうですね。</p>
+
+<p>※ただ自分で管理しているページなら対応出来るかもしれないけど、すぐ出来ない場合もありますよね…。</p>
+
+<p>アプリ側で対応を行う場合は、下記の様にwebviewの設定を変更する事で混在コンテンツのページも正常に表示される様になりました。</p>
+
+<noscript>
+  <pre><code class="language-java java">@SuppressLint("NewApi")
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+
+    WebView webView = (WebView) findViewById(R.id.webView);
+
+     if (Build.VERSION.SDK_INT &gt;= Build.VERSION_CODES.LOLLIPOP) {
+          webView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+     }
+
+}</code></pre>
+</noscript>
+
+<p>とりあえず仕事でもアプリ開発しているのだし、もう少し公式ブログやドキュメントとか追ってないとなーと反省しました..(^_^;)</p>
+
+      
+      
+      
+    </article>
+    
+ <aside><div id="disqus_thread"></div></aside>
+
+<script type="text/javascript">
+     
+    var disqus_shortname = 'intemous9';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+  </main>
+  
+  <nav class="pagination-single">
+    
+      <span class="previous">&larr; <a href="http://intemous9.github.io/2015/06/28/use_wp_gist/" rel="prev">[WordPress]今更ながらgistを使い始めました</a></span>
+    
+    
+      <span class="next"><a href="http://intemous9.github.io/2016/08/11/github-green-1-month/" rel="next">GitHub緑化活動経過報告(1ヶ月くらい)</a> &rarr;</span>
+    
+  </nav>
+
+
+  
+  <footer role="contentinfo">
+    <div style="text-align:center;">
+      <img src="/images/profile.png" width="64" height="64"><br>
+      Written by T.Muroi
+    </div>
+  </footer>
+
+
+</div>
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-39497186-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+</body>
+</html>
+

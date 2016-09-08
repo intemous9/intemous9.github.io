@@ -1,0 +1,1441 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on T.Muroiのblog</title>
+    <link>http://intemous9.github.io/post/</link>
+    <description>Recent content in Posts on T.Muroiのblog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ja</language>
+    <lastBuildDate>Thu, 11 Aug 2016 05:32:42 +0000</lastBuildDate>
+    <atom:link href="http://intemous9.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GitHub緑化活動経過報告(1ヶ月くらい)</title>
+      <link>http://intemous9.github.io/2016/08/11/github-green-1-month/</link>
+      <pubDate>Thu, 11 Aug 2016 05:32:42 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2016/08/11/github-green-1-month/</guid>
+      <description>
+
+&lt;p&gt;[&lt;img src=&#34;http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green-300x116.png&#34; alt=&#34;github_green&#34; width=&#34;100%&#34; class=&#34;alignnone size-medium wp-image-421&#34; srcset=&#34;http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green-300x116.png 300w, http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green-768x298.png 768w, http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green-700x272.png 700w, http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green.png 1494w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;][1]&lt;/p&gt;
+
+&lt;p&gt;GitHub緑化活動自体は結構今更感があったのですが、ふと仕事以外でもコードを書く時間を意識的に持ちたいなと思い始めてみました。&lt;/p&gt;
+
+&lt;p&gt;報告も半年とか一年くらいしてから記事を書こうと思っていた所ですが、結構１ヶ月でも思うことはあったり、少しでも自分自身へ継続の力になればと思い、記事に書いておく事にしました。&lt;/p&gt;
+
+&lt;h3 id=&#34;やってよかったと思ったこと-h2:d57280c6d50944ceb327397503b111c1&#34;&gt;やってよかったと思ったこと&lt;/h2&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;いい感じにプレッシャーになるので、毎日少しでもコードに向きあうきっかけになった&lt;/li&gt;
+&lt;li&gt;個人で開発していたアプリをリリースするまでもっていけた&lt;/li&gt;
+&lt;li&gt;少しでもコミットを稼ごうと色々とサンプルを読んで試すようになった&lt;/li&gt;
+&lt;li&gt;ドットファイル等も管理するようにしたので複数マシンでの環境共有が楽になった&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;今後考えて何とかしたいこと-h2:d57280c6d50944ceb327397503b111c1&#34;&gt;今後考えて何とかしたいこと&lt;/h2&gt;&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;個人開発とはいえ、公開できないコードの修正もありグラフを緑に出来ない日があった&lt;/li&gt;
+&lt;li&gt;ドットファイルの変更に逃げる日もあった&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;まとめ-h2:d57280c6d50944ceb327397503b111c1&#34;&gt;まとめ&lt;/h2&gt;&lt;/h3&gt;
+
+&lt;p&gt;案外続けようと意識してやってみると楽しくできる。緑にするために色々とネタ探しに技術調べたりするきっかけになったのも良かったと思います。&lt;/p&gt;
+
+&lt;p&gt;※興味本位でgolangとか無駄に勉強しようとか色々おかしな方向に行きそうになったりもしたり・・・ｗ&lt;/p&gt;
+
+&lt;p&gt;何より、ちょこちょこ作ってはモチベーションが下がり放置したりと・・・そんな感じでいたアプリを、機能落ちしてるとはいえ公開まで出来たのは良かった！&lt;/p&gt;
+
+&lt;p&gt;※アプリについては別記事で紹介したいなと・・・。&lt;/p&gt;
+
+&lt;p&gt;後は、実際にグラフでも隙間が出来ているようにコードを書いていても公開出来ない内容が多い時もあり、完全に緑は難しいかなと思ったり・・・。&lt;/p&gt;
+
+&lt;p&gt;上記の事を考えつつ、もう少し半年・一年と継続してみようと思います！&lt;/p&gt;
+
+&lt;p&gt;緑が増えていくのは楽しい！&lt;/p&gt;
+
+&lt;p&gt;[1]: &lt;a href=&#34;http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green.png&#34;&gt;http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green.png&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Androidのwebviewで画像が正しく表示されない時の対処法</title>
+      <link>http://intemous9.github.io/2015/12/23/android-mixed-content-mode/</link>
+      <pubDate>Wed, 23 Dec 2015 10:09:01 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2015/12/23/android-mixed-content-mode/</guid>
+      <description>&lt;p&gt;最近Androidアプリを開発している時に発生したのですが、webviewを表示する画面で一部画像が正しく表示されない問題が発生しました。&lt;/p&gt;
+
+&lt;p&gt;何でだろうとエラーログを確認した所、下記の様なエラーが&amp;#8230;。&lt;/p&gt;
+
+&lt;pre&gt;[INFO:CONSOLE(0)] &#34;Mixed Content: The page at &#39;https://***.com&#39; was loaded over HTTPS, but requested an insecure image &#39;http://***.com/img/hoge.png&#39;. This request has been blocked; the content must be served over HTTPS.&#34;, source: https://***.com (0)
+&lt;/pre&gt;
+
+&lt;p&gt;どうもhttpsのページ内でURLがhttpの画像を表示しようとした所、httpへのリクエストが安全ではないとの理由ブロックされていた様でした。&lt;/p&gt;
+
+&lt;p&gt;今までこんな事はなかったのに…。&lt;/p&gt;
+
+&lt;p&gt;色々と原因を調べた所、Android L(API Level21)から一部仕様の変更があった様でした。&lt;/p&gt;
+
+&lt;p&gt;Android Lから、httpとhttpsの混在しているページをwebviewで表示しようとするとブロックする様にデフォルトの設定が反対になったようでして…。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#39;http://developer.android.com/intl/ja/reference/android/webkit/WebSettings.html#setMixedContentMode%28int%29&#39; target=&#39;_blank&#39;&gt;&lt;a href=&#34;http://developer.android.com/intl/ja/reference/android/webkit/WebSettings.html#setMixedContentMode%28int%29&#34;&gt;http://developer.android.com/intl/ja/reference/android/webkit/WebSettings.html#setMixedContentMode%28int%29&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;この設定が変わっていたため画像も表示されませんでした。&lt;/p&gt;
+
+&lt;p&gt;確かにセキュリティの観点から見ると対応として正しいと思うのですが、こんな罠が…。&lt;/p&gt;
+
+&lt;p&gt;対応方法としては、セキュリティの理由から変更されているので、可能ならwebページ側のコンテンツを直すのが一番良さそうですね。&lt;/p&gt;
+
+&lt;p&gt;※ただ自分で管理しているページなら対応出来るかもしれないけど、すぐ出来ない場合もありますよね…。&lt;/p&gt;
+
+&lt;p&gt;アプリ側で対応を行う場合は、下記の様にwebviewの設定を変更する事で混在コンテンツのページも正常に表示される様になりました。&lt;/p&gt;
+
+&lt;noscript&gt;
+  &lt;pre&gt;&lt;code class=&#34;language-java java&#34;&gt;@SuppressLint(&#34;NewApi&#34;)
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+
+    WebView webView = (WebView) findViewById(R.id.webView);
+
+     if (Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.LOLLIPOP) {
+          webView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
+     }
+
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/noscript&gt;
+
+&lt;p&gt;とりあえず仕事でもアプリ開発しているのだし、もう少し公式ブログやドキュメントとか追ってないとなーと反省しました..(^_^;)&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[WordPress]今更ながらgistを使い始めました</title>
+      <link>http://intemous9.github.io/2015/06/28/use_wp_gist/</link>
+      <pubDate>Sun, 28 Jun 2015 00:37:31 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2015/06/28/use_wp_gist/</guid>
+      <description>
+
+&lt;p&gt;ブログを書く際に記事にソースコードを載せるのですが、これまではシンタックスハイライトのプラグインを使っていたのですが、中々しっくり来るプラグインがなく。&lt;/p&gt;
+
+&lt;p&gt;シンタックスハイライトって読み込むの時間かかるし、ちょっと長くなると見づらかったりコピペもしにくいんですよね。&lt;/p&gt;
+
+&lt;p&gt;それでずっと何かいい方法はないかなと探してたのですが、仕事でもちょくちょく使ってたgistをブログ用にも利用して載せてみた所すごいしっくりきました！&lt;/p&gt;
+
+&lt;p&gt;いやgistっていいですね。&lt;/p&gt;
+
+&lt;p&gt;githubとは異なり、ファイル単位で扱えるので手軽に追加出来ますし。gitなんでメンテもしやすい。もっと早く利用しておけば良かった…。&lt;/p&gt;
+
+&lt;p&gt;まだブログでの利用は始めたばかりですがメリットも多々ありそうです。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ブログに貼り付けやすい&lt;/li&gt;
+&lt;li&gt;ブログ上でコードが見やすい&lt;/li&gt;
+&lt;li&gt;記事の読み込み速度も多少良くなった&lt;/li&gt;
+&lt;li&gt;記事に載せているソースコードもメンテしやすくなった&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;ブログに貼り付けやすい:b41cec40607b190c9a070cc7ab260625&#34;&gt;ブログに貼り付けやすい&lt;/h4&gt;
+
+&lt;p&gt;これもすごい変わりそうです。&lt;/p&gt;
+
+&lt;p&gt;いままでは実際にサンプルを実装して、動作確認をしてからコピペして記事に貼り付けてたのですが、これからはローカルで実装して動作検証、確認できたらpushして完了。gistのIDをそのまま記事に設定すれば載せれます。&lt;/p&gt;
+
+&lt;p&gt;gistの方でもブログ貼り付け用のHTMLが発行されるのですが、WordPressではそのまま利用出来ないようなんで、プラグインを使うといいみたいです。&lt;/p&gt;
+
+&lt;p&gt;[Embed GitHub Gist][1]&lt;/p&gt;
+
+&lt;p&gt;あとは記事の中で下記の様なタグを入れるだけで完了でした。&lt;/p&gt;
+
+&lt;pre&gt;&amp;#091;gist id=gistのIDを設定する&amp;#093;
+&lt;/pre&gt;
+
+&lt;h4 id=&#34;ブログ上でコードが見やすい:b41cec40607b190c9a070cc7ab260625&#34;&gt;ブログ上でコードが見やすい&lt;/h4&gt;
+
+&lt;p&gt;下記は別記事用に書いたサンプルなんですが、行間がシンタックスハイライトのプラグインよりも見やすいですし、ファイル種別によって色分けもされていい感じで。&lt;/p&gt;
+
+&lt;noscript&gt;
+  &lt;pre&gt;&lt;code class=&#34;language-java java&#34;&gt;public static String rmBom(String xmlString) {
+    if (Integer.toHexString(xmlString.charAt(0)).equals(&#34;feff&#34;)) {
+        // 先頭一文字を除く
+        xmlString = xmlString.substring(1);
+    }
+    return xmlString;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/noscript&gt;
+
+&lt;h4 id=&#34;記事の読み込み速度も多少良くなった:b41cec40607b190c9a070cc7ab260625&#34;&gt;記事の読み込み速度も多少良くなった&lt;/h4&gt;
+
+&lt;p&gt;これは正確に測ったわけではないんですが…、気のせいかシンタックスハイライトのプラグインよりも体感で読み込み速度が早くなった感じがします。&lt;/p&gt;
+
+&lt;h4 id=&#34;記事に乗せているソースコードもメンテしやくなった:b41cec40607b190c9a070cc7ab260625&#34;&gt;記事に乗せているソースコードもメンテしやくなった&lt;/h4&gt;
+
+&lt;p&gt;なんだかんだで、一番のメリットはこれなのかなと思いました。&lt;/p&gt;
+
+&lt;p&gt;ブログの載せる以上は間違いは書かないように慎重に書いてるのですが、やはり間違いやもっといい書き方を思いついたりもしますし、そんな時に開発環境で再度確認して、記事を書き直す…これは結構面倒でした。&lt;/p&gt;
+
+&lt;p&gt;gistなら検証してプッシュするだけで記事側も変更せずに修正出来ます。&lt;/p&gt;
+
+&lt;p&gt;便利です。&lt;/p&gt;
+
+&lt;h3 id=&#34;まとめ:b41cec40607b190c9a070cc7ab260625&#34;&gt;まとめ&lt;/h3&gt;
+
+&lt;p&gt;WordPressで技術ブログを書いていたらgist使うと楽になりますね。&lt;/p&gt;
+
+&lt;p&gt;過去の記事とかも、ちょこちょことgistに移行していこうかなと考えてます。&lt;/p&gt;
+
+&lt;p&gt;関係ないですけど、qiitaとブログの使い分けもどうするか悩み中です。&lt;/p&gt;
+
+&lt;p&gt;自分の中ではqiitaは、使い回し可能な作業の記録とかで、ブログでは色々検証とかサンプルも載せていきたいなと考えてます。&lt;/p&gt;
+
+&lt;p&gt;[1]: &lt;a href=&#34;https://wordpress.org/plugins/embed-github-gist/&#34;&gt;https://wordpress.org/plugins/embed-github-gist/&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[Android]XmlPullParserException: Unexpected tokenが発生した時の対処方法</title>
+      <link>http://intemous9.github.io/2015/06/17/android-xmlpullparserexception-unexpected-token/</link>
+      <pubDate>Tue, 16 Jun 2015 23:33:03 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2015/06/17/android-xmlpullparserexception-unexpected-token/</guid>
+      <description>
+
+&lt;p&gt;Androidアプリ開発の際、リソースファイルやHttp経由で取得したUTF-8なxmlファイルをStringReaderで読み込むと、下記の様なエラーが発生する場合、読み込んだファイルの先頭にBOMが付いている可能性があります。&lt;/p&gt;
+
+&lt;pre&gt;XmlPullParserException
+org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in java.io.StringReader@***) 
+     at org.kxml2.io.KXmlParser.next(KXmlParser.java:432)
+     at org.kxml2.io.KXmlParser.next(KXmlParser.java:313)
+・
+・
+・
+&lt;/pre&gt;
+
+&lt;h4 id=&#34;解決方法:7d33596006e6af95dde9f6df20e5121e&#34;&gt;解決方法&lt;/h4&gt;
+
+&lt;p&gt;StringReaderで読み込む前にBOM付きかチェックして除去することで回避できました。&lt;/p&gt;
+
+&lt;h5 id=&#34;サンプルコード:7d33596006e6af95dde9f6df20e5121e&#34;&gt;サンプルコード&lt;/h5&gt;
+
+&lt;noscript&gt;
+  &lt;pre&gt;&lt;code class=&#34;language-java java&#34;&gt;public static String rmBom(String xmlString) {
+    if (Integer.toHexString(xmlString.charAt(0)).equals(&#34;feff&#34;)) {
+        // 先頭一文字を除く
+        xmlString = xmlString.substring(1);
+    }
+    return xmlString;
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/noscript&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[Android]URLConnectionでリダイレクトにも対応してみた</title>
+      <link>http://intemous9.github.io/2015/06/16/url-connection-redirect/</link>
+      <pubDate>Mon, 15 Jun 2015 23:52:57 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2015/06/16/url-connection-redirect/</guid>
+      <description>&lt;p&gt;org.apache.httpパッケージとAndroidHttpClientクラスがAndroid5.1(API Level 22)から非推奨になりましたね。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://developer.android.com/about/versions/android-5.1.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://developer.android.com/about/versions/android-5.1.html&#34;&gt;https://developer.android.com/about/versions/android-5.1.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これまでHttpClientで実装していたアプリはURLConnectionクラスを利用・変更しましょうとの事で。&lt;/p&gt;
+
+&lt;p&gt;それで今回はURLConnectionの実装に切り替えた際に、リダイレクト処理でうまく動作しなかったので、リダイレクトに対応したサンプルメソッドを作ってみました。&lt;/p&gt;
+
+&lt;p&gt;HttpClientなら特に30系のステータスコードでも意識する必要なかったんですけど、ちょっと面倒ですね。&lt;/p&gt;
+
+&lt;p&gt;ということで30系でも動作するように対応したサンプルメソッド&lt;/p&gt;
+
+&lt;noscript&gt;
+  &lt;pre&gt;&lt;code class=&#34;language-java java&#34;&gt;/**
+ * urlとcookieからbodyを取得する
+ */
+public static String getContents(String urlString, String cookies) throws IOException {
+ 
+    URL url = new URL(urlString);
+    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
+ 
+    conn.setRequestMethod(&#34;GET&#34;);
+    conn.setConnectTimeout(5000);
+    conn.setDoOutput(true);
+    if (cookies != null) {
+        conn.setRequestProperty(&#34;Cookie&#34;, cookies);
+    }
+ 
+    try {
+ 
+        conn.connect();
+        int statuscode = conn.getResponseCode();
+ 
+        // check 20x
+        if (statuscode != HttpURLConnection.HTTP_OK
+                &amp;&amp; statuscode != HttpURLConnection.HTTP_CREATED) {
+            // check 30x
+            if (statuscode == HttpURLConnection.HTTP_MOVED_TEMP
+                    || statuscode == HttpURLConnection.HTTP_MOVED_PERM
+                    || statuscode == HttpURLConnection.HTTP_SEE_OTHER) {
+ 
+                String newUrlString = conn.getHeaderField(&#34;Location&#34;);
+                cookies = conn.getHeaderField(&#34;Set-Cookie&#34;);
+                conn = (HttpURLConnection) new URL(newUrlString).openConnection();
+ 
+                if (cookies != null) {
+                    conn.setRequestProperty(&#34;Cookie&#34;, cookies);
+                }
+ 
+            } else {
+                // 20x or 30x系でないので例外を送出
+                throw new IOException(&#34;Response code is &#34; + Integer.toString(statuscode));
+            }
+        }
+ 
+    } catch (RuntimeException e) {
+        throw e;
+    }
+ 
+    InputStream inputStream = new BufferedInputStream(conn.getInputStream());
+    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, &#34;UTF-8&#34;));
+    StringBuilder stringBuilder = new StringBuilder();
+    String line = &#34;&#34;;
+ 
+    while ((line = bufferedReader.readLine()) != null) {
+        stringBuilder.append(line);
+    }
+    bufferedReader.close();
+ 
+    return stringBuilder.toString();
+}&lt;/code&gt;&lt;/pre&gt;
+&lt;/noscript&gt;
+
+&lt;p&gt;一度レスポンスコードを受け取り、20x系なら正常処理、30x系の場合は再度connクラスを再生成して対応しました。&lt;/p&gt;
+
+&lt;p&gt;にしても、IO系クラス扱うのも少し苦手だ&amp;#8230;。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[Android]FragmentでMapViewを使った時の問題と解決策</title>
+      <link>http://intemous9.github.io/2015/03/31/fragment-mapview-v2/</link>
+      <pubDate>Mon, 30 Mar 2015 15:18:57 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2015/03/31/fragment-mapview-v2/</guid>
+      <description>&lt;p&gt;久しぶりの更新です。最近ぜんぜん更新しないまま、だいぶ経ってしまいました。&lt;/p&gt;
+
+&lt;p&gt;書きたい事は結構あるのに、忙しいとかを理由にサボってしまい…。&lt;/p&gt;
+
+&lt;p&gt;またちょいちょい更新していこう。&lt;/p&gt;
+
+&lt;p&gt;今回は、AndroidのMapViewを使ったアプリ開発の際に起きた問題とその解決策について、自分なりですが対応した方法を書いてみました。&lt;/p&gt;
+
+&lt;p&gt;問題の方は、Map表示のMapViewをロードする際に画面が黒や白っぽく一瞬チラッと表示される現象があり、動作上は特に問題ないのですが、ちょっと動きとして何か気持ち悪いなと思ったので対応出来ないかと調べて対応してみました。&lt;/p&gt;
+
+&lt;p&gt;ちなみに発生する端末は、最近の端末では発生せず、API Level14/4.0系と、現在より3年くらい前の機種で現象が起きていたので、単純に端末のスペックが問題なんだろうなとも思ってます。&lt;/p&gt;
+
+&lt;p&gt;実際に対応した方法ですが、Fragmentで利用するMapViewの上に透過したレイアウトを重ねておく事で、下に表示されたマップの描画処理を抑える事ができ、画面の黒表示などを消す事が出来ました。&lt;/p&gt;
+
+&lt;p&gt;※ただ、今回の現象を抑える事は出来ましたが、これが本当に解決策として正しいのかかなり怪しいので、詳しく知っている方がいればぜひ教えて頂きたいです。&lt;/p&gt;
+
+&lt;p&gt;レイアウトファイル: (fragment_map_sample.xml)&lt;/p&gt;
+
+&lt;p&gt;[xml name=&amp;#8221;fragment_map_sample.xml&amp;#8221;]&lt;/p&gt;
+
+&lt;p&gt;&lt;LinearLayout xmlns:android=&#34;http://schemas.android.com/apk/res/android&#34; xmlns:tools=&#34;http://schemas.android.com/tools&#34; android:layout\_width=&#34;match\_parent&#34; android:layout\_height=&#34;match\_parent&#34; android:orientation=&#34;vertical&#34; tools:context=&#34;com.dtdweb.mapfragmentsample.fragments.MapSampleFragment&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;FrameLayout android:layout\_width=&#34;fill\_parent&#34; android:layout\_height=&#34;fill\_parent&#34;&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;com.google.android.gms.maps.MapView android:id=&#34;@+id/mapview&#34; android:layout\_width=&#34;fill\_parent&#34; android:layout\_height=&#34;fill\_parent&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;TextView android:id=&#34;@+id/transparent\_layout&#34; android:layout\_width=&#34;fill\_parent&#34; android:layout\_height=&#34;fill\_parent&#34; android:background=&#34;@drawable/translucent\_background&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/FrameLayout&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/LinearLayout&gt;&lt;/p&gt;
+
+&lt;p&gt;[/xml]&lt;/p&gt;
+
+&lt;p&gt;完成画面:&lt;/p&gt;
+
+&lt;p&gt;[&lt;img src=&#34;http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample-180x300.png&#34; alt=&#34;20150331_fragment_mapview_sample&#34; width=&#34;180&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-341&#34; srcset=&#34;http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample-180x300.png 180w, http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;][1]&lt;/p&gt;
+
+&lt;p&gt;画面の通り見かけ上は変わらず、またFragmentを切り替えた際も画面のチラつきを抑える事が出来ました。&lt;/p&gt;
+
+&lt;p&gt;(ActivityやFragmentのソースコードについてはgitにアップしております)&lt;/p&gt;
+
+&lt;p&gt;もうちょっと調べて、他に方法がないか調べてみる必要がありそうです…。&lt;/p&gt;
+
+&lt;p&gt;サンプルで使っているMapViewはGoogle Map API v2を使用&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://developers.google.com/maps/documentation/android/?hl=ja&#34; title=&#34;https://developers.google.com/maps/documentation/android/?hl=ja&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://developers.google.com/maps/documentation/android/?hl=ja&#34;&gt;https://developers.google.com/maps/documentation/android/?hl=ja&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;サンプルのソースコードは下記リポジトリに追加しております。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample&#34; title=&#34;https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample&#34;&gt;https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[1]: &lt;a href=&#34;http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png&#34;&gt;http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[Android]GPSの使い方、プロバイダのメリット・デメリットと使い分け</title>
+      <link>http://intemous9.github.io/2013/04/06/gps_desc/</link>
+      <pubDate>Sat, 06 Apr 2013 03:03:02 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2013/04/06/gps_desc/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://blog.dtdweb.com/wp-content/uploads/2013/04/gps_ss1.png&#34; alt=&#34;Gps ss1&#34; title=&#34;gps_ss1.png&#34; border=&#34;0&#34; width=&#34;360&#34; height=&#34;600&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;GPS機能を使ったアプリを開発する機会があったんですが、調べてみると結構複雑でして。&lt;/p&gt;
+
+&lt;p&gt;GPSを使うにも、ネットワークから取得する方法とGPS衛星を使う方法があったりと、複数方法があったのでそれぞれの使い方と違いを書いてみました。&lt;/p&gt;
+
+&lt;p&gt;メリット・デメリットについては若干の主観も混じっているため実際の仕様と異なる場合もございます&lt;/p&gt;
+
+&lt;p&gt;GPSを使用したアプリサンプルについては&lt;a href=&#34;https://github.com/dtdweb/android/tree/master/GPSSample&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;にアップしてます。&lt;/p&gt;
+
+&lt;h3 id=&#34;もくじ:426ef98a8bb738f2bde1020f7c489130&#34;&gt;もくじ&lt;/h3&gt;
+
+&lt;ul&gt;
+&lt;li&gt;GPS機能の使い方とメソッド説明&lt;/li&gt;
+&lt;li&gt;各プロバイダのメリット・デメリット&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&#34;gps機能の使い方とメソッド説明:426ef98a8bb738f2bde1020f7c489130&#34;&gt;GPS機能の使い方とメソッド説明&lt;/h3&gt;
+
+&lt;p&gt;まずGPS機能を使用するにはAndroidManifest.xmlに下記のパーミッションを追加する必要があります。&lt;/p&gt;
+
+&lt;p&gt;・GPSによる位置情報利用&lt;/p&gt;
+
+&lt;p&gt;[java]&lt;/p&gt;
+
+&lt;p&gt;&lt;uses-permission android:name=”android.permission.ACCESS\_FINE\_LOCATION”/&gt;&lt;/p&gt;
+
+&lt;p&gt;[/java]&lt;/p&gt;
+
+&lt;p&gt;・ネットワークによる位置情報利用&lt;/p&gt;
+
+&lt;p&gt;[java]&lt;/p&gt;
+
+&lt;p&gt;&lt;uses-permission android:name=”android.permission.ACCESS\_COARSE\_LOCATION”/&gt;&lt;/p&gt;
+
+&lt;p&gt;[/java]&lt;/p&gt;
+
+&lt;p&gt;あとはActivityなどで、LocationListenerインターフェースを実装し利用することが出来ます。&lt;/p&gt;
+
+&lt;p&gt;実装が必要となるメソッドが4つあります。&lt;/p&gt;
+
+&lt;p&gt;[java]&lt;/p&gt;
+
+&lt;p&gt;@Override&lt;/p&gt;
+
+&lt;p&gt;public void onLocationChanged(Location location) {&lt;/p&gt;
+
+&lt;p&gt;// TODO Auto-generated method stub&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;@Override&lt;/p&gt;
+
+&lt;p&gt;public void onProviderDisabled(String provider) {&lt;/p&gt;
+
+&lt;p&gt;// TODO Auto-generated method stub&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;@Override&lt;/p&gt;
+
+&lt;p&gt;public void onProviderEnabled(String provider) {&lt;/p&gt;
+
+&lt;p&gt;// TODO Auto-generated method stub&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;@Override&lt;/p&gt;
+
+&lt;p&gt;public void onStatusChanged(String provider, int status, Bundle extras) {&lt;/p&gt;
+
+&lt;p&gt;// TODO Auto-generated method stub&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;[/java]&lt;/p&gt;
+
+&lt;p&gt;しかし使用する上では基本的にonLocationChangedメソッドだけ使ってました。&lt;/p&gt;
+
+&lt;p&gt;このメソッドは、位置情報が取得出来ると呼び出されるメソッドとなります。&lt;/p&gt;
+
+&lt;h4 id=&#34;位置情報を取得してみる:426ef98a8bb738f2bde1020f7c489130&#34;&gt;位置情報を取得してみる&lt;/h4&gt;
+
+&lt;p&gt;[java]&lt;/p&gt;
+
+&lt;p&gt;// ロケーションマネージャーのインスタンスを取得&lt;/p&gt;
+
+&lt;p&gt;LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);&lt;/p&gt;
+
+&lt;p&gt;// 利用できるGPSを選択してプロバイダを取得&lt;/p&gt;
+
+&lt;p&gt;if (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {&lt;/p&gt;
+
+&lt;p&gt;// ネットワークプロバイダを使って検索&lt;/p&gt;
+
+&lt;p&gt;locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, this);&lt;/p&gt;
+
+&lt;p&gt;} else if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {&lt;/p&gt;
+
+&lt;p&gt;// GPSプロバイダを使って検索&lt;/p&gt;
+
+&lt;p&gt;locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;[/java]&lt;/p&gt;
+
+&lt;p&gt;それぞれの引数についは&lt;/p&gt;
+
+&lt;p&gt;・第一引数：プロバイダ&lt;/p&gt;
+
+&lt;p&gt;・第二引数：通知の最小時間間隔&lt;/p&gt;
+
+&lt;p&gt;・第三引数：通知の最小距離間隔&lt;/p&gt;
+
+&lt;p&gt;・第四引数：リスナー(LocationListenerを実装した自身を渡します)&lt;/p&gt;
+
+&lt;p&gt;これで位置が取得できるとonLocationChangedメソッドが呼ばれますので、引数のlocationを使い緯度や経度を取得することが出来ます。&lt;/p&gt;
+
+&lt;p&gt;[java]&lt;/p&gt;
+
+&lt;p&gt;// 緯度を取得&lt;/p&gt;
+
+&lt;p&gt;location.getLatitude();&lt;/p&gt;
+
+&lt;p&gt;// 経度を取得&lt;/p&gt;
+
+&lt;p&gt;location.getLongitude();&lt;/p&gt;
+
+&lt;p&gt;// 精度を取得&lt;/p&gt;
+
+&lt;p&gt;location.getAccuracy();&lt;/p&gt;
+
+&lt;p&gt;// 標高を取得&lt;/p&gt;
+
+&lt;p&gt;location.getAltitude();&lt;/p&gt;
+
+&lt;p&gt;// 取得時間を取得&lt;/p&gt;
+
+&lt;p&gt;location.getTime();&lt;/p&gt;
+
+&lt;p&gt;[/java]&lt;/p&gt;
+
+&lt;p&gt;また、注意点としまして、取得が終わった後やアプリを途中で終了したり、バッググラウンドに移る際は必ず位置情報の計測を停止させて下さい。&lt;/p&gt;
+
+&lt;p&gt;停止させるまではずっと取得状態となってしまい、定期的に上記のメソッドが呼び出されてしまい、バッテリー消費の原因にもなります。&lt;/p&gt;
+
+&lt;p&gt;位置情報取得の終了方法&lt;/p&gt;
+
+&lt;p&gt;[java]&lt;/p&gt;
+
+&lt;p&gt;locationManager.removeUpdates(this);&lt;/p&gt;
+
+&lt;p&gt;[/java]&lt;/p&gt;
+
+&lt;p&gt;これで停止させる事ができるので、onLocationChangedやActivityのonPauseメソッド内とかでも停止させたほうが良いかと思います。&lt;/p&gt;
+
+&lt;h3 id=&#34;各プロバイダのメリット-デメリット:426ef98a8bb738f2bde1020f7c489130&#34;&gt;各プロバイダのメリット・デメリット&lt;/h3&gt;
+
+&lt;p&gt;若干体感や主観も混ざってしまっているのですが&lt;/p&gt;
+
+&lt;h4 id=&#34;locationmanager-network-provider:426ef98a8bb738f2bde1020f7c489130&#34;&gt;LocationManager.NETWORK_PROVIDER&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;取得するまでの時間が早い&lt;/li&gt;
+&lt;li&gt;バッテリー消費はGPS_PROVIDERより抑える事ができる&lt;/li&gt;
+&lt;li&gt;GPS_PROVIDERに比べて精度が低い&lt;/li&gt;
+&lt;li&gt;用途としては、ざっくりとした位置を求めるには良いのかなと思いました。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&#34;locationmanager-gps-provider:426ef98a8bb738f2bde1020f7c489130&#34;&gt;LocationManager.GPS_PROVIDER&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;取得まで時間がかかる&lt;/li&gt;
+&lt;li&gt;位置情報の精度は高い&lt;/li&gt;
+&lt;li&gt;室内だと場所によるが取得できない場合が多々あった&lt;/li&gt;
+&lt;li&gt;現在の場所から特定の場所までの距離を計測するなど、詳細な位置を求める場合向き&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;上記の様な感じがしました。&lt;/p&gt;
+
+&lt;p&gt;用途によってうまく使い分ける必要がありますね。&lt;/p&gt;
+
+&lt;h3 id=&#34;参考:426ef98a8bb738f2bde1020f7c489130&#34;&gt;参考&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://developer.android.com/reference/android/location/LocationManager.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://developer.android.com/reference/android/location/LocationManager.html&#34;&gt;http://developer.android.com/reference/android/location/LocationManager.html&lt;/a&gt;&amp;lt;/&amp;gt;&lt;/p&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[Android]SharedPreferencesを簡単に使うためのラッパークラスを作成してみました</title>
+      <link>http://intemous9.github.io/2013/03/19/android-sharedpreferences/</link>
+      <pubDate>Tue, 19 Mar 2013 14:40:12 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2013/03/19/android-sharedpreferences/</guid>
+      <description>
+
+&lt;p&gt;[&lt;img src=&#34;http://blog.dtdweb.com/wp-content/uploads/2013/03/SharedPreferencesApp_SS1-180x300.png&#34; alt=&#34;SharedPreferencesApp_SS1&#34; width=&#34;180&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-233&#34; srcset=&#34;http://blog.dtdweb.com/wp-content/uploads/2013/03/SharedPreferencesApp_SS1-180x300.png 180w, http://blog.dtdweb.com/wp-content/uploads/2013/03/SharedPreferencesApp_SS1.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;][1]&lt;/p&gt;
+
+&lt;p&gt;Androidのデータ永続化手法として、SQLiteやSharedPreferencesとかありますよね。&lt;/p&gt;
+
+&lt;p&gt;自分は比較的簡単に使用することの出来るSharedPreferencesをよく使うんですが、少しでも簡単にコードをシンプルな状態で使えないかなと考え、ラッパークラスの様なものを作成してみました。&lt;/p&gt;
+
+&lt;p&gt;＊ソースコードは&lt;a href=&#34;https://github.com/dtdweb/android/tree/master/SharedPreferencesApp&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;で公開しています&lt;/p&gt;
+
+&lt;p&gt;ここでは、簡単な使い方の説明と紹介を載せたいと思います。&lt;/p&gt;
+
+&lt;p&gt;まだまだAndroid開発経験が短いため、おかしな所や改善点がありましたらアドバイス等もらえるとうれしいです！…結構ToDoも残っているのですよね&amp;#8230;(笑)&lt;/p&gt;
+
+&lt;h2 id=&#34;サンプル:964fdf811693e5a6015dc706ff70417b&#34;&gt;サンプル&lt;/h2&gt;
+
+&lt;p&gt;テキストを保存するためのサンプルクラスはラッパークラスを継承しています。&lt;/p&gt;
+
+&lt;p&gt;データの呼び出し・保存処理をラッパークラスで実装しているので比較的シンプルに実装できるようになっております。&lt;/p&gt;
+
+&lt;p&gt;キーを登録して、_setや_getを呼び出し保存する仕組みです。&lt;/p&gt;
+
+&lt;p&gt;[java]&lt;/p&gt;
+
+&lt;p&gt;package com.dtdweb.sharedpreferences.sample;&lt;/p&gt;
+
+&lt;p&gt;import android.content.Context;&lt;/p&gt;
+
+&lt;p&gt;import com.dtdweb.lib.sharedpreferences.SharedPreferencesWrapper;&lt;/p&gt;
+
+&lt;p&gt;public class SharedSample extends SharedPreferencesWrapper {&lt;/p&gt;
+
+&lt;p&gt;private static final String TEXT_CONFIG_KEY_NAME = &amp;#8220;text_config_name&amp;#8221;;&lt;/p&gt;
+
+&lt;p&gt;public SharedSample(Context context) {&lt;/p&gt;
+
+&lt;p&gt;super(context);&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;/**&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;テキストの保存&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;*/&lt;/p&gt;
+
+&lt;p&gt;public void setText(String text) {&lt;/p&gt;
+
+&lt;p&gt;this._set(SharedSample.TEXT_CONFIG_KEY_NAME, text);&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;/**&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;保存されているテキストデータの取得&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;*/&lt;/p&gt;
+
+&lt;p&gt;public String getText() {&lt;/p&gt;
+
+&lt;p&gt;return this._get(SharedSample.TEXT_CONFIG_KEY_NAME);&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;/**&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;保存されているテキストデータを削除&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;*/&lt;/p&gt;
+
+&lt;p&gt;public void removeText() {&lt;/p&gt;
+
+&lt;p&gt;this._remove(SharedSample.TEXT_CONFIG_KEY_NAME);&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;[/java]&lt;/p&gt;
+
+&lt;p&gt;Activity側からの呼び出し方&lt;/p&gt;
+
+&lt;p&gt;[java]&lt;/p&gt;
+
+&lt;p&gt;SharedSample sharedSample = new SharedSample(this);&lt;/p&gt;
+
+&lt;p&gt;// テキストの保存&lt;/p&gt;
+
+&lt;p&gt;sharedSample.setText(&amp;#8220;入力されたデータ&amp;#8221;);&lt;/p&gt;
+
+&lt;p&gt;// 保存されているデータの呼び出し&lt;/p&gt;
+
+&lt;p&gt;String dataString = sharedSample.getText();&lt;/p&gt;
+
+&lt;p&gt;[/java]&lt;/p&gt;
+
+&lt;p&gt;これだけで、いちいちEditorのインスタンスを作成してput***やcommitを行わずに保存・呼び出しが出来るようにしてみました。&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ:964fdf811693e5a6015dc706ff70417b&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;そもそもこのクラスをつくろうと思ったきっかけですが、一番はやはり複数のActivityで呼び出す際にシンプルに呼び出して使えたらなと思ったのが始まりでした。&lt;/p&gt;
+
+&lt;p&gt;他にセキュリティ的に大丈夫なのかなと思い保存の際は暗号化して保存したりと、恐らくそこまではやらなくても良かったのかもしれないですね。&lt;/p&gt;
+
+&lt;h2 id=&#34;残っている課題点:964fdf811693e5a6015dc706ff70417b&#34;&gt;残っている課題点&lt;/h2&gt;
+
+&lt;p&gt;現状のクラスですが、保存するデータの型がStringしか対応できておりません。&lt;/p&gt;
+
+&lt;p&gt;数値や配列データを保存したい場合、parseしたりjson形式にしたりとで、少々不便な点も残っております。この辺は今後改善していけたらと思います！&lt;/p&gt;
+
+&lt;p&gt;ーー&lt;/p&gt;
+
+&lt;p&gt;参考サイト:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://developer.android.com/reference/android/content/SharedPreferences.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://developer.android.com/reference/android/content/SharedPreferences.html&#34;&gt;http://developer.android.com/reference/android/content/SharedPreferences.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;[1]: &lt;a href=&#34;http://blog.dtdweb.com/wp-content/uploads/2013/03/SharedPreferencesApp_SS1.png&#34;&gt;http://blog.dtdweb.com/wp-content/uploads/2013/03/SharedPreferencesApp_SS1.png&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>[Android]WiFi接続まわりで苦戦したのでメモ</title>
+      <link>http://intemous9.github.io/2013/03/08/android-wifi-network/</link>
+      <pubDate>Fri, 08 Mar 2013 13:51:10 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2013/03/08/android-wifi-network/</guid>
+      <description>
+
+&lt;p&gt;AndroidのWiFi設定や変更において、色々と苦戦したのでその時の記録をメモ。&lt;/p&gt;
+
+&lt;p&gt;(*2013年3月現在 : APILevel8~16にて動作確認)&lt;/p&gt;
+
+&lt;p&gt;こちらの記事内容で動作確認は出来ましたが、動作保証はしかねますので、使用の際には再度ドキュメントを確認した方が良いかと思います。&lt;/p&gt;
+
+&lt;p&gt;また、端末によって微妙に挙動が異なったり、WiFi切替まで時間もかかったりと、色々と下記以外にも調整しないといけない事が多かったです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://developer.android.com/reference/android/net/wifi/WifiManager.html&#34; target=&#34;_blank&#34;&gt;Androidリファレンス:WifiManager&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://developer.android.com/reference/android/net/wifi/WifiConfiguration.html&#34; target=&#34;_blank&#34;&gt;Androidリファレンス:WifiConfiguration&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;使用するために:506278074be7e994baf0f209d1456c13&#34;&gt;使用するために&lt;/h2&gt;
+
+&lt;p&gt;まずAndroidManifest.xmlに下記のパーミッション追加をする必要があります。&lt;/p&gt;
+
+&lt;p&gt;[java]&lt;/p&gt;
+
+&lt;p&gt;&lt;uses-permission android:name=&#34;android.permission.CHANGE\_WIFI\_STATE&#34;&gt;&lt;/uses-permission&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;uses-permission android:name=&#34;android.permission.ACCESS\_WIFI\_STATE&#34;&gt;&lt;/uses-permission&gt;&lt;/p&gt;
+
+&lt;p&gt;[/java]&lt;/p&gt;
+
+&lt;h2 id=&#34;wifi機能をonにする:506278074be7e994baf0f209d1456c13&#34;&gt;WiFi機能をONにする&lt;/h2&gt;
+
+&lt;p&gt;SSID登録の際は、WiFi機能が有効でないと出来ないので、もしプログラム内で有効にするには下記の方法で行う&lt;/p&gt;
+
+&lt;p&gt;[java]&lt;/p&gt;
+
+&lt;p&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);&lt;/p&gt;
+
+&lt;p&gt;if (wifiManager.isWifiEnabled() == false) {&lt;/p&gt;
+
+&lt;p&gt;wifiManager.setWifiEnabled(true);&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;[/java]&lt;/p&gt;
+
+&lt;p&gt;上記のコードをActivityのonCreate等で実行しておくと良いかと思います。&lt;/p&gt;
+
+&lt;p&gt;端末によっては、切り替わるまで少々時間もかかるようなんで注意も必要ですね。&lt;/p&gt;
+
+&lt;h2 id=&#34;ssidを端末に設定する:506278074be7e994baf0f209d1456c13&#34;&gt;SSIDを端末に設定する&lt;/h2&gt;
+
+&lt;p&gt;こちらもWiFi機能が無効の場合、正しく設定することができないので、先に有効にする処理を入れる必要があります。&lt;/p&gt;
+
+&lt;p&gt;また、設定については認証方式毎に異なります。&lt;/p&gt;
+
+&lt;h2 id=&#34;セキュリティなしのssidを設定する:506278074be7e994baf0f209d1456c13&#34;&gt;セキュリティなしのSSIDを設定する&lt;/h2&gt;
+
+&lt;p&gt;[java]&lt;/p&gt;
+
+&lt;p&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);&lt;/p&gt;
+
+&lt;p&gt;String ssid = &amp;#8220;SSID_NAME&amp;#8221;;&lt;/p&gt;
+
+&lt;p&gt;WifiConfiguration config = new WifiConfiguration();&lt;/p&gt;
+
+&lt;p&gt;config.SSID = &amp;#8220;&amp;amp;#8221;&amp;#8221; + ssid + &amp;#8220;&amp;amp;#8221;&amp;#8221;;&lt;/p&gt;
+
+&lt;p&gt;config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);&lt;/p&gt;
+
+&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);&lt;/p&gt;
+
+&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);&lt;/p&gt;
+
+&lt;p&gt;config.allowedAuthAlgorithms.clear();&lt;/p&gt;
+
+&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);&lt;/p&gt;
+
+&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);&lt;/p&gt;
+
+&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);&lt;/p&gt;
+
+&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);&lt;/p&gt;
+
+&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);&lt;/p&gt;
+
+&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);&lt;/p&gt;
+
+&lt;p&gt;int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります&lt;/p&gt;
+
+&lt;p&gt;wifiManager.saveConfiguration();&lt;/p&gt;
+
+&lt;p&gt;wifiManager.updateNetwork(config);&lt;/p&gt;
+
+&lt;p&gt;[/java]&lt;/p&gt;
+
+&lt;h2 id=&#34;認証方式-wepのssid設定:506278074be7e994baf0f209d1456c13&#34;&gt;認証方式 : WEPのSSID設定&lt;/h2&gt;
+
+&lt;p&gt;[java]&lt;/p&gt;
+
+&lt;p&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);&lt;/p&gt;
+
+&lt;p&gt;String ssid = &amp;#8220;SSID_NAME&amp;#8221;;&lt;/p&gt;
+
+&lt;p&gt;WifiConfiguration config = new WifiConfiguration();&lt;/p&gt;
+
+&lt;p&gt;config.SSID = &amp;#8220;&amp;amp;#8221;&amp;#8221; + ssid + &amp;#8220;&amp;amp;#8221;&amp;#8221;;&lt;/p&gt;
+
+&lt;p&gt;config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);&lt;/p&gt;
+
+&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);&lt;/p&gt;
+
+&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);&lt;/p&gt;
+
+&lt;p&gt;config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);&lt;/p&gt;
+
+&lt;p&gt;config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.SHARED);&lt;/p&gt;
+
+&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);&lt;/p&gt;
+
+&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);&lt;/p&gt;
+
+&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);&lt;/p&gt;
+
+&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);&lt;/p&gt;
+
+&lt;p&gt;config.wepKeys[0] = &amp;#8220;&amp;amp;#8221;password&amp;amp;#8221;&amp;#8221;;&lt;/p&gt;
+
+&lt;p&gt;config.wepTxKeyIndex = 0;&lt;/p&gt;
+
+&lt;p&gt;int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります&lt;/p&gt;
+
+&lt;p&gt;wifiManager.saveConfiguration();&lt;/p&gt;
+
+&lt;p&gt;wifiManager.updateNetwork(config);&lt;/p&gt;
+
+&lt;p&gt;[/java]&lt;/p&gt;
+
+&lt;h2 id=&#34;認証方式-wpa-wpa2-pskのssid設定:506278074be7e994baf0f209d1456c13&#34;&gt;認証方式 : WPA/WPA2-PSKのSSID設定&lt;/h2&gt;
+
+&lt;p&gt;[java]&lt;/p&gt;
+
+&lt;p&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);&lt;/p&gt;
+
+&lt;p&gt;String ssid = &amp;#8220;SSID_NAME&amp;#8221;;&lt;/p&gt;
+
+&lt;p&gt;WifiConfiguration config = new WifiConfiguration();&lt;/p&gt;
+
+&lt;p&gt;config.SSID = &amp;#8220;&amp;amp;#8221;&amp;#8221; + ssid + &amp;#8220;&amp;amp;#8221;&amp;#8221;;&lt;/p&gt;
+
+&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);&lt;/p&gt;
+
+&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);&lt;/p&gt;
+
+&lt;p&gt;config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);&lt;/p&gt;
+
+&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);&lt;/p&gt;
+
+&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);&lt;/p&gt;
+
+&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);&lt;/p&gt;
+
+&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);&lt;/p&gt;
+
+&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);&lt;/p&gt;
+
+&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);&lt;/p&gt;
+
+&lt;p&gt;config.preSharedKey = &amp;#8220;&amp;amp;#8221;password&amp;amp;#8221;&amp;#8221;;&lt;/p&gt;
+
+&lt;p&gt;int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります&lt;/p&gt;
+
+&lt;p&gt;wifiManager.saveConfiguration();&lt;/p&gt;
+
+&lt;p&gt;wifiManager.updateNetwork(config);&lt;/p&gt;
+
+&lt;p&gt;[/java]&lt;/p&gt;
+
+&lt;h2 id=&#34;上記で作成したssidに接続する:506278074be7e994baf0f209d1456c13&#34;&gt;上記で作成したSSIDに接続する&lt;/h2&gt;
+
+&lt;p&gt;networkIdが正しくとれていれば実際に接続を試してみます。&lt;/p&gt;
+
+&lt;p&gt;[java]&lt;/p&gt;
+
+&lt;p&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);&lt;/p&gt;
+
+&lt;p&gt;int networkId = 0; // 上記設定で取得できたものを使用&lt;/p&gt;
+
+&lt;p&gt;String targetSSID = &amp;#8220;hoge-ssid&amp;#8221;;&lt;/p&gt;
+
+&lt;p&gt;// WiFi機能が無効の状態で呼び出されるとSSID検索の所でnullとなるので念のため例外処理を行なう&lt;/p&gt;
+
+&lt;p&gt;try {&lt;/p&gt;
+
+&lt;p&gt;// ssidの検索を開始&lt;/p&gt;
+
+&lt;p&gt;wifiManager.startScan();&lt;/p&gt;
+
+&lt;p&gt;for (ScanResult result : wifiManager.getScanResults()) {&lt;/p&gt;
+
+&lt;p&gt;// Android4.2以降よりダブルクォーテーションが付いてくるので除去&lt;/p&gt;
+
+&lt;p&gt;String resultSSID = result.SSID.replace(&amp;#8220;&amp;amp;#8221;&amp;#8221;, &amp;#8220;&amp;#8221;);&lt;/p&gt;
+
+&lt;p&gt;if (resultSSID.equals(targetSSID)) {&lt;/p&gt;
+
+&lt;p&gt;// 接続を行う&lt;/p&gt;
+
+&lt;p&gt;if (networkId &amp;gt; 0) {&lt;/p&gt;
+
+&lt;p&gt;// 先に既存接続先を無効にしてから接続します&lt;/p&gt;
+
+&lt;p&gt;for (WifiConfiguration c0 : wifiManager.getConfiguredNetworks()) {&lt;/p&gt;
+
+&lt;p&gt;wifiManager.enableNetwork(c0.networkId, false);&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;wifiManager.enableNetwork(networkId, true);&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;break;&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;} catch (NullPointerException e) {&lt;/p&gt;
+
+&lt;p&gt;// 適切な例外処理をしてください。&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;[/java]&lt;/p&gt;
+
+&lt;p&gt;これでひと通りSSID設定と、接続まで出来るようになりました。&lt;/p&gt;
+
+&lt;p&gt;接続タイミングやWiFi切替等、微妙に調整の必要があるため結構大変でした。&lt;/p&gt;
+
+&lt;p&gt;また、認証方式毎の設定についても理解しきれていない所もあるんで、もっと勉強しないとなと思いました。&lt;/p&gt;
+
+&lt;p&gt;詳しい方いましたら、ぜひアドバイスや間違いをご指摘頂けると嬉しいです。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PhoneGapで始めるスマホアプリ開発-iOS編　HelloWorldを表示！各種APIを試すまで</title>
+      <link>http://intemous9.github.io/2012/07/09/phonegap-ios-2/</link>
+      <pubDate>Sun, 08 Jul 2012 17:12:39 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2012/07/09/phonegap-ios-2/</guid>
+      <description>
+
+&lt;p&gt;こんにちは！&lt;/p&gt;
+
+&lt;p&gt;前回の記事&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://intemous9.github.io/2012/06/26/phonegap-ios-1/&#34;&gt;PhoneGapで始めるスマホアプリ開発~iOS編(セットアップ)~&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;こちらでPhoneGapでの開発環境を作ったので、引き続き実際にコードを書きながら色々と試してみました。&lt;/p&gt;
+
+&lt;p&gt;この記事ではHello Worldを出すまでまとめようと思っていたのですが、表示までなら前回のでほぼ出来ていた事にこの記事を書きながら気づきました&amp;#8230;。&lt;/p&gt;
+
+&lt;p&gt;とういう事で今回は、用意されているAPIや実際にAPIを実行するために覚えておくと良さそうな事をまとめました。&lt;/p&gt;
+
+&lt;h2 id=&#34;hello-worldを表示してみる:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;Hello Worldを表示してみる&lt;/h2&gt;
+
+&lt;p&gt;早速Hello Worldを表示してみました。&lt;/p&gt;
+
+&lt;p&gt;前回と同様にXcodeを起動し、index.htmlを開きます。&lt;/p&gt;
+
+&lt;p&gt;本当に「Hello World」だけを表示するためindex.htmlの中身を最低限にしてみました。&lt;/p&gt;
+
+&lt;p&gt;index.html&lt;/p&gt;
+
+&lt;p&gt;[html]&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;hello-world-phonegap:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;Hello World!! PhoneGap!&lt;/h1&gt;
+
+&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/html&gt;&lt;/p&gt;
+
+&lt;p&gt;[/html]&lt;/p&gt;
+
+&lt;p&gt;実際にシミュレータで実行した結果はこちらになります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss2.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss2.png&#34; alt=&#34;&#34; title=&#34;ios2-ss2&#34; width=&#34;366&#34; height=&#34;704&#34; class=&#34;aligncenter size-full wp-image-152&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;本当にシンプルなHTMLで表示することが出来ました。&lt;/p&gt;
+
+&lt;p&gt;静的な画面を出すだけならHTMLの編集だけで表示することが出来るようですね。&lt;/p&gt;
+
+&lt;h3 id=&#34;apiを呼び出すために覚えたい事:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを呼び出すために覚えたい事&lt;/h3&gt;
+
+&lt;h4 id=&#34;アプリケーション上でドラッグを禁止する場合:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;アプリケーション上でドラッグを禁止する場合&lt;/h4&gt;
+
+&lt;p&gt;禁止する場合は、先程のindex.htmlのhead内に下記のコードを追記する事で設定する事が出来ます。&lt;/p&gt;
+
+&lt;p&gt;index.html&lt;/p&gt;
+
+&lt;p&gt;[javascript]&lt;/p&gt;
+
+&lt;p&gt;function preventBehavior(e)&lt;/p&gt;
+
+&lt;p&gt;{&lt;/p&gt;
+
+&lt;p&gt;e.preventDefault();&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;document.addEventListener(&amp;#8220;touchmove&amp;#8221;, preventBehavior, false);&lt;/p&gt;
+
+&lt;p&gt;[/javascript]&lt;/p&gt;
+
+&lt;h4 id=&#34;phonegapの各種apiを使うために重要な項目:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;PhoneGapの各種APIを使うために重要な項目&lt;/h4&gt;
+
+&lt;p&gt;PhoneGapのAPIを使用するためには、JavaScriptコードとネイティブコードのロードが完了した時点でAPIの処理を呼び出す必要があります。&lt;/p&gt;
+
+&lt;p&gt;なのでAPIを使う場合は下記のメソッド内で処理を記述していきます。&lt;/p&gt;
+
+&lt;p&gt;恐らく開発を行なう上で下記のメソッド一番重要になるのではないかと思います。&lt;/p&gt;
+
+&lt;p&gt;index.html(JS部分)&lt;/p&gt;
+
+&lt;p&gt;[javascript]&lt;/p&gt;
+
+&lt;p&gt;// ロード完了時点に呼び出す&lt;/p&gt;
+
+&lt;p&gt;function onBodyLoad()&lt;/p&gt;
+
+&lt;p&gt;{&lt;/p&gt;
+
+&lt;p&gt;document.addEventListener(&amp;#8220;deviceready&amp;#8221;, onDeviceReady, false);&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;// PhoneGapライブラリ/ネイティブコードのロード後に呼び出す&lt;/p&gt;
+
+&lt;p&gt;function onDeviceReady()&lt;/p&gt;
+
+&lt;p&gt;{&lt;/p&gt;
+
+&lt;p&gt;// この中でAPI処理を扱う&lt;/p&gt;
+
+&lt;p&gt;}&lt;/p&gt;
+
+&lt;p&gt;[/javascript]&lt;/p&gt;
+
+&lt;p&gt;index.html(html部分)&lt;/p&gt;
+
+&lt;p&gt;[html]&lt;/p&gt;
+
+&lt;!-- ロード完了時に呼び出すようにします --&gt;
+
+&lt;p&gt;[/html]&lt;/p&gt;&lt;/p&gt;
+
+&lt;p&gt;これで準備は完了となります。&lt;/p&gt;
+
+&lt;h3 id=&#34;apiを試してみました:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを試してみました&lt;/h3&gt;
+
+&lt;p&gt;せっかくなんで、簡単に使えるAPIを試してみました。&lt;/p&gt;
+
+&lt;h4 id=&#34;端末情報を取得するapi-device-api:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;端末情報を取得するAPI(Device API)&lt;/h4&gt;
+
+&lt;p&gt;端末の情報を取得API、Device APIを実験に使用してみました。&lt;/p&gt;
+
+&lt;p&gt;参考:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://docs.phonegap.com/en/1.0.0/phonegap_device_device.md.html#Device&#34; target=&#34;_blank&#34; &gt;Device APIドキュメント&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;サンプルコード&lt;/p&gt;
+
+&lt;p&gt;[html]&lt;/p&gt;
+
+&lt;!-- ロード完了時に呼び出すようにします --&gt;
+
+&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
+
+&lt;h1 id=&#34;api-test:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;API Test&lt;/h1&gt;
+
+&lt;p id=&#34;deviceDesc&#34;&gt;
+  DeviceInfo
+&lt;/p&gt;
+
+&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;/html&gt;&lt;/p&gt;
+
+&lt;p&gt;[/html]&lt;/p&gt;
+
+&lt;p&gt;実際に表示した画面が下記の通りとなります。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss3.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss3.png&#34; alt=&#34;&#34; title=&#34;ios2-ss3&#34; width=&#34;336&#34; height=&#34;656&#34; class=&#34;aligncenter size-full wp-image-175&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;呼び出し方もとても簡単で、すぐに使用することが出来ました。&lt;/p&gt;
+
+&lt;h3 id=&#34;まとめ:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;まとめ&lt;/h3&gt;
+
+&lt;p&gt;まだまだ、これだけでは全然アプリを作れる状態ではないのですがAPIの呼び出し方と簡単ですが記述方法も覚える事が出来たので、引き続き色々と実験しながらやっていきたいと思います。&lt;/p&gt;
+
+&lt;p&gt;覚える事は沢山ありますが、HTMLベースで書けるという事はだいぶ敷居も低くなりますし、何よりデバイス共通で行けるというのは本当に強いですね。&lt;/p&gt;
+
+&lt;p&gt;もっともっと実験しながら勉強していきます。&lt;/p&gt;
+
+&lt;p&gt;参考URLまとめ:&lt;/p&gt;
+
+&lt;p&gt;・&lt;a href=&#34;http://docs.phonegap.com/en/1.0.0/&#34; target=&#34;_blank&#34;&gt;PhoneGap API Reference&lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>PhoneGapで始めるスマホアプリ開発~iOS編(セットアップ)~</title>
+      <link>http://intemous9.github.io/2012/06/26/phonegap-ios-1/</link>
+      <pubDate>Tue, 26 Jun 2012 00:32:09 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2012/06/26/phonegap-ios-1/</guid>
+      <description>
+
+&lt;p&gt;&lt;span style=&#34;font-size:10px;&#34;&gt;&lt;img src=&#34;http://farm6.static.flickr.com/5224/5682929553_7930aabc82_m.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;build.phonegap / doctorserone&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;スマホアプリの開発を行なう場合、それぞれ開発をするとなるとiPhoneならObjective-C、AndroidならJavaと言語も異なり、同時に開発を進めたい時とか色々と考える事ありますよね。&lt;/p&gt;
+
+&lt;p&gt;両言語を理解していればいいのですが、例えば自分の場合はJavaしか分かっておらず、Objective-Cはなかなか敷居の高いものでした。&lt;/p&gt;
+
+&lt;p&gt;上記も踏まえ、今回は出来るならなるべく同時にリリースしたい、メンテする上でも合わせて保守したいと考えまして、クロスプラットフォーム開発を行なう事のできるフレームワークを覚えてみようと思いました。&lt;/p&gt;
+
+&lt;p&gt;調べてみるとフレームワーク自体は沢山ある様で。&lt;/p&gt;
+
+&lt;p&gt;せっかくなんでひと通り試してみようと思い、最初はPhoneGapから手を出してみました。&lt;/p&gt;
+
+&lt;h2 id=&#34;phonegapとは:cd02f337e2fe8fb590505b5861d064de&#34;&gt;PhoneGapとは&lt;/h2&gt;
+
+&lt;p&gt;Adobeによって開発されているオープンソースのフレームワークです。&lt;/p&gt;
+
+&lt;p&gt;(MIT/BSDのデュアルライセンス)&lt;/p&gt;
+
+&lt;p&gt;公式サイト:&lt;a target=&#34;_blank&#34; href=&#34;http://phonegap.com/&#34;&gt;&lt;a href=&#34;http://phonegap.com/&#34;&gt;http://phonegap.com/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;(2012/6時点のversionは1.8.1が最新となっておりました)&lt;/p&gt;
+
+&lt;p&gt;このフレームワークでは、HTML+JavaScript+CSSを使ってWebアプリの開発を行なう様に開発を進める事ができます。&lt;/p&gt;
+
+&lt;p&gt;ネイティブで利用するようなAPIも下記の通り数多く用意されている様です。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;モーションセンサ&lt;/li&gt;
+&lt;li&gt;カメラ&lt;/li&gt;
+&lt;li&gt;マイク&lt;/li&gt;
+&lt;li&gt;コンパス&lt;/li&gt;
+&lt;li&gt;回線情報&lt;/li&gt;
+&lt;li&gt;電話帳&lt;/li&gt;
+&lt;li&gt;デバイス情報&lt;/li&gt;
+&lt;li&gt;タッチ操作&lt;/li&gt;
+&lt;li&gt;ファイルシステム&lt;/li&gt;
+&lt;li&gt;GPS&lt;/li&gt;
+&lt;li&gt;プッシュ通知&lt;/li&gt;
+&lt;li&gt;ストレージアクセス&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;(Supported Featuresより抜粋させて頂きました)&lt;/p&gt;
+
+&lt;h2 id=&#34;開発準備:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備&lt;/h2&gt;
+
+&lt;p&gt;では早速、開発までの準備をしていきたいと思います。&lt;/p&gt;
+
+&lt;p&gt;開発を行なうで必要になるものが&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;IntelベースのMacOS X&lt;/li&gt;
+&lt;li&gt;Xcode&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この2つとなります。&lt;/p&gt;
+
+&lt;h3 id=&#34;開発準備-ダウンロードとインストール:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(ダウンロードとインストール)&lt;/h3&gt;
+
+&lt;p&gt;それでは公式サイトよりダウンロードしてみます。&lt;/p&gt;
+
+&lt;p&gt;(トップからだと右上にDownLoadリンクがあります。)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://phonegap.com/download&#34; target=&#34;_blank&#34;&gt;ダウンロードページ&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;実際に私がダウンロードしたときは、最新が1.8.1でした。&lt;/p&gt;
+
+&lt;p&gt;zipファイルでダウンロードして解凍すると下記のファイル構成となっていました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss1.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss1.png&#34; alt=&#34;&#34; title=&#34;contents_1&#34; width=&#34;500&#34; height=&#34;151&#34; class=&#34;aligncenter size-full wp-image-82&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;libの中にそれぞれOS用のファイルが用意されていました。&lt;/p&gt;
+
+&lt;p&gt;今回はiOSの開発準備ということでCordova-1.8.1.dmgというファイルをマウントします。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss2.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss2.png&#34; alt=&#34;&#34; title=&#34;ss2&#34; width=&#34;500&#34; height=&#34;220&#34; class=&#34;aligncenter size-full wp-image-84&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;マウントしてみると、Cordova-1.8.1.pkgというファイルがあります。&lt;/p&gt;
+
+&lt;p&gt;今度はこれをインストールします。&lt;/p&gt;
+
+&lt;p&gt;基本的には手順に従うだけで簡単にインストールできました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss3.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss3.png&#34; alt=&#34;&#34; title=&#34;ss3&#34; width=&#34;500&#34; height=&#34;435&#34; class=&#34;aligncenter size-full wp-image-86&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;特に何も変更せず「続ける」を押していきます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss4.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss4.png&#34; alt=&#34;&#34; title=&#34;ss4&#34; width=&#34;500&#34; height=&#34;432&#34; class=&#34;aligncenter size-full wp-image-87&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;これで完了です。&lt;/p&gt;
+
+&lt;p&gt;インストールを行なうことでXcodeを使って開発する準備が整いました。&lt;/p&gt;
+
+&lt;h3 id=&#34;開発準備-xcode:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(Xcode)&lt;/h3&gt;
+
+&lt;p&gt;インストールが完了したので、早速Xcodeを起動してみます。&lt;/p&gt;
+
+&lt;p&gt;起動して新規プロジェクト作成画面を開くと、PhoneGap開発用のプロジェクトが追加されていました。&lt;/p&gt;
+
+&lt;p&gt;(Cordova-based-Applicationというものですね)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss5.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss5.png&#34; alt=&#34;&#34; title=&#34;ss5&#34; width=&#34;500&#34; height=&#34;480&#34; class=&#34;aligncenter size-full wp-image-90&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上記プロジェクトを選択してまずサンプルでプロジェクトを作ってみます。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss6.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss6.png&#34; alt=&#34;&#34; title=&#34;ss6&#34; width=&#34;500&#34; height=&#34;487&#34; class=&#34;aligncenter size-full wp-image-91&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ただ、このままでは実際に開発で使用するディレクトリがないため、開発用のｗｗｗディレクトリを追加します。&lt;/p&gt;
+
+&lt;p&gt;プロジェクトのルートよりshow Finderをクリックすることで、Finderが表示され、開いた所にｗｗｗディレクトリがありますので、これを先程作成したプロジェクトにドラッグ&amp;amp;ドロップします。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss8.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss8.png&#34; alt=&#34;&#34; title=&#34;ss8&#34; width=&#34;500&#34; height=&#34;204&#34; class=&#34;aligncenter size-full wp-image-98&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;「右クリック」で上記の様にメニューが表示されますので選択します。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss9.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss9.png&#34; alt=&#34;&#34; title=&#34;ss9&#34; width=&#34;412&#34; height=&#34;140&#34; class=&#34;aligncenter size-full wp-image-100&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ディレクトリと、その中身「index.html」と「cordova-1.8.1.js」も追加します。&lt;/p&gt;
+
+&lt;p&gt;実際に追加してみました。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss10.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/06/ss10.png&#34; alt=&#34;&#34; title=&#34;ss10&#34; width=&#34;250&#34; height=&#34;147&#34; class=&#34;aligncenter size-full wp-image-101&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;追加してXcodeのプロジェクトより確認した画面が上記の通りとなります。&lt;/p&gt;
+
+&lt;p&gt;これでエミュレータを起動してみるとエラーも出ずに正常に起動することが出来ました。&lt;/p&gt;
+
+&lt;p&gt;ここまででiOSでの開発準備も出来ましたので、次回よりHello Worldの表示や実際にAPIなども使って色々と実験していきたいと思います。&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>WordPressのデザインを変更する際に知っておくと良さそうな事</title>
+      <link>http://intemous9.github.io/2012/04/24/wordpress-customize/</link>
+      <pubDate>Tue, 24 Apr 2012 02:04:30 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2012/04/24/wordpress-customize/</guid>
+      <description>
+
+&lt;p&gt;&lt;span style=&#34;font-size:10px;&#34;&gt;&lt;img src=&#34;http://farm7.static.flickr.com/6030/5965186458_bf20305722_m.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;WordPress Pencil and Pins-05 / thisismyurl&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;WordPress、他ブログサービスと異なるのはカスタマイズのしやすさでしょうか。&lt;/p&gt;
+
+&lt;p&gt;サイドメニューはもちろん、デザインも多少のWordPressのお作法を覚えれば自分でカスタマイズ出来るので面白い！&lt;/p&gt;
+
+&lt;p&gt;とはいえ、自分はデザインが1から出来る訳ではないので、他の方が作ったデザインをベースに自分好みに直すしかできないのですが&amp;#8230;（泣）&lt;/p&gt;
+
+&lt;p&gt;デザインも自分で出来るようになりたいです！これを先の目標にしつつ&amp;#8230;。&lt;/p&gt;
+
+&lt;p&gt;今回はテーマを編集する際に調べた内容、またテーマ内の共通となるテンプレートの意味について理解した部分をまとめておこうと思います。&lt;/p&gt;
+
+&lt;p&gt;まだまだ勉強中でもあるので、間違っている箇所等があれば教えて頂けますと幸いです。&lt;/p&gt;
+
+&lt;p&gt;随時情報は更新していきたいと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;目次:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;目次&lt;/h2&gt;
+
+&lt;ol&gt;
+&lt;li&gt;テーマを作るのに必要な最小構成ファイル&lt;/li&gt;
+&lt;li&gt;index.php&lt;/li&gt;
+&lt;li&gt;style.css&lt;/li&gt;
+&lt;li&gt;page.php&lt;/li&gt;
+&lt;li&gt;single.php&lt;/li&gt;
+&lt;li&gt;functions.php&lt;/li&gt;
+&lt;li&gt;まとめ&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&#34;テーマをつくるのに必要な最小構成ファイル:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;テーマをつくるのに必要な最小構成ファイル&lt;/h2&gt;
+
+&lt;p&gt;他の方が作った色々なテーマを見てみると分かるのですが、テーマ毎に入っているファイル、またテーマ用で作成されたファイル等があり、1から作るには最低限何が必要か分かりませんでした。&lt;/p&gt;
+
+&lt;p&gt;そこで調べていき分かったのが、テーマを作成する際に必要最小限なファイルは&lt;/p&gt;
+
+&lt;p&gt;・index.php&lt;/p&gt;
+
+&lt;p&gt;・style.css&lt;/p&gt;
+
+&lt;p&gt;この2つがあればとりあえずのテーマインストールは行なう事ができました。&lt;/p&gt;
+
+&lt;p&gt;とはいえ、この2つだけだと投稿記事等を表示はできず、あくまでTOPページを表示するだけしかできません。&lt;/p&gt;
+
+&lt;p&gt;テーマをインスールするために必要な最低限のファイルですね。&lt;/p&gt;
+
+&lt;h2 id=&#34;index-php:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;index.php&lt;/h2&gt;
+
+&lt;p&gt;TOPページにあたるテンプレートとなります。&lt;/p&gt;
+
+&lt;p&gt;WordPressで作成されたページにアクセスすると初回はこのテンプレートが呼び出されます。&lt;/p&gt;
+
+&lt;p&gt;一番カスタマイズされるファイルとなりますね。&lt;/p&gt;
+
+&lt;p&gt;またheader.phpやfooter.phpなど、共通部分などを別途ファイルに切りだしておくと、下記に説明があります固定ページ、投稿用ページなどでも使い回す事ができ便利となります。&lt;/p&gt;
+
+&lt;h2 id=&#34;style-css:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;style.css&lt;/h2&gt;
+
+&lt;p&gt;これもテーマを構成する際に必須なファイルとなりますが、別にこれだけでCSSを定義する必要はなく&amp;#8230;(自分で好きにCSSファイルを追加することも可)&lt;/p&gt;
+
+&lt;p&gt;WordPress内部で共通に呼び出される等で必要になるのでしょうかね。&lt;/p&gt;
+
+&lt;p&gt;style.cssがないとテーマをインストールすることはできませんでした。&lt;/p&gt;
+
+&lt;h2 id=&#34;page-php:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;page.php&lt;/h2&gt;
+
+&lt;p&gt;このテンプレートは、WordPressで固定ページ(WordPress Ver3以降で追加されたもの)を使用すると呼び出されるファイルとなります。&lt;/p&gt;
+
+&lt;p&gt;固定ページとは、投稿記事とは異なり時系列に影響しないページを制作する際に使用するページとなるようです。&lt;/p&gt;
+
+&lt;p&gt;自己紹介など頻繁に更新のありそうなページを制作する際に使用されるものなんでしょうかね。まだ自分では使い分けができておりません。&lt;/p&gt;
+
+&lt;p&gt;この固定ページを使用したページにアクセスするとpage.phpが呼び出されるので、ページデザインを変更するにはこのファイルを編集します。&lt;/p&gt;
+
+&lt;h2 id=&#34;single-php:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;single.php&lt;/h2&gt;
+
+&lt;p&gt;これは、各記事(投稿毎)の単体ページ用のテンプレートとなります。&lt;/p&gt;
+
+&lt;p&gt;記事ページにアクセスするとこのテンプレートが呼び出されます。&lt;/p&gt;
+
+&lt;h2 id=&#34;functions-php:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;functions.php&lt;/h2&gt;
+
+&lt;p&gt;これがなかなか便利だなと思いました。&lt;/p&gt;
+
+&lt;p&gt;テンプレート内で独自の関数が必要になった際にこのファイルに定義しておくとテンプレート内で呼び出す事ができます。&lt;/p&gt;
+
+&lt;p&gt;既にWordPressでも沢山の関数は用意されてますが、それ以外でも例えばある特定の文字を別の文字に置換したい、またその処理は他のテンプレートでも使いそう、といった時にこのファイルはとても便利に使えました。&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;まだまだWordPressのテーマをカスタマイズするには覚える事も沢山あり、苦戦しそうですが、自分で好きにブログを作れると面白いですね！&lt;/p&gt;
+
+&lt;p&gt;また、カスタマイズする際は下記サイトを参考にさせて頂きました。&lt;/p&gt;
+
+&lt;p&gt;ファイル毎の詳細な説明もデモテーマを使いながら紹介があるのでとても分かりやすいです。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.webcreatorbox.com/tech/wordpress3-original-theme/&#34; title=&#34;WordPress オリジナルテーマの作り方 3.0+ &#34; target=&#34;_blank&#34;&gt;WordPress オリジナルテーマの作り方 3.0+ &lt;/a&gt;&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>WordPressを使ってブログを作成する</title>
+      <link>http://intemous9.github.io/2012/04/22/start-wordpress-blog/</link>
+      <pubDate>Sun, 22 Apr 2012 00:34:10 +0000</pubDate>
+      
+      <guid>http://intemous9.github.io/2012/04/22/start-wordpress-blog/</guid>
+      <description>
+
+&lt;p&gt;&lt;span style=&#34;font-size:10px;&#34;&gt;&lt;img src=&#34;http://farm5.static.flickr.com/4099/4919659112_70f8836dfa_m.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;WordPress Logo / Phil Oakley&lt;/span&gt;&lt;/p&gt;
+
+&lt;p&gt;はじめまして！&lt;/p&gt;
+
+&lt;p&gt;一発目の記事になります！&lt;/p&gt;
+
+&lt;p&gt;最初の記事はずっと前から使ってみたかったWordPressについて。&lt;/p&gt;
+
+&lt;p&gt;せっかく導入してみたので、サイト公開までの手順を書きたいと思います。&lt;/p&gt;
+
+&lt;p&gt;様々なブログサービスがありますが、WordPressはカスタマイズの自由度が凄く高く。&lt;/p&gt;
+
+&lt;p&gt;また勉強のためと、いい機会でもあったので使ってみることにしました。&lt;/p&gt;
+
+&lt;p&gt;という事で、最初の記事はWordPressを使ったブログの作成方法からまとめておきたいと思います。&lt;/p&gt;
+
+&lt;p&gt;まとめといっても他サイト様の参照という形ではありますが&amp;#8230;。&lt;/p&gt;
+
+&lt;p&gt;最初はインストール、初期設定や参考にしたサイトをまとめておこうと思います。&lt;/p&gt;
+
+&lt;h2 id=&#34;wordpressをインストールしてみる:4066c6fab69e4dd4894c4f662e0813da&#34;&gt;WordPressをインストールしてみる&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://www.adminweb.jp/wordpress/install/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://www.adminweb.jp/wordpress/install/&#34;&gt;http://www.adminweb.jp/wordpress/install/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;基本は上記サイトを参考にインストールしました。&lt;/p&gt;
+
+&lt;p&gt;手順通り行えばそれ程難しくもなくインストールできるかと思います。&lt;/p&gt;
+
+&lt;p&gt;バージョンは公式サイトより、最新版を確認。&lt;/p&gt;
+
+&lt;p&gt;WordPress公式サイト(日本語)&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://ja.wordpress.org/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://ja.wordpress.org/&#34;&gt;http://ja.wordpress.org/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;インストール後に最初に行った事:4066c6fab69e4dd4894c4f662e0813da&#34;&gt;インストール後に最初に行った事&lt;/h2&gt;
+
+&lt;p&gt;SEO対策や、その他便利なプラグインの紹介、設定方法がまとまって&lt;/p&gt;
+
+&lt;p&gt;おりましたので下記のサイトを参考にプラグインを導入しました。&lt;/p&gt;
+
+&lt;p&gt;各記事のリンクの設定や細かい設定まで紹介されておりましたので大変参考に&lt;/p&gt;
+
+&lt;p&gt;なりました。&lt;/p&gt;
+
+&lt;p&gt;・WordPressをインストールしたら最初にやること&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://web.showjin.me/2011/02/firsttodo_install_wordpress.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://web.showjin.me/2011/02/firsttodo_install_wordpress.html&#34;&gt;http://web.showjin.me/2011/02/firsttodo_install_wordpress.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;・WordPressを公開する前にやっておきたい7つの事&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://webdesignrecipes.com/wordpress-start-up/&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://webdesignrecipes.com/wordpress-start-up/&#34;&gt;http://webdesignrecipes.com/wordpress-start-up/&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;最後に:4066c6fab69e4dd4894c4f662e0813da&#34;&gt;最後に&lt;/h2&gt;
+
+&lt;p&gt;WordPressはカスタマイズが色々と出来るようなのでとても面白そうです。&lt;/p&gt;
+
+&lt;p&gt;また自分でもデザインのテーマとか作れたらいいんですけど&amp;#8230;。&lt;/p&gt;
+
+&lt;p&gt;この辺も少しずつ勉強しながら自分で作っていきたいです！&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
