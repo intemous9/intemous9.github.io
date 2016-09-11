@@ -79,37 +79,26 @@
 
 <p>また、端末によって微妙に挙動が異なったり、WiFi切替まで時間もかかったりと、色々と下記以外にも調整しないといけない事が多かったです。</p>
 
-<p><a href="http://developer.android.com/reference/android/net/wifi/WifiManager.html" target="_blank">Androidリファレンス:WifiManager</a></p>
-
-<p><a href="http://developer.android.com/reference/android/net/wifi/WifiConfiguration.html" target="_blank">Androidリファレンス:WifiConfiguration</a></p>
+<p><a href="http://developer.android.com/reference/android/net/wifi/WifiManager.html" target="_blank">Androidリファレンス:WifiManager</a><br />
+<a href="http://developer.android.com/reference/android/net/wifi/WifiConfiguration.html" target="_blank">Androidリファレンス:WifiConfiguration</a></p>
 
 <h2 id="使用するために:506278074be7e994baf0f209d1456c13">使用するために</h2>
 
 <p>まずAndroidManifest.xmlに下記のパーミッション追加をする必要があります。</p>
 
-<p>[java]</p>
-
-<p><uses-permission android:name="android.permission.CHANGE\_WIFI\_STATE"></uses-permission></p>
-
-<p><uses-permission android:name="android.permission.ACCESS\_WIFI\_STATE"></uses-permission></p>
-
-<p>[/java]</p>
+<pre><code class="language-xml">&lt;uses-permission android:name=&quot;android.permission.CHANGE\_WIFI\_STATE&quot;&gt;&lt;/uses-permission&gt;
+&lt;uses-permission android:name=&quot;android.permission.ACCESS\_WIFI\_STATE&quot;&gt;&lt;/uses-permission&gt;
+</code></pre>
 
 <h2 id="wifi機能をonにする:506278074be7e994baf0f209d1456c13">WiFi機能をONにする</h2>
 
 <p>SSID登録の際は、WiFi機能が有効でないと出来ないので、もしプログラム内で有効にするには下記の方法で行う</p>
 
-<p>[java]</p>
-
-<p>WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);</p>
-
-<p>if (wifiManager.isWifiEnabled() == false) {</p>
-
-<p>wifiManager.setWifiEnabled(true);</p>
-
-<p>}</p>
-
-<p>[/java]</p>
+<pre><code class="language-java">WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+if (wifiManager.isWifiEnabled() == false) {
+    wifiManager.setWifiEnabled(true);
+}
+</code></pre>
 
 <p>上記のコードをActivityのonCreate等で実行しておくと良いかと思います。</p>
 
@@ -123,183 +112,98 @@
 
 <h2 id="セキュリティなしのssidを設定する:506278074be7e994baf0f209d1456c13">セキュリティなしのSSIDを設定する</h2>
 
-<p>[java]</p>
-
-<p>WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);</p>
-
-<p>String ssid = &#8220;SSID_NAME&#8221;;</p>
-
-<p>WifiConfiguration config = new WifiConfiguration();</p>
-
-<p>config.SSID = &#8220;&amp;#8221;&#8221; + ssid + &#8220;&amp;#8221;&#8221;;</p>
-
-<p>config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);</p>
-
-<p>config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);</p>
-
-<p>config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);</p>
-
-<p>config.allowedAuthAlgorithms.clear();</p>
-
-<p>config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);</p>
-
-<p>config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);</p>
-
-<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);</p>
-
-<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);</p>
-
-<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);</p>
-
-<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);</p>
-
-<p>int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります</p>
-
-<p>wifiManager.saveConfiguration();</p>
-
-<p>wifiManager.updateNetwork(config);</p>
-
-<p>[/java]</p>
+<pre><code class="language-java">WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+String ssid = &quot;SSID_NAME&quot;;
+WifiConfiguration config = new WifiConfiguration();
+config.SSID = &quot;\&quot;&quot; + ssid + &quot;\&quot;&quot;;
+config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
+config.allowedAuthAlgorithms.clear();
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります
+wifiManager.saveConfiguration();
+wifiManager.updateNetwork(config);
+</code></pre>
 
 <h2 id="認証方式-wepのssid設定:506278074be7e994baf0f209d1456c13">認証方式 : WEPのSSID設定</h2>
 
-<p>[java]</p>
-
-<p>WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);</p>
-
-<p>String ssid = &#8220;SSID_NAME&#8221;;</p>
-
-<p>WifiConfiguration config = new WifiConfiguration();</p>
-
-<p>config.SSID = &#8220;&amp;#8221;&#8221; + ssid + &#8220;&amp;#8221;&#8221;;</p>
-
-<p>config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);</p>
-
-<p>config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);</p>
-
-<p>config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);</p>
-
-<p>config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);</p>
-
-<p>config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.SHARED);</p>
-
-<p>config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);</p>
-
-<p>config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);</p>
-
-<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);</p>
-
-<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);</p>
-
-<p>config.wepKeys[0] = &#8220;&amp;#8221;password&amp;#8221;&#8221;;</p>
-
-<p>config.wepTxKeyIndex = 0;</p>
-
-<p>int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります</p>
-
-<p>wifiManager.saveConfiguration();</p>
-
-<p>wifiManager.updateNetwork(config);</p>
-
-<p>[/java]</p>
+<pre><code class="language-java">WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+String ssid = &quot;SSID_NAME&quot;;
+WifiConfiguration config = new WifiConfiguration();
+config.SSID = &quot;\&quot;&quot; + ssid + &quot;\&quot;&quot;;
+config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
+config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);
+config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.SHARED);
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
+config.wepKeys[0] = &quot;\&quot;password\&quot;&quot;;
+config.wepTxKeyIndex = 0;
+int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります
+wifiManager.saveConfiguration();
+wifiManager.updateNetwork(config);
+</code></pre>
 
 <h2 id="認証方式-wpa-wpa2-pskのssid設定:506278074be7e994baf0f209d1456c13">認証方式 : WPA/WPA2-PSKのSSID設定</h2>
 
-<p>[java]</p>
-
-<p>WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);</p>
-
-<p>String ssid = &#8220;SSID_NAME&#8221;;</p>
-
-<p>WifiConfiguration config = new WifiConfiguration();</p>
-
-<p>config.SSID = &#8220;&amp;#8221;&#8221; + ssid + &#8220;&amp;#8221;&#8221;;</p>
-
-<p>config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);</p>
-
-<p>config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);</p>
-
-<p>config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);</p>
-
-<p>config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);</p>
-
-<p>config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);</p>
-
-<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);</p>
-
-<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);</p>
-
-<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);</p>
-
-<p>config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);</p>
-
-<p>config.preSharedKey = &#8220;&amp;#8221;password&amp;#8221;&#8221;;</p>
-
-<p>int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります</p>
-
-<p>wifiManager.saveConfiguration();</p>
-
-<p>wifiManager.updateNetwork(config);</p>
-
-<p>[/java]</p>
+<pre><code class="language-java">WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+String ssid = &quot;SSID_NAME&quot;;
+WifiConfiguration config = new WifiConfiguration();
+config.SSID = &quot;\&quot;&quot; + ssid + &quot;\&quot;&quot;;
+config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
+config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+config.preSharedKey = &quot;\&quot;password\&quot;&quot;;
+int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります
+wifiManager.saveConfiguration();
+wifiManager.updateNetwork(config);
+</code></pre>
 
 <h2 id="上記で作成したssidに接続する:506278074be7e994baf0f209d1456c13">上記で作成したSSIDに接続する</h2>
 
 <p>networkIdが正しくとれていれば実際に接続を試してみます。</p>
 
-<p>[java]</p>
-
-<p>WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);</p>
-
-<p>int networkId = 0; // 上記設定で取得できたものを使用</p>
-
-<p>String targetSSID = &#8220;hoge-ssid&#8221;;</p>
-
-<p>// WiFi機能が無効の状態で呼び出されるとSSID検索の所でnullとなるので念のため例外処理を行なう</p>
-
-<p>try {</p>
-
-<p>// ssidの検索を開始</p>
-
-<p>wifiManager.startScan();</p>
-
-<p>for (ScanResult result : wifiManager.getScanResults()) {</p>
-
-<p>// Android4.2以降よりダブルクォーテーションが付いてくるので除去</p>
-
-<p>String resultSSID = result.SSID.replace(&#8220;&amp;#8221;&#8221;, &#8220;&#8221;);</p>
-
-<p>if (resultSSID.equals(targetSSID)) {</p>
-
-<p>// 接続を行う</p>
-
-<p>if (networkId &gt; 0) {</p>
-
-<p>// 先に既存接続先を無効にしてから接続します</p>
-
-<p>for (WifiConfiguration c0 : wifiManager.getConfiguredNetworks()) {</p>
-
-<p>wifiManager.enableNetwork(c0.networkId, false);</p>
-
-<p>}</p>
-
-<p>wifiManager.enableNetwork(networkId, true);</p>
-
-<p>}</p>
-
-<p>break;</p>
-
-<p>}</p>
-
-<p>}</p>
-
-<p>} catch (NullPointerException e) {</p>
-
-<p>// 適切な例外処理をしてください。</p>
-
-<p>}</p>
-
-<p>[/java]</p>
+<pre><code class="language-java">WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+int networkId = 0; // 上記設定で取得できたものを使用
+String targetSSID = &quot;hoge-ssid&quot;;
+// WiFi機能が無効の状態で呼び出されるとSSID検索の所でnullとなるので念のため例外処理を行なう
+try {
+    // ssidの検索を開始
+    wifiManager.startScan();
+    for (ScanResult result : wifiManager.getScanResults()) {
+        // Android4.2以降よりダブルクォーテーションが付いてくるので除去
+        String resultSSID = result.SSID.replace(&quot;\&quot;&quot;, &quot;&quot;);
+        if (resultSSID.equals(targetSSID)) {
+            // 接続を行う
+            if (networkId &gt; 0) {
+                // 先に既存接続先を無効にしてから接続します
+                for (WifiConfiguration c0 : wifiManager.getConfiguredNetworks()) {
+                    wifiManager.enableNetwork(c0.networkId, false);
+                }
+                wifiManager.enableNetwork(networkId, true);
+            }
+            break;
+        }
+    }
+} catch (NullPointerException e) {
+   // 適切な例外処理をしてください。
+}
+</code></pre>
 
 <p>これでひと通りSSID設定と、接続まで出来るようになりました。</p>
 

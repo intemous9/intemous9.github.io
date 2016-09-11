@@ -75,7 +75,7 @@
     <article>
       <p>org.apache.httpパッケージとAndroidHttpClientクラスがAndroid5.1(API Level 22)から非推奨になりましたね。</p>
 
-<p><a href="https://developer.android.com/about/versions/android-5.1.html" target="_blank"><a href="https://developer.android.com/about/versions/android-5.1.html">https://developer.android.com/about/versions/android-5.1.html</a></a></p>
+<p><a href="https://developer.android.com/about/versions/android-5.1.html" target="_blank">Android 5.1 APIs | Android Developers</a></p>
 
 <p>これまでHttpClientで実装していたアプリはURLConnectionクラスを利用・変更しましょうとの事で。</p>
 
@@ -85,70 +85,11 @@
 
 <p>ということで30系でも動作するように対応したサンプルメソッド</p>
 
-<noscript>
-  <pre><code class="language-java java">/**
- * urlとcookieからbodyを取得する
- */
-public static String getContents(String urlString, String cookies) throws IOException {
- 
-    URL url = new URL(urlString);
-    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
- 
-    conn.setRequestMethod("GET");
-    conn.setConnectTimeout(5000);
-    conn.setDoOutput(true);
-    if (cookies != null) {
-        conn.setRequestProperty("Cookie", cookies);
-    }
- 
-    try {
- 
-        conn.connect();
-        int statuscode = conn.getResponseCode();
- 
-        // check 20x
-        if (statuscode != HttpURLConnection.HTTP_OK
-                && statuscode != HttpURLConnection.HTTP_CREATED) {
-            // check 30x
-            if (statuscode == HttpURLConnection.HTTP_MOVED_TEMP
-                    || statuscode == HttpURLConnection.HTTP_MOVED_PERM
-                    || statuscode == HttpURLConnection.HTTP_SEE_OTHER) {
- 
-                String newUrlString = conn.getHeaderField("Location");
-                cookies = conn.getHeaderField("Set-Cookie");
-                conn = (HttpURLConnection) new URL(newUrlString).openConnection();
- 
-                if (cookies != null) {
-                    conn.setRequestProperty("Cookie", cookies);
-                }
- 
-            } else {
-                // 20x or 30x系でないので例外を送出
-                throw new IOException("Response code is " + Integer.toString(statuscode));
-            }
-        }
- 
-    } catch (RuntimeException e) {
-        throw e;
-    }
- 
-    InputStream inputStream = new BufferedInputStream(conn.getInputStream());
-    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
-    StringBuilder stringBuilder = new StringBuilder();
-    String line = "";
- 
-    while ((line = bufferedReader.readLine()) != null) {
-        stringBuilder.append(line);
-    }
-    bufferedReader.close();
- 
-    return stringBuilder.toString();
-}</code></pre>
-</noscript>
+<script src="https://gist.github.com/dtdweb/13e25365a827df07ce07.js"></script>
 
 <p>一度レスポンスコードを受け取り、20x系なら正常処理、30x系の場合は再度connクラスを再生成して対応しました。</p>
 
-<p>にしても、IO系クラス扱うのも少し苦手だ&#8230;。</p>
+<p>にしても、IO系クラス扱うのも少し苦手だ&hellip;。</p>
 
       
       

@@ -69,7 +69,9 @@
       </div>
     </div>
     <article>
-      <p>久しぶりの更新です。最近ぜんぜん更新しないまま、だいぶ経ってしまいました。</p>
+      
+
+<p>久しぶりの更新です。最近ぜんぜん更新しないまま、だいぶ経ってしまいました。</p>
 
 <p>書きたい事は結構あるのに、忙しいとかを理由にサボってしまい…。</p>
 
@@ -85,27 +87,43 @@
 
 <p>※ただ、今回の現象を抑える事は出来ましたが、これが本当に解決策として正しいのかかなり怪しいので、詳しく知っている方がいればぜひ教えて頂きたいです。</p>
 
-<p>レイアウトファイル: (fragment_map_sample.xml)</p>
+<ul>
+<li>レイアウトファイル: (fragment_map_sample.xml)</li>
+</ul>
 
-<p>[xml name=&#8221;fragment_map_sample.xml&#8221;]</p>
+<pre><code class="language-xml">&lt;LinearLayout
+    xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;
+    xmlns:tools=&quot;http://schemas.android.com/tools&quot;
+    android:layout_width=&quot;match_parent&quot;
+    android:layout_height=&quot;match_parent&quot;
+    android:orientation=&quot;vertical&quot;
+    tools:context=&quot;com.dtdweb.mapfragmentsample.fragments.MapSampleFragment&quot;&gt;
 
-<p><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools" android:layout\_width="match\_parent" android:layout\_height="match\_parent" android:orientation="vertical" tools:context="com.dtdweb.mapfragmentsample.fragments.MapSampleFragment"></p>
+    &lt;FrameLayout
+        android:layout_width=&quot;fill_parent&quot;
+        android:layout_height=&quot;fill_parent&quot;&gt;
 
-<p><FrameLayout android:layout\_width="fill\_parent" android:layout\_height="fill\_parent"></p>
+        &lt;com.google.android.gms.maps.MapView
+            android:id=&quot;@+id/mapview&quot;
+            android:layout_width=&quot;fill_parent&quot;
+            android:layout_height=&quot;fill_parent&quot; /&gt;
 
-<p><com.google.android.gms.maps.MapView android:id="@+id/mapview" android:layout\_width="fill\_parent" android:layout\_height="fill\_parent" /></p>
+        &lt;TextView
+            android:id=&quot;@+id/transparent_layout&quot;
+            android:layout_width=&quot;fill_parent&quot;
+            android:layout_height=&quot;fill_parent&quot;
+            android:background=&quot;@drawable/translucent_background&quot; /&gt;
 
-<p><TextView android:id="@+id/transparent\_layout" android:layout\_width="fill\_parent" android:layout\_height="fill\_parent" android:background="@drawable/translucent\_background" /></p>
+    &lt;/FrameLayout&gt;
 
-<p></FrameLayout></p>
+&lt;/LinearLayout&gt;
+</code></pre>
 
-<p></LinearLayout></p>
+<ul>
+<li>完成画面:</li>
+</ul>
 
-<p>[/xml]</p>
-
-<p>完成画面:</p>
-
-<p>[<img src="http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample-180x300.png" alt="20150331_fragment_mapview_sample" width="180" height="300" class="alignnone size-medium wp-image-341" srcset="http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample-180x300.png 180w, http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png 480w" sizes="(max-width: 180px) 100vw, 180px" />][1]</p>
+<p><img src="/images/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png" alt="20150331_fragment_mapview_sample" width="180" height="300" class="alignnone size-medium" /></p>
 
 <p>画面の通り見かけ上は変わらず、またFragmentを切り替えた際も画面のチラつきを抑える事が出来ました。</p>
 
@@ -113,15 +131,15 @@
 
 <p>もうちょっと調べて、他に方法がないか調べてみる必要がありそうです…。</p>
 
+<h2 id="参考:d493a555f3b789dfb12d50a1710f0197">参考</h2>
+
 <p>サンプルで使っているMapViewはGoogle Map API v2を使用</p>
 
-<p><a href="https://developers.google.com/maps/documentation/android/?hl=ja" title="https://developers.google.com/maps/documentation/android/?hl=ja" target="_blank"><a href="https://developers.google.com/maps/documentation/android/?hl=ja">https://developers.google.com/maps/documentation/android/?hl=ja</a></a></p>
+<p><a href="https://developers.google.com/maps/documentation/android/?hl=ja" title="https://developers.google.com/maps/documentation/android/?hl=ja" target="_blank">Google Maps Android API  &nbsp;|&nbsp; Google Developers</a></p>
 
 <p>サンプルのソースコードは下記リポジトリに追加しております。</p>
 
-<p><a href="https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample" title="https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample" target="_blank"><a href="https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample">https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample</a></a></p>
-
-<p>[1]: <a href="http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png">http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png</a></p>
+<p><a href="https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample" title="https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample" target="_blank">android/Fragment-MapViewSample/MapFragmentSample</a></p>
 
       
       

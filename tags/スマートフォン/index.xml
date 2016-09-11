@@ -21,7 +21,7 @@
 
 &lt;p&gt;前回の記事&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://intemous9.github.io/2012/06/26/phonegap-ios-1/&#34;&gt;PhoneGapで始めるスマホアプリ開発~iOS編(セットアップ)~&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[PhoneGapで始めるスマホアプリ開発~iOS編(セットアップ)~][1]&lt;/p&gt;
 
 &lt;p&gt;こちらでPhoneGapでの開発環境を作ったので、引き続き実際にコードを書きながら色々と試してみました。&lt;/p&gt;
 
@@ -37,51 +37,40 @@
 
 &lt;p&gt;本当に「Hello World」だけを表示するためindex.htmlの中身を最低限にしてみました。&lt;/p&gt;
 
-&lt;p&gt;index.html&lt;/p&gt;
+&lt;h3 id=&#34;index-html:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;index.html&lt;/h3&gt;
 
-&lt;p&gt;[html]&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;hello-world-phonegap:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;Hello World!! PhoneGap!&lt;/h1&gt;
-
-&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/html&gt;&lt;/p&gt;
-
-&lt;p&gt;[/html]&lt;/p&gt;
-
-&lt;p&gt;実際にシミュレータで実行した結果はこちらになります。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss2.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss2.png&#34; alt=&#34;&#34; title=&#34;ios2-ss2&#34; width=&#34;366&#34; height=&#34;704&#34; class=&#34;aligncenter size-full wp-image-152&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;本当にシンプルなHTMLで表示することが出来ました。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;&amp;quot; /&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;only screen and (max-device-width: 480px)&amp;quot; href=&amp;quot;iphone.css&amp;quot; type=&amp;quot;text/css&amp;quot; /&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot; charset=&amp;quot;utf-8&amp;quot; src=&amp;quot;cordova-1.8.1.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;h1&amp;gt;Hello World!! PhoneGap!&amp;lt;/h1&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;静的な画面を出すだけならHTMLの編集だけで表示することが出来るようですね。&lt;/p&gt;
 
-&lt;h3 id=&#34;apiを呼び出すために覚えたい事:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを呼び出すために覚えたい事&lt;/h3&gt;
+&lt;h2 id=&#34;apiを呼び出すために覚えたい事:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを呼び出すために覚えたい事&lt;/h2&gt;
 
-&lt;h4 id=&#34;アプリケーション上でドラッグを禁止する場合:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;アプリケーション上でドラッグを禁止する場合&lt;/h4&gt;
+&lt;h3 id=&#34;アプリケーション上でドラッグを禁止する場合:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;アプリケーション上でドラッグを禁止する場合&lt;/h3&gt;
 
 &lt;p&gt;禁止する場合は、先程のindex.htmlのhead内に下記のコードを追記する事で設定する事が出来ます。&lt;/p&gt;
 
-&lt;p&gt;index.html&lt;/p&gt;
+&lt;h4 id=&#34;index-html-1:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;index.html&lt;/h4&gt;
 
-&lt;p&gt;[javascript]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function preventBehavior(e) {
+    e.preventDefault();
+}
+document.addEventListener(&amp;quot;touchmove&amp;quot;, preventBehavior, false);
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;function preventBehavior(e)&lt;/p&gt;
-
-&lt;p&gt;{&lt;/p&gt;
-
-&lt;p&gt;e.preventDefault();&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;document.addEventListener(&amp;#8220;touchmove&amp;#8221;, preventBehavior, false);&lt;/p&gt;
-
-&lt;p&gt;[/javascript]&lt;/p&gt;
-
-&lt;h4 id=&#34;phonegapの各種apiを使うために重要な項目:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;PhoneGapの各種APIを使うために重要な項目&lt;/h4&gt;
+&lt;h3 id=&#34;phonegapの各種apiを使うために重要な項目:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;PhoneGapの各種APIを使うために重要な項目&lt;/h3&gt;
 
 &lt;p&gt;PhoneGapのAPIを使用するためには、JavaScriptコードとネイティブコードのロードが完了した時点でAPIの処理を呼び出す必要があります。&lt;/p&gt;
 
@@ -91,79 +80,76 @@
 
 &lt;p&gt;index.html(JS部分)&lt;/p&gt;
 
-&lt;p&gt;[javascript]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// ロード完了時点に呼び出す
+function onBodyLoad() {
+    document.addEventListener(&amp;quot;deviceready&amp;quot;, onDeviceReady, false);
+}
 
-&lt;p&gt;// ロード完了時点に呼び出す&lt;/p&gt;
-
-&lt;p&gt;function onBodyLoad()&lt;/p&gt;
-
-&lt;p&gt;{&lt;/p&gt;
-
-&lt;p&gt;document.addEventListener(&amp;#8220;deviceready&amp;#8221;, onDeviceReady, false);&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;// PhoneGapライブラリ/ネイティブコードのロード後に呼び出す&lt;/p&gt;
-
-&lt;p&gt;function onDeviceReady()&lt;/p&gt;
-
-&lt;p&gt;{&lt;/p&gt;
-
-&lt;p&gt;// この中でAPI処理を扱う&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;[/javascript]&lt;/p&gt;
+// PhoneGapライブラリ/ネイティブコードのロード後に呼び出す
+function onDeviceReady() {
+    // この中でAPI処理を扱う
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;index.html(html部分)&lt;/p&gt;
 
-&lt;p&gt;[html]&lt;/p&gt;
-
-&lt;!-- ロード完了時に呼び出すようにします --&gt;
-
-&lt;p&gt;[/html]&lt;/p&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!-- ロード完了時に呼び出すようにします --&amp;gt;
+&amp;lt;body onload=&amp;quot;onBodyLoad()&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;これで準備は完了となります。&lt;/p&gt;
 
-&lt;h3 id=&#34;apiを試してみました:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを試してみました&lt;/h3&gt;
+&lt;h2 id=&#34;apiを試してみました:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを試してみました&lt;/h2&gt;
 
 &lt;p&gt;せっかくなんで、簡単に使えるAPIを試してみました。&lt;/p&gt;
 
-&lt;h4 id=&#34;端末情報を取得するapi-device-api:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;端末情報を取得するAPI(Device API)&lt;/h4&gt;
+&lt;h3 id=&#34;端末情報を取得するapi-device-api:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;端末情報を取得するAPI(Device API)&lt;/h3&gt;
 
 &lt;p&gt;端末の情報を取得API、Device APIを実験に使用してみました。&lt;/p&gt;
 
-&lt;p&gt;参考:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.phonegap.com/en/1.0.0/phonegap_device_device.md.html#Device&#34; target=&#34;_blank&#34; &gt;Device APIドキュメント&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考： &lt;a href=&#34;http://docs.phonegap.com/en/1.0.0/phonegap_device_device.md.html#Device&#34; target=&#34;_blank&#34; &gt;Device APIドキュメント&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;サンプルコード&lt;/p&gt;
 
-&lt;p&gt;[html]&lt;/p&gt;
-
-&lt;!-- ロード完了時に呼び出すようにします --&gt;
-
-&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;api-test:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;API Test&lt;/h1&gt;
-
-&lt;p id=&#34;deviceDesc&#34;&gt;
-  DeviceInfo
-&lt;/p&gt;
-
-&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/html&gt;&lt;/p&gt;
-
-&lt;p&gt;[/html]&lt;/p&gt;
-
-&lt;p&gt;実際に表示した画面が下記の通りとなります。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss3.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss3.png&#34; alt=&#34;&#34; title=&#34;ios2-ss3&#34; width=&#34;336&#34; height=&#34;656&#34; class=&#34;aligncenter size-full wp-image-175&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+  &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;&amp;quot; /&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;only screen and (max-device-width: 480px)&amp;quot; href=&amp;quot;iphone.css&amp;quot; type=&amp;quot;text/css&amp;quot; /&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot; charset=&amp;quot;utf-8&amp;quot; src=&amp;quot;cordova-1.8.1.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    // ロード完了時点に呼び出す
+    function onBodyLoad()
+    {       
+        document.addEventListener(&amp;quot;deviceready&amp;quot;, onDeviceReady, false);
+    }
+    // PhoneGapライブラリ/ネイティブコードのロード後に呼び出す
+    function onDeviceReady()
+    {
+        // 端末情報を取得して表示する
+        document.getElementById(&#39;deviceDesc&#39;).innerHTML =
+        &#39;&amp;lt;ul&amp;gt;&#39; +
+        &#39;&amp;lt;li&amp;gt;device=&#39; + device.name + &#39;&amp;lt;/li&amp;gt;&#39; +
+        &#39;&amp;lt;li&amp;gt;platform=&#39; + device.platform + &#39;&amp;lt;/li&amp;gt;&#39; +
+        &#39;&amp;lt;li&amp;gt;UUID=&#39; + device.uuid + &#39;&amp;lt;/li&amp;gt;&#39; +
+        &#39;&amp;lt;li&amp;gt;version=&#39; + device.version + &#39;&amp;lt;/li&amp;gt;&#39; +
+        &#39;&amp;lt;/ul&amp;gt;&#39;;
+    }
+    &amp;lt;/script&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;!-- ロード完了時に呼び出すようにします --&amp;gt;
+  &amp;lt;body onload=&amp;quot;onBodyLoad()&amp;quot;&amp;gt;
+      &amp;lt;h1&amp;gt;API Test&amp;lt;/h1&amp;gt;
+      &amp;lt;p id=&amp;quot;deviceDesc&amp;quot;&amp;gt;DeviceInfo&amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;呼び出し方もとても簡単で、すぐに使用することが出来ました。&lt;/p&gt;
 
-&lt;h3 id=&#34;まとめ:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;まとめ&lt;/h3&gt;
+&lt;h2 id=&#34;まとめ:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;まだまだ、これだけでは全然アプリを作れる状態ではないのですがAPIの呼び出し方と簡単ですが記述方法も覚える事が出来たので、引き続き色々と実験しながらやっていきたいと思います。&lt;/p&gt;
 
@@ -241,7 +227,7 @@
 
 &lt;p&gt;この2つとなります。&lt;/p&gt;
 
-&lt;h3 id=&#34;開発準備-ダウンロードとインストール:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(ダウンロードとインストール)&lt;/h3&gt;
+&lt;h2 id=&#34;開発準備-ダウンロードとインストール:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(ダウンロードとインストール)&lt;/h2&gt;
 
 &lt;p&gt;それでは公式サイトよりダウンロードしてみます。&lt;/p&gt;
 
@@ -277,7 +263,7 @@
 
 &lt;p&gt;インストールを行なうことでXcodeを使って開発する準備が整いました。&lt;/p&gt;
 
-&lt;h3 id=&#34;開発準備-xcode:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(Xcode)&lt;/h3&gt;
+&lt;h2 id=&#34;開発準備-xcode:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(Xcode)&lt;/h2&gt;
 
 &lt;p&gt;インストールが完了したので、早速Xcodeを起動してみます。&lt;/p&gt;
 

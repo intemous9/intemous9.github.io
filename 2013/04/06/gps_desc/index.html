@@ -71,7 +71,7 @@
     <article>
       
 
-<p><img src="http://blog.dtdweb.com/wp-content/uploads/2013/04/gps_ss1.png" alt="Gps ss1" title="gps_ss1.png" border="0" width="360" height="600" /></p>
+<p><img src="/images/wp-content/uploads/2013/04/ss1.png" alt="Gps ss1" title="gps_ss1.png" border="0" width="360" height="600" /></p>
 
 <p>GPS機能を使ったアプリを開発する機会があったんですが、調べてみると結構複雑でして。</p>
 
@@ -81,158 +81,103 @@
 
 <p>GPSを使用したアプリサンプルについては<a href="https://github.com/dtdweb/android/tree/master/GPSSample" target="_blank">github</a>にアップしてます。</p>
 
-<h3 id="もくじ:426ef98a8bb738f2bde1020f7c489130">もくじ</h3>
-
-<ul>
-<li>GPS機能の使い方とメソッド説明</li>
-<li>各プロバイダのメリット・デメリット</li>
-</ul>
-
-<h3 id="gps機能の使い方とメソッド説明:426ef98a8bb738f2bde1020f7c489130">GPS機能の使い方とメソッド説明</h3>
+<h2 id="gps機能の使い方とメソッド説明:426ef98a8bb738f2bde1020f7c489130">GPS機能の使い方とメソッド説明</h2>
 
 <p>まずGPS機能を使用するにはAndroidManifest.xmlに下記のパーミッションを追加する必要があります。</p>
 
 <p>・GPSによる位置情報利用</p>
 
-<p>[java]</p>
-
-<p><uses-permission android:name=”android.permission.ACCESS\_FINE\_LOCATION”/></p>
-
-<p>[/java]</p>
+<pre><code class="language-xml">&lt;uses-permission android:name=”android.permission.ACCESS\_FINE\_LOCATION”/&gt;
+</code></pre>
 
 <p>・ネットワークによる位置情報利用</p>
 
-<p>[java]</p>
-
-<p><uses-permission android:name=”android.permission.ACCESS\_COARSE\_LOCATION”/></p>
-
-<p>[/java]</p>
+<pre><code class="language-xml">&lt;uses-permission android:name=”android.permission.ACCESS\_COARSE\_LOCATION”/&gt;
+</code></pre>
 
 <p>あとはActivityなどで、LocationListenerインターフェースを実装し利用することが出来ます。</p>
 
 <p>実装が必要となるメソッドが4つあります。</p>
 
-<p>[java]</p>
+<pre><code class="language-java">@Override
+public void onLocationChanged(Location location) {
+    // TODO Auto-generated method stub
+}
+@Override
+public void onProviderDisabled(String provider) {
+    // TODO Auto-generated method stub
+}
 
-<p>@Override</p>
+@Override
+public void onProviderEnabled(String provider) {
+    // TODO Auto-generated method stub
+}
 
-<p>public void onLocationChanged(Location location) {</p>
-
-<p>// TODO Auto-generated method stub</p>
-
-<p>}</p>
-
-<p>@Override</p>
-
-<p>public void onProviderDisabled(String provider) {</p>
-
-<p>// TODO Auto-generated method stub</p>
-
-<p>}</p>
-
-<p>@Override</p>
-
-<p>public void onProviderEnabled(String provider) {</p>
-
-<p>// TODO Auto-generated method stub</p>
-
-<p>}</p>
-
-<p>@Override</p>
-
-<p>public void onStatusChanged(String provider, int status, Bundle extras) {</p>
-
-<p>// TODO Auto-generated method stub</p>
-
-<p>}</p>
-
-<p>[/java]</p>
+@Override
+public void onStatusChanged(String provider, int status, Bundle extras) {
+    // TODO Auto-generated method stub
+}
+</code></pre>
 
 <p>しかし使用する上では基本的にonLocationChangedメソッドだけ使ってました。</p>
 
 <p>このメソッドは、位置情報が取得出来ると呼び出されるメソッドとなります。</p>
 
-<h4 id="位置情報を取得してみる:426ef98a8bb738f2bde1020f7c489130">位置情報を取得してみる</h4>
+<h3 id="位置情報を取得してみる:426ef98a8bb738f2bde1020f7c489130">位置情報を取得してみる</h3>
 
-<p>[java]</p>
-
-<p>// ロケーションマネージャーのインスタンスを取得</p>
-
-<p>LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);</p>
-
-<p>// 利用できるGPSを選択してプロバイダを取得</p>
-
-<p>if (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {</p>
-
-<p>// ネットワークプロバイダを使って検索</p>
-
-<p>locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, this);</p>
-
-<p>} else if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {</p>
-
-<p>// GPSプロバイダを使って検索</p>
-
-<p>locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);</p>
-
-<p>}</p>
-
-<p>[/java]</p>
+<pre><code class="language-java">// ロケーションマネージャーのインスタンスを取得
+LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+// 利用できるGPSを選択してプロバイダを取得
+if (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
+    // ネットワークプロバイダを使って検索
+    locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, this);
+} else if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+    // GPSプロバイダを使って検索
+    locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+}
+</code></pre>
 
 <p>それぞれの引数についは</p>
 
-<p>・第一引数：プロバイダ</p>
-
-<p>・第二引数：通知の最小時間間隔</p>
-
-<p>・第三引数：通知の最小距離間隔</p>
-
-<p>・第四引数：リスナー(LocationListenerを実装した自身を渡します)</p>
+<ul>
+<li>第一引数：プロバイダ</li>
+<li>第二引数：通知の最小時間間隔</li>
+<li>第三引数：通知の最小距離間隔</li>
+<li>第四引数：リスナー(LocationListenerを実装した自身を渡します)</li>
+</ul>
 
 <p>これで位置が取得できるとonLocationChangedメソッドが呼ばれますので、引数のlocationを使い緯度や経度を取得することが出来ます。</p>
 
-<p>[java]</p>
-
-<p>// 緯度を取得</p>
-
-<p>location.getLatitude();</p>
-
-<p>// 経度を取得</p>
-
-<p>location.getLongitude();</p>
-
-<p>// 精度を取得</p>
-
-<p>location.getAccuracy();</p>
-
-<p>// 標高を取得</p>
-
-<p>location.getAltitude();</p>
-
-<p>// 取得時間を取得</p>
-
-<p>location.getTime();</p>
-
-<p>[/java]</p>
+<pre><code class="language-java">// 緯度を取得
+location.getLatitude();
+// 経度を取得
+location.getLongitude();
+// 精度を取得
+location.getAccuracy();
+// 標高を取得
+location.getAltitude();
+// 取得時間を取得
+location.getTime();
+</code></pre>
 
 <p>また、注意点としまして、取得が終わった後やアプリを途中で終了したり、バッググラウンドに移る際は必ず位置情報の計測を停止させて下さい。</p>
 
 <p>停止させるまではずっと取得状態となってしまい、定期的に上記のメソッドが呼び出されてしまい、バッテリー消費の原因にもなります。</p>
 
-<p>位置情報取得の終了方法</p>
+<ul>
+<li>位置情報取得の終了方法</li>
+</ul>
 
-<p>[java]</p>
-
-<p>locationManager.removeUpdates(this);</p>
-
-<p>[/java]</p>
+<pre><code class="language-java">locationManager.removeUpdates(this);
+</code></pre>
 
 <p>これで停止させる事ができるので、onLocationChangedやActivityのonPauseメソッド内とかでも停止させたほうが良いかと思います。</p>
 
-<h3 id="各プロバイダのメリット-デメリット:426ef98a8bb738f2bde1020f7c489130">各プロバイダのメリット・デメリット</h3>
+<h2 id="各プロバイダのメリット-デメリット:426ef98a8bb738f2bde1020f7c489130">各プロバイダのメリット・デメリット</h2>
 
 <p>若干体感や主観も混ざってしまっているのですが</p>
 
-<h4 id="locationmanager-network-provider:426ef98a8bb738f2bde1020f7c489130">LocationManager.NETWORK_PROVIDER</h4>
+<h3 id="locationmanager-network-provider:426ef98a8bb738f2bde1020f7c489130">LocationManager.NETWORK_PROVIDER</h3>
 
 <ul>
 <li>取得するまでの時間が早い</li>
@@ -241,7 +186,7 @@
 <li>用途としては、ざっくりとした位置を求めるには良いのかなと思いました。</li>
 </ul>
 
-<h4 id="locationmanager-gps-provider:426ef98a8bb738f2bde1020f7c489130">LocationManager.GPS_PROVIDER</h4>
+<h3 id="locationmanager-gps-provider:426ef98a8bb738f2bde1020f7c489130">LocationManager.GPS_PROVIDER</h3>
 
 <ul>
 <li>取得まで時間がかかる</li>
@@ -254,9 +199,9 @@
 
 <p>用途によってうまく使い分ける必要がありますね。</p>
 
-<h3 id="参考:426ef98a8bb738f2bde1020f7c489130">参考</h3>
+<h2 id="参考:426ef98a8bb738f2bde1020f7c489130">参考</h2>
 
-<p><a href="http://developer.android.com/reference/android/location/LocationManager.html" target="_blank"><a href="http://developer.android.com/reference/android/location/LocationManager.html">http://developer.android.com/reference/android/location/LocationManager.html</a>&lt;/&gt;</p></p>
+<p><a href="http://developer.android.com/reference/android/location/LocationManager.html" target="_blank">LocationManager | Android Developers</a></p>
 
       
       

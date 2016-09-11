@@ -71,13 +71,11 @@
     <article>
       
 
-<p>[<img src="http://blog.dtdweb.com/wp-content/uploads/2013/03/SharedPreferencesApp_SS1-180x300.png" alt="SharedPreferencesApp_SS1" width="180" height="300" class="alignnone size-medium wp-image-233" srcset="http://blog.dtdweb.com/wp-content/uploads/2013/03/SharedPreferencesApp_SS1-180x300.png 180w, http://blog.dtdweb.com/wp-content/uploads/2013/03/SharedPreferencesApp_SS1.png 480w" sizes="(max-width: 180px) 100vw, 180px" />][1]</p>
+<p><img src="/images/wp-content/uploads/2013/03/SharedPreferencesApp_SS1.png" alt="SharedPreferencesApp_SS1" width="180" height="300" class="alignnone size-medium wp-image-233" /></p>
 
 <p>Androidのデータ永続化手法として、SQLiteやSharedPreferencesとかありますよね。</p>
 
 <p>自分は比較的簡単に使用することの出来るSharedPreferencesをよく使うんですが、少しでも簡単にコードをシンプルな状態で使えないかなと考え、ラッパークラスの様なものを作成してみました。</p>
-
-<p>＊ソースコードは<a href="https://github.com/dtdweb/android/tree/master/SharedPreferencesApp" target="_blank">github</a>で公開しています</p>
 
 <p>ここでは、簡単な使い方の説明と紹介を載せたいと思います。</p>
 
@@ -91,85 +89,51 @@
 
 <p>キーを登録して、_setや_getを呼び出し保存する仕組みです。</p>
 
-<p>[java]</p>
+<pre><code class="language-java">package com.dtdweb.sharedpreferences.sample;
 
-<p>package com.dtdweb.sharedpreferences.sample;</p>
+import android.content.Context;
 
-<p>import android.content.Context;</p>
+import com.dtdweb.lib.sharedpreferences.SharedPreferencesWrapper;
 
-<p>import com.dtdweb.lib.sharedpreferences.SharedPreferencesWrapper;</p>
+public class SharedSample extends SharedPreferencesWrapper {
 
-<p>public class SharedSample extends SharedPreferencesWrapper {</p>
+    private static final String TEXT_CONFIG_KEY_NAME = &quot;text_config_name&quot;;
 
-<p>private static final String TEXT_CONFIG_KEY_NAME = &#8220;text_config_name&#8221;;</p>
+    public SharedSample(Context context) {
+        super(context);
+    }
 
-<p>public SharedSample(Context context) {</p>
+    /**
+     * テキストの保存
+     */
+    public void setText(String text) {
+        this._set(SharedSample.TEXT_CONFIG_KEY_NAME, text);
+    }
 
-<p>super(context);</p>
+    /**
+     * 保存されているテキストデータの取得
+     */
+    public String getText() {
+        return this._get(SharedSample.TEXT_CONFIG_KEY_NAME);
+    }
 
-<p>}</p>
-
-<p>/**</p>
-
-<ul>
-<li>テキストの保存</li>
-</ul>
-
-<p>*/</p>
-
-<p>public void setText(String text) {</p>
-
-<p>this._set(SharedSample.TEXT_CONFIG_KEY_NAME, text);</p>
-
-<p>}</p>
-
-<p>/**</p>
-
-<ul>
-<li>保存されているテキストデータの取得</li>
-</ul>
-
-<p>*/</p>
-
-<p>public String getText() {</p>
-
-<p>return this._get(SharedSample.TEXT_CONFIG_KEY_NAME);</p>
-
-<p>}</p>
-
-<p>/**</p>
-
-<ul>
-<li>保存されているテキストデータを削除</li>
-</ul>
-
-<p>*/</p>
-
-<p>public void removeText() {</p>
-
-<p>this._remove(SharedSample.TEXT_CONFIG_KEY_NAME);</p>
-
-<p>}</p>
-
-<p>}</p>
-
-<p>[/java]</p>
+    /**
+     * 保存されているテキストデータを削除
+     */
+    public void removeText() {
+        this._remove(SharedSample.TEXT_CONFIG_KEY_NAME);
+    }
+}
+</code></pre>
 
 <p>Activity側からの呼び出し方</p>
 
-<p>[java]</p>
-
-<p>SharedSample sharedSample = new SharedSample(this);</p>
-
-<p>// テキストの保存</p>
-
-<p>sharedSample.setText(&#8220;入力されたデータ&#8221;);</p>
-
-<p>// 保存されているデータの呼び出し</p>
-
-<p>String dataString = sharedSample.getText();</p>
-
-<p>[/java]</p>
+<pre><code class="language-java">SharedSample sharedSample = new SharedSample(this);
+// テキストの保存
+sharedSample.setText(&quot;入力されたデータ&quot;);
+// 保存されているデータの呼び出し
+String dataString = sharedSample.getText();
+</code></pre>
 
 <p>これだけで、いちいちEditorのインスタンスを作成してput***やcommitを行わずに保存・呼び出しが出来るようにしてみました。</p>
 
@@ -185,13 +149,8 @@
 
 <p>数値や配列データを保存したい場合、parseしたりjson形式にしたりとで、少々不便な点も残っております。この辺は今後改善していけたらと思います！</p>
 
-<p>ーー</p>
-
-<p>参考サイト:</p>
-
-<p><a href="http://developer.android.com/reference/android/content/SharedPreferences.html" target="_blank"><a href="http://developer.android.com/reference/android/content/SharedPreferences.html">http://developer.android.com/reference/android/content/SharedPreferences.html</a></a></p>
-
-<p>[1]: <a href="http://blog.dtdweb.com/wp-content/uploads/2013/03/SharedPreferencesApp_SS1.png">http://blog.dtdweb.com/wp-content/uploads/2013/03/SharedPreferencesApp_SS1.png</a></p>
+<p>参考サイト:<br />
+<a href="http://developer.android.com/reference/android/content/SharedPreferences.html" target="_blank">SharedPreferences | Android Developers</a></p>
 
       
       

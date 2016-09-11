@@ -77,9 +77,11 @@
 
 <p>それでずっと何かいい方法はないかなと探してたのですが、仕事でもちょくちょく使ってたgistをブログ用にも利用して載せてみた所すごいしっくりきました！</p>
 
-<p>いやgistっていいですね。</p>
+<h2 id="gistの利点:b41cec40607b190c9a070cc7ab260625">gistの利点</h2>
 
-<p>githubとは異なり、ファイル単位で扱えるので手軽に追加出来ますし。gitなんでメンテもしやすい。もっと早く利用しておけば良かった…。</p>
+<p>githubとは異なり、ファイル単位で扱えるので手軽に追加出来ますし。gitなんでメンテもしやすい。</p>
+
+<p>もっと早く利用しておけば良かった…。</p>
 
 <p>まだブログでの利用は始めたばかりですがメリットも多々ありそうです。</p>
 
@@ -90,7 +92,7 @@
 <li>記事に載せているソースコードもメンテしやすくなった</li>
 </ul>
 
-<h4 id="ブログに貼り付けやすい:b41cec40607b190c9a070cc7ab260625">ブログに貼り付けやすい</h4>
+<h2 id="ブログに貼り付けやすい:b41cec40607b190c9a070cc7ab260625">ブログに貼り付けやすい</h2>
 
 <p>これもすごい変わりそうです。</p>
 
@@ -98,32 +100,24 @@
 
 <p>gistの方でもブログ貼り付け用のHTMLが発行されるのですが、WordPressではそのまま利用出来ないようなんで、プラグインを使うといいみたいです。</p>
 
-<p>[Embed GitHub Gist][1]</p>
+<p><a href="https://wordpress.org/plugins/embed-github-gist/" target="_blank">Embed GitHub Gist</a></p>
 
 <p>あとは記事の中で下記の様なタグを入れるだけで完了でした。</p>
 
-<pre>&#091;gist id=gistのIDを設定する&#093;
-</pre>
+<pre><code>[gist id=gistのIDを設定する]
+</code></pre>
 
-<h4 id="ブログ上でコードが見やすい:b41cec40607b190c9a070cc7ab260625">ブログ上でコードが見やすい</h4>
+<h2 id="ブログ上でコードが見やすい:b41cec40607b190c9a070cc7ab260625">ブログ上でコードが見やすい</h2>
 
 <p>下記は別記事用に書いたサンプルなんですが、行間がシンタックスハイライトのプラグインよりも見やすいですし、ファイル種別によって色分けもされていい感じで。</p>
 
-<noscript>
-  <pre><code class="language-java java">public static String rmBom(String xmlString) {
-    if (Integer.toHexString(xmlString.charAt(0)).equals("feff")) {
-        // 先頭一文字を除く
-        xmlString = xmlString.substring(1);
-    }
-    return xmlString;
-}</code></pre>
-</noscript>
+<script src="https://gist.github.com/dtdweb/b0fe8d1c1b7580fb0345.js"></script>
 
-<h4 id="記事の読み込み速度も多少良くなった:b41cec40607b190c9a070cc7ab260625">記事の読み込み速度も多少良くなった</h4>
+<h2 id="記事の読み込み速度も多少良くなった:b41cec40607b190c9a070cc7ab260625">記事の読み込み速度も多少良くなった</h2>
 
 <p>これは正確に測ったわけではないんですが…、気のせいかシンタックスハイライトのプラグインよりも体感で読み込み速度が早くなった感じがします。</p>
 
-<h4 id="記事に乗せているソースコードもメンテしやくなった:b41cec40607b190c9a070cc7ab260625">記事に乗せているソースコードもメンテしやくなった</h4>
+<h2 id="記事に乗せているソースコードもメンテしやくなった:b41cec40607b190c9a070cc7ab260625">記事に乗せているソースコードもメンテしやくなった</h2>
 
 <p>なんだかんだで、一番のメリットはこれなのかなと思いました。</p>
 
@@ -133,7 +127,7 @@
 
 <p>便利です。</p>
 
-<h3 id="まとめ:b41cec40607b190c9a070cc7ab260625">まとめ</h3>
+<h2 id="まとめ:b41cec40607b190c9a070cc7ab260625">まとめ</h2>
 
 <p>WordPressで技術ブログを書いていたらgist使うと楽になりますね。</p>
 
@@ -142,8 +136,6 @@
 <p>関係ないですけど、qiitaとブログの使い分けもどうするか悩み中です。</p>
 
 <p>自分の中ではqiitaは、使い回し可能な作業の記録とかで、ブログでは色々検証とかサンプルも載せていきたいなと考えてます。</p>
-
-<p>[1]: <a href="https://wordpress.org/plugins/embed-github-gist/">https://wordpress.org/plugins/embed-github-gist/</a></p>
 
       
       

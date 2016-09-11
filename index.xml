@@ -17,13 +17,13 @@
       <guid>http://intemous9.github.io/2016/08/11/github-green-1-month/</guid>
       <description>
 
-&lt;p&gt;[&lt;img src=&#34;http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green-300x116.png&#34; alt=&#34;github_green&#34; width=&#34;100%&#34; class=&#34;alignnone size-medium wp-image-421&#34; srcset=&#34;http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green-300x116.png 300w, http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green-768x298.png 768w, http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green-700x272.png 700w, http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green.png 1494w&#34; sizes=&#34;(max-width: 300px) 100vw, 300px&#34; /&gt;][1]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green.png&#34; alt=&#34;github_green&#34; width=&#34;90%&#34; class=&#34;alignnone size-medium&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;GitHub緑化活動自体は結構今更感があったのですが、ふと仕事以外でもコードを書く時間を意識的に持ちたいなと思い始めてみました。&lt;/p&gt;
 
 &lt;p&gt;報告も半年とか一年くらいしてから記事を書こうと思っていた所ですが、結構１ヶ月でも思うことはあったり、少しでも自分自身へ継続の力になればと思い、記事に書いておく事にしました。&lt;/p&gt;
 
-&lt;h3 id=&#34;やってよかったと思ったこと-h2:d57280c6d50944ceb327397503b111c1&#34;&gt;やってよかったと思ったこと&lt;/h2&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;やってよかったと思ったこと:d57280c6d50944ceb327397503b111c1&#34;&gt;やってよかったと思ったこと&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;いい感じにプレッシャーになるので、毎日少しでもコードに向きあうきっかけになった&lt;/li&gt;
@@ -32,14 +32,14 @@
 &lt;li&gt;ドットファイル等も管理するようにしたので複数マシンでの環境共有が楽になった&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;今後考えて何とかしたいこと-h2:d57280c6d50944ceb327397503b111c1&#34;&gt;今後考えて何とかしたいこと&lt;/h2&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;今後考えて何とかしたいこと:d57280c6d50944ceb327397503b111c1&#34;&gt;今後考えて何とかしたいこと&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;個人開発とはいえ、公開できないコードの修正もありグラフを緑に出来ない日があった&lt;/li&gt;
 &lt;li&gt;ドットファイルの変更に逃げる日もあった&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&#34;まとめ-h2:d57280c6d50944ceb327397503b111c1&#34;&gt;まとめ&lt;/h2&gt;&lt;/h3&gt;
+&lt;h2 id=&#34;まとめ:d57280c6d50944ceb327397503b111c1&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;案外続けようと意識してやってみると楽しくできる。緑にするために色々とネタ探しに技術調べたりするきっかけになったのも良かったと思います。&lt;/p&gt;
 
@@ -54,8 +54,6 @@
 &lt;p&gt;上記の事を考えつつ、もう少し半年・一年と継続してみようと思います！&lt;/p&gt;
 
 &lt;p&gt;緑が増えていくのは楽しい！&lt;/p&gt;
-
-&lt;p&gt;[1]: &lt;a href=&#34;http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green.png&#34;&gt;http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green.png&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -65,12 +63,14 @@
       <pubDate>Wed, 23 Dec 2015 10:09:01 +0000</pubDate>
       
       <guid>http://intemous9.github.io/2015/12/23/android-mixed-content-mode/</guid>
-      <description>&lt;p&gt;最近Androidアプリを開発している時に発生したのですが、webviewを表示する画面で一部画像が正しく表示されない問題が発生しました。&lt;/p&gt;
+      <description>
+
+&lt;p&gt;最近Androidアプリを開発している時に発生したのですが、webviewを表示する画面で一部画像が正しく表示されない問題が発生しました。&lt;/p&gt;
 
 &lt;p&gt;何でだろうとエラーログを確認した所、下記の様なエラーが&amp;#8230;。&lt;/p&gt;
 
-&lt;pre&gt;[INFO:CONSOLE(0)] &#34;Mixed Content: The page at &#39;https://***.com&#39; was loaded over HTTPS, but requested an insecure image &#39;http://***.com/img/hoge.png&#39;. This request has been blocked; the content must be served over HTTPS.&#34;, source: https://***.com (0)
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[INFO:CONSOLE(0)] &amp;quot;Mixed Content: The page at &#39;https://***.com&#39; was loaded over HTTPS, but requested an insecure image &#39;http://***.com/img/hoge.png&#39;. This request has been blocked; the content must be served over HTTPS.&amp;quot;, source: https://***.com (0)
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;どうもhttpsのページ内でURLがhttpの画像を表示しようとした所、httpへのリクエストが安全ではないとの理由ブロックされていた様でした。&lt;/p&gt;
 
@@ -80,11 +80,13 @@
 
 &lt;p&gt;Android Lから、httpとhttpsの混在しているページをwebviewで表示しようとするとブロックする様にデフォルトの設定が反対になったようでして…。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#39;http://developer.android.com/intl/ja/reference/android/webkit/WebSettings.html#setMixedContentMode%28int%29&#39; target=&#39;_blank&#39;&gt;&lt;a href=&#34;http://developer.android.com/intl/ja/reference/android/webkit/WebSettings.html#setMixedContentMode%28int%29&#34;&gt;http://developer.android.com/intl/ja/reference/android/webkit/WebSettings.html#setMixedContentMode%28int%29&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#39;http://developer.android.com/intl/ja/reference/android/webkit/WebSettings.html#setMixedContentMode%28int%29&#39; target=&#39;_blank&#39;&gt;WebSettings | Android Developers #setMixedContentMode&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;この設定が変わっていたため画像も表示されませんでした。&lt;/p&gt;
 
 &lt;p&gt;確かにセキュリティの観点から見ると対応として正しいと思うのですが、こんな罠が…。&lt;/p&gt;
+
+&lt;h2 id=&#34;対応方法:5ecf30485b06f63d40a737361a0ef539&#34;&gt;対応方法&lt;/h2&gt;
 
 &lt;p&gt;対応方法としては、セキュリティの理由から変更されているので、可能ならwebページ側のコンテンツを直すのが一番良さそうですね。&lt;/p&gt;
 
@@ -92,19 +94,7 @@
 
 &lt;p&gt;アプリ側で対応を行う場合は、下記の様にwebviewの設定を変更する事で混在コンテンツのページも正常に表示される様になりました。&lt;/p&gt;
 
-&lt;noscript&gt;
-  &lt;pre&gt;&lt;code class=&#34;language-java java&#34;&gt;@SuppressLint(&#34;NewApi&#34;)
-@Override
-protected void onCreate(Bundle savedInstanceState) {
-
-    WebView webView = (WebView) findViewById(R.id.webView);
-
-     if (Build.VERSION.SDK_INT &amp;gt;= Build.VERSION_CODES.LOLLIPOP) {
-          webView.getSettings().setMixedContentMode(WebSettings.MIXED_CONTENT_ALWAYS_ALLOW);
-     }
-
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/noscript&gt;
+&lt;script src=&#34;https://gist.github.com/dtdweb/d55fd9066b30df9cfd51.js&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;とりあえず仕事でもアプリ開発しているのだし、もう少し公式ブログやドキュメントとか追ってないとなーと反省しました..(^_^;)&lt;/p&gt;
 </description>
@@ -124,9 +114,11 @@ protected void onCreate(Bundle savedInstanceState) {
 
 &lt;p&gt;それでずっと何かいい方法はないかなと探してたのですが、仕事でもちょくちょく使ってたgistをブログ用にも利用して載せてみた所すごいしっくりきました！&lt;/p&gt;
 
-&lt;p&gt;いやgistっていいですね。&lt;/p&gt;
+&lt;h2 id=&#34;gistの利点:b41cec40607b190c9a070cc7ab260625&#34;&gt;gistの利点&lt;/h2&gt;
 
-&lt;p&gt;githubとは異なり、ファイル単位で扱えるので手軽に追加出来ますし。gitなんでメンテもしやすい。もっと早く利用しておけば良かった…。&lt;/p&gt;
+&lt;p&gt;githubとは異なり、ファイル単位で扱えるので手軽に追加出来ますし。gitなんでメンテもしやすい。&lt;/p&gt;
+
+&lt;p&gt;もっと早く利用しておけば良かった…。&lt;/p&gt;
 
 &lt;p&gt;まだブログでの利用は始めたばかりですがメリットも多々ありそうです。&lt;/p&gt;
 
@@ -137,7 +129,7 @@ protected void onCreate(Bundle savedInstanceState) {
 &lt;li&gt;記事に載せているソースコードもメンテしやすくなった&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;ブログに貼り付けやすい:b41cec40607b190c9a070cc7ab260625&#34;&gt;ブログに貼り付けやすい&lt;/h4&gt;
+&lt;h2 id=&#34;ブログに貼り付けやすい:b41cec40607b190c9a070cc7ab260625&#34;&gt;ブログに貼り付けやすい&lt;/h2&gt;
 
 &lt;p&gt;これもすごい変わりそうです。&lt;/p&gt;
 
@@ -145,32 +137,24 @@ protected void onCreate(Bundle savedInstanceState) {
 
 &lt;p&gt;gistの方でもブログ貼り付け用のHTMLが発行されるのですが、WordPressではそのまま利用出来ないようなんで、プラグインを使うといいみたいです。&lt;/p&gt;
 
-&lt;p&gt;[Embed GitHub Gist][1]&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://wordpress.org/plugins/embed-github-gist/&#34; target=&#34;_blank&#34;&gt;Embed GitHub Gist&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;あとは記事の中で下記の様なタグを入れるだけで完了でした。&lt;/p&gt;
 
-&lt;pre&gt;&amp;#091;gist id=gistのIDを設定する&amp;#093;
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[gist id=gistのIDを設定する]
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;ブログ上でコードが見やすい:b41cec40607b190c9a070cc7ab260625&#34;&gt;ブログ上でコードが見やすい&lt;/h4&gt;
+&lt;h2 id=&#34;ブログ上でコードが見やすい:b41cec40607b190c9a070cc7ab260625&#34;&gt;ブログ上でコードが見やすい&lt;/h2&gt;
 
 &lt;p&gt;下記は別記事用に書いたサンプルなんですが、行間がシンタックスハイライトのプラグインよりも見やすいですし、ファイル種別によって色分けもされていい感じで。&lt;/p&gt;
 
-&lt;noscript&gt;
-  &lt;pre&gt;&lt;code class=&#34;language-java java&#34;&gt;public static String rmBom(String xmlString) {
-    if (Integer.toHexString(xmlString.charAt(0)).equals(&#34;feff&#34;)) {
-        // 先頭一文字を除く
-        xmlString = xmlString.substring(1);
-    }
-    return xmlString;
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/noscript&gt;
+&lt;script src=&#34;https://gist.github.com/dtdweb/b0fe8d1c1b7580fb0345.js&#34;&gt;&lt;/script&gt;
 
-&lt;h4 id=&#34;記事の読み込み速度も多少良くなった:b41cec40607b190c9a070cc7ab260625&#34;&gt;記事の読み込み速度も多少良くなった&lt;/h4&gt;
+&lt;h2 id=&#34;記事の読み込み速度も多少良くなった:b41cec40607b190c9a070cc7ab260625&#34;&gt;記事の読み込み速度も多少良くなった&lt;/h2&gt;
 
 &lt;p&gt;これは正確に測ったわけではないんですが…、気のせいかシンタックスハイライトのプラグインよりも体感で読み込み速度が早くなった感じがします。&lt;/p&gt;
 
-&lt;h4 id=&#34;記事に乗せているソースコードもメンテしやくなった:b41cec40607b190c9a070cc7ab260625&#34;&gt;記事に乗せているソースコードもメンテしやくなった&lt;/h4&gt;
+&lt;h2 id=&#34;記事に乗せているソースコードもメンテしやくなった:b41cec40607b190c9a070cc7ab260625&#34;&gt;記事に乗せているソースコードもメンテしやくなった&lt;/h2&gt;
 
 &lt;p&gt;なんだかんだで、一番のメリットはこれなのかなと思いました。&lt;/p&gt;
 
@@ -180,7 +164,7 @@ protected void onCreate(Bundle savedInstanceState) {
 
 &lt;p&gt;便利です。&lt;/p&gt;
 
-&lt;h3 id=&#34;まとめ:b41cec40607b190c9a070cc7ab260625&#34;&gt;まとめ&lt;/h3&gt;
+&lt;h2 id=&#34;まとめ:b41cec40607b190c9a070cc7ab260625&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;WordPressで技術ブログを書いていたらgist使うと楽になりますね。&lt;/p&gt;
 
@@ -189,8 +173,6 @@ protected void onCreate(Bundle savedInstanceState) {
 &lt;p&gt;関係ないですけど、qiitaとブログの使い分けもどうするか悩み中です。&lt;/p&gt;
 
 &lt;p&gt;自分の中ではqiitaは、使い回し可能な作業の記録とかで、ブログでは色々検証とかサンプルも載せていきたいなと考えてます。&lt;/p&gt;
-
-&lt;p&gt;[1]: &lt;a href=&#34;https://wordpress.org/plugins/embed-github-gist/&#34;&gt;https://wordpress.org/plugins/embed-github-gist/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -204,30 +186,22 @@ protected void onCreate(Bundle savedInstanceState) {
 
 &lt;p&gt;Androidアプリ開発の際、リソースファイルやHttp経由で取得したUTF-8なxmlファイルをStringReaderで読み込むと、下記の様なエラーが発生する場合、読み込んだファイルの先頭にBOMが付いている可能性があります。&lt;/p&gt;
 
-&lt;pre&gt;XmlPullParserException
-org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in java.io.StringReader@***) 
+&lt;pre&gt;&lt;code&gt;XmlPullParserException
+org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in java.io.StringReader@***)
      at org.kxml2.io.KXmlParser.next(KXmlParser.java:432)
      at org.kxml2.io.KXmlParser.next(KXmlParser.java:313)
 ・
 ・
 ・
-&lt;/pre&gt;
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;解決方法:7d33596006e6af95dde9f6df20e5121e&#34;&gt;解決方法&lt;/h4&gt;
+&lt;h2 id=&#34;解決方法:7d33596006e6af95dde9f6df20e5121e&#34;&gt;解決方法&lt;/h2&gt;
 
 &lt;p&gt;StringReaderで読み込む前にBOM付きかチェックして除去することで回避できました。&lt;/p&gt;
 
-&lt;h5 id=&#34;サンプルコード:7d33596006e6af95dde9f6df20e5121e&#34;&gt;サンプルコード&lt;/h5&gt;
+&lt;h3 id=&#34;サンプルコード:7d33596006e6af95dde9f6df20e5121e&#34;&gt;サンプルコード&lt;/h3&gt;
 
-&lt;noscript&gt;
-  &lt;pre&gt;&lt;code class=&#34;language-java java&#34;&gt;public static String rmBom(String xmlString) {
-    if (Integer.toHexString(xmlString.charAt(0)).equals(&#34;feff&#34;)) {
-        // 先頭一文字を除く
-        xmlString = xmlString.substring(1);
-    }
-    return xmlString;
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/noscript&gt;
+&lt;script src=&#34;https://gist.github.com/dtdweb/b0fe8d1c1b7580fb0345.js&#34;&gt;&lt;/script&gt;
 </description>
     </item>
     
@@ -239,7 +213,7 @@ org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in 
       <guid>http://intemous9.github.io/2015/06/16/url-connection-redirect/</guid>
       <description>&lt;p&gt;org.apache.httpパッケージとAndroidHttpClientクラスがAndroid5.1(API Level 22)から非推奨になりましたね。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://developer.android.com/about/versions/android-5.1.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://developer.android.com/about/versions/android-5.1.html&#34;&gt;https://developer.android.com/about/versions/android-5.1.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.android.com/about/versions/android-5.1.html&#34; target=&#34;_blank&#34;&gt;Android 5.1 APIs | Android Developers&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;これまでHttpClientで実装していたアプリはURLConnectionクラスを利用・変更しましょうとの事で。&lt;/p&gt;
 
@@ -249,70 +223,11 @@ org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in 
 
 &lt;p&gt;ということで30系でも動作するように対応したサンプルメソッド&lt;/p&gt;
 
-&lt;noscript&gt;
-  &lt;pre&gt;&lt;code class=&#34;language-java java&#34;&gt;/**
- * urlとcookieからbodyを取得する
- */
-public static String getContents(String urlString, String cookies) throws IOException {
- 
-    URL url = new URL(urlString);
-    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
- 
-    conn.setRequestMethod(&#34;GET&#34;);
-    conn.setConnectTimeout(5000);
-    conn.setDoOutput(true);
-    if (cookies != null) {
-        conn.setRequestProperty(&#34;Cookie&#34;, cookies);
-    }
- 
-    try {
- 
-        conn.connect();
-        int statuscode = conn.getResponseCode();
- 
-        // check 20x
-        if (statuscode != HttpURLConnection.HTTP_OK
-                &amp;&amp; statuscode != HttpURLConnection.HTTP_CREATED) {
-            // check 30x
-            if (statuscode == HttpURLConnection.HTTP_MOVED_TEMP
-                    || statuscode == HttpURLConnection.HTTP_MOVED_PERM
-                    || statuscode == HttpURLConnection.HTTP_SEE_OTHER) {
- 
-                String newUrlString = conn.getHeaderField(&#34;Location&#34;);
-                cookies = conn.getHeaderField(&#34;Set-Cookie&#34;);
-                conn = (HttpURLConnection) new URL(newUrlString).openConnection();
- 
-                if (cookies != null) {
-                    conn.setRequestProperty(&#34;Cookie&#34;, cookies);
-                }
- 
-            } else {
-                // 20x or 30x系でないので例外を送出
-                throw new IOException(&#34;Response code is &#34; + Integer.toString(statuscode));
-            }
-        }
- 
-    } catch (RuntimeException e) {
-        throw e;
-    }
- 
-    InputStream inputStream = new BufferedInputStream(conn.getInputStream());
-    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, &#34;UTF-8&#34;));
-    StringBuilder stringBuilder = new StringBuilder();
-    String line = &#34;&#34;;
- 
-    while ((line = bufferedReader.readLine()) != null) {
-        stringBuilder.append(line);
-    }
-    bufferedReader.close();
- 
-    return stringBuilder.toString();
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/noscript&gt;
+&lt;script src=&#34;https://gist.github.com/dtdweb/13e25365a827df07ce07.js&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;一度レスポンスコードを受け取り、20x系なら正常処理、30x系の場合は再度connクラスを再生成して対応しました。&lt;/p&gt;
 
-&lt;p&gt;にしても、IO系クラス扱うのも少し苦手だ&amp;#8230;。&lt;/p&gt;
+&lt;p&gt;にしても、IO系クラス扱うのも少し苦手だ&amp;hellip;。&lt;/p&gt;
 </description>
     </item>
     
@@ -322,7 +237,9 @@ public static String getContents(String urlString, String cookies) throws IOExce
       <pubDate>Mon, 30 Mar 2015 15:18:57 +0000</pubDate>
       
       <guid>http://intemous9.github.io/2015/03/31/fragment-mapview-v2/</guid>
-      <description>&lt;p&gt;久しぶりの更新です。最近ぜんぜん更新しないまま、だいぶ経ってしまいました。&lt;/p&gt;
+      <description>
+
+&lt;p&gt;久しぶりの更新です。最近ぜんぜん更新しないまま、だいぶ経ってしまいました。&lt;/p&gt;
 
 &lt;p&gt;書きたい事は結構あるのに、忙しいとかを理由にサボってしまい…。&lt;/p&gt;
 
@@ -338,27 +255,43 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;※ただ、今回の現象を抑える事は出来ましたが、これが本当に解決策として正しいのかかなり怪しいので、詳しく知っている方がいればぜひ教えて頂きたいです。&lt;/p&gt;
 
-&lt;p&gt;レイアウトファイル: (fragment_map_sample.xml)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;レイアウトファイル: (fragment_map_sample.xml)&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;[xml name=&amp;#8221;fragment_map_sample.xml&amp;#8221;]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;LinearLayout
+    xmlns:android=&amp;quot;http://schemas.android.com/apk/res/android&amp;quot;
+    xmlns:tools=&amp;quot;http://schemas.android.com/tools&amp;quot;
+    android:layout_width=&amp;quot;match_parent&amp;quot;
+    android:layout_height=&amp;quot;match_parent&amp;quot;
+    android:orientation=&amp;quot;vertical&amp;quot;
+    tools:context=&amp;quot;com.dtdweb.mapfragmentsample.fragments.MapSampleFragment&amp;quot;&amp;gt;
 
-&lt;p&gt;&lt;LinearLayout xmlns:android=&#34;http://schemas.android.com/apk/res/android&#34; xmlns:tools=&#34;http://schemas.android.com/tools&#34; android:layout\_width=&#34;match\_parent&#34; android:layout\_height=&#34;match\_parent&#34; android:orientation=&#34;vertical&#34; tools:context=&#34;com.dtdweb.mapfragmentsample.fragments.MapSampleFragment&#34;&gt;&lt;/p&gt;
+    &amp;lt;FrameLayout
+        android:layout_width=&amp;quot;fill_parent&amp;quot;
+        android:layout_height=&amp;quot;fill_parent&amp;quot;&amp;gt;
 
-&lt;p&gt;&lt;FrameLayout android:layout\_width=&#34;fill\_parent&#34; android:layout\_height=&#34;fill\_parent&#34;&gt;&lt;/p&gt;
+        &amp;lt;com.google.android.gms.maps.MapView
+            android:id=&amp;quot;@+id/mapview&amp;quot;
+            android:layout_width=&amp;quot;fill_parent&amp;quot;
+            android:layout_height=&amp;quot;fill_parent&amp;quot; /&amp;gt;
 
-&lt;p&gt;&lt;com.google.android.gms.maps.MapView android:id=&#34;@+id/mapview&#34; android:layout\_width=&#34;fill\_parent&#34; android:layout\_height=&#34;fill\_parent&#34; /&gt;&lt;/p&gt;
+        &amp;lt;TextView
+            android:id=&amp;quot;@+id/transparent_layout&amp;quot;
+            android:layout_width=&amp;quot;fill_parent&amp;quot;
+            android:layout_height=&amp;quot;fill_parent&amp;quot;
+            android:background=&amp;quot;@drawable/translucent_background&amp;quot; /&amp;gt;
 
-&lt;p&gt;&lt;TextView android:id=&#34;@+id/transparent\_layout&#34; android:layout\_width=&#34;fill\_parent&#34; android:layout\_height=&#34;fill\_parent&#34; android:background=&#34;@drawable/translucent\_background&#34; /&gt;&lt;/p&gt;
+    &amp;lt;/FrameLayout&amp;gt;
 
-&lt;p&gt;&lt;/FrameLayout&gt;&lt;/p&gt;
+&amp;lt;/LinearLayout&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;&lt;/LinearLayout&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;完成画面:&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;[/xml]&lt;/p&gt;
-
-&lt;p&gt;完成画面:&lt;/p&gt;
-
-&lt;p&gt;[&lt;img src=&#34;http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample-180x300.png&#34; alt=&#34;20150331_fragment_mapview_sample&#34; width=&#34;180&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-341&#34; srcset=&#34;http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample-180x300.png 180w, http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;][1]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://intemous9.github.io/images/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png&#34; alt=&#34;20150331_fragment_mapview_sample&#34; width=&#34;180&#34; height=&#34;300&#34; class=&#34;alignnone size-medium&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;画面の通り見かけ上は変わらず、またFragmentを切り替えた際も画面のチラつきを抑える事が出来ました。&lt;/p&gt;
 
@@ -366,15 +299,15 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;もうちょっと調べて、他に方法がないか調べてみる必要がありそうです…。&lt;/p&gt;
 
+&lt;h2 id=&#34;参考:d493a555f3b789dfb12d50a1710f0197&#34;&gt;参考&lt;/h2&gt;
+
 &lt;p&gt;サンプルで使っているMapViewはGoogle Map API v2を使用&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://developers.google.com/maps/documentation/android/?hl=ja&#34; title=&#34;https://developers.google.com/maps/documentation/android/?hl=ja&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://developers.google.com/maps/documentation/android/?hl=ja&#34;&gt;https://developers.google.com/maps/documentation/android/?hl=ja&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developers.google.com/maps/documentation/android/?hl=ja&#34; title=&#34;https://developers.google.com/maps/documentation/android/?hl=ja&#34; target=&#34;_blank&#34;&gt;Google Maps Android API  &amp;nbsp;|&amp;nbsp; Google Developers&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;サンプルのソースコードは下記リポジトリに追加しております。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample&#34; title=&#34;https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample&#34;&gt;https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[1]: &lt;a href=&#34;http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png&#34;&gt;http://blog.dtdweb.com/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample&#34; title=&#34;https://github.com/dtdweb/android/tree/master/Fragment-MapViewSample/MapFragmentSample&#34; target=&#34;_blank&#34;&gt;android/Fragment-MapViewSample/MapFragmentSample&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -386,7 +319,7 @@ public static String getContents(String urlString, String cookies) throws IOExce
       <guid>http://intemous9.github.io/2013/04/06/gps_desc/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://blog.dtdweb.com/wp-content/uploads/2013/04/gps_ss1.png&#34; alt=&#34;Gps ss1&#34; title=&#34;gps_ss1.png&#34; border=&#34;0&#34; width=&#34;360&#34; height=&#34;600&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://intemous9.github.io/images/wp-content/uploads/2013/04/ss1.png&#34; alt=&#34;Gps ss1&#34; title=&#34;gps_ss1.png&#34; border=&#34;0&#34; width=&#34;360&#34; height=&#34;600&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;GPS機能を使ったアプリを開発する機会があったんですが、調べてみると結構複雑でして。&lt;/p&gt;
 
@@ -396,158 +329,103 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;GPSを使用したアプリサンプルについては&lt;a href=&#34;https://github.com/dtdweb/android/tree/master/GPSSample&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;にアップしてます。&lt;/p&gt;
 
-&lt;h3 id=&#34;もくじ:426ef98a8bb738f2bde1020f7c489130&#34;&gt;もくじ&lt;/h3&gt;
-
-&lt;ul&gt;
-&lt;li&gt;GPS機能の使い方とメソッド説明&lt;/li&gt;
-&lt;li&gt;各プロバイダのメリット・デメリット&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&#34;gps機能の使い方とメソッド説明:426ef98a8bb738f2bde1020f7c489130&#34;&gt;GPS機能の使い方とメソッド説明&lt;/h3&gt;
+&lt;h2 id=&#34;gps機能の使い方とメソッド説明:426ef98a8bb738f2bde1020f7c489130&#34;&gt;GPS機能の使い方とメソッド説明&lt;/h2&gt;
 
 &lt;p&gt;まずGPS機能を使用するにはAndroidManifest.xmlに下記のパーミッションを追加する必要があります。&lt;/p&gt;
 
 &lt;p&gt;・GPSによる位置情報利用&lt;/p&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;&lt;uses-permission android:name=”android.permission.ACCESS\_FINE\_LOCATION”/&gt;&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;uses-permission android:name=”android.permission.ACCESS\_FINE\_LOCATION”/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;・ネットワークによる位置情報利用&lt;/p&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;&lt;uses-permission android:name=”android.permission.ACCESS\_COARSE\_LOCATION”/&gt;&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;uses-permission android:name=”android.permission.ACCESS\_COARSE\_LOCATION”/&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;あとはActivityなどで、LocationListenerインターフェースを実装し利用することが出来ます。&lt;/p&gt;
 
 &lt;p&gt;実装が必要となるメソッドが4つあります。&lt;/p&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Override
+public void onLocationChanged(Location location) {
+    // TODO Auto-generated method stub
+}
+@Override
+public void onProviderDisabled(String provider) {
+    // TODO Auto-generated method stub
+}
 
-&lt;p&gt;@Override&lt;/p&gt;
+@Override
+public void onProviderEnabled(String provider) {
+    // TODO Auto-generated method stub
+}
 
-&lt;p&gt;public void onLocationChanged(Location location) {&lt;/p&gt;
-
-&lt;p&gt;// TODO Auto-generated method stub&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;@Override&lt;/p&gt;
-
-&lt;p&gt;public void onProviderDisabled(String provider) {&lt;/p&gt;
-
-&lt;p&gt;// TODO Auto-generated method stub&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;@Override&lt;/p&gt;
-
-&lt;p&gt;public void onProviderEnabled(String provider) {&lt;/p&gt;
-
-&lt;p&gt;// TODO Auto-generated method stub&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;@Override&lt;/p&gt;
-
-&lt;p&gt;public void onStatusChanged(String provider, int status, Bundle extras) {&lt;/p&gt;
-
-&lt;p&gt;// TODO Auto-generated method stub&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+@Override
+public void onStatusChanged(String provider, int status, Bundle extras) {
+    // TODO Auto-generated method stub
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;しかし使用する上では基本的にonLocationChangedメソッドだけ使ってました。&lt;/p&gt;
 
 &lt;p&gt;このメソッドは、位置情報が取得出来ると呼び出されるメソッドとなります。&lt;/p&gt;
 
-&lt;h4 id=&#34;位置情報を取得してみる:426ef98a8bb738f2bde1020f7c489130&#34;&gt;位置情報を取得してみる&lt;/h4&gt;
+&lt;h3 id=&#34;位置情報を取得してみる:426ef98a8bb738f2bde1020f7c489130&#34;&gt;位置情報を取得してみる&lt;/h3&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;// ロケーションマネージャーのインスタンスを取得&lt;/p&gt;
-
-&lt;p&gt;LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);&lt;/p&gt;
-
-&lt;p&gt;// 利用できるGPSを選択してプロバイダを取得&lt;/p&gt;
-
-&lt;p&gt;if (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {&lt;/p&gt;
-
-&lt;p&gt;// ネットワークプロバイダを使って検索&lt;/p&gt;
-
-&lt;p&gt;locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, this);&lt;/p&gt;
-
-&lt;p&gt;} else if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {&lt;/p&gt;
-
-&lt;p&gt;// GPSプロバイダを使って検索&lt;/p&gt;
-
-&lt;p&gt;locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// ロケーションマネージャーのインスタンスを取得
+LocationManager locationManager = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
+// 利用できるGPSを選択してプロバイダを取得
+if (locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
+    // ネットワークプロバイダを使って検索
+    locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, this);
+} else if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+    // GPSプロバイダを使って検索
+    locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;それぞれの引数についは&lt;/p&gt;
 
-&lt;p&gt;・第一引数：プロバイダ&lt;/p&gt;
-
-&lt;p&gt;・第二引数：通知の最小時間間隔&lt;/p&gt;
-
-&lt;p&gt;・第三引数：通知の最小距離間隔&lt;/p&gt;
-
-&lt;p&gt;・第四引数：リスナー(LocationListenerを実装した自身を渡します)&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;第一引数：プロバイダ&lt;/li&gt;
+&lt;li&gt;第二引数：通知の最小時間間隔&lt;/li&gt;
+&lt;li&gt;第三引数：通知の最小距離間隔&lt;/li&gt;
+&lt;li&gt;第四引数：リスナー(LocationListenerを実装した自身を渡します)&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;これで位置が取得できるとonLocationChangedメソッドが呼ばれますので、引数のlocationを使い緯度や経度を取得することが出来ます。&lt;/p&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;// 緯度を取得&lt;/p&gt;
-
-&lt;p&gt;location.getLatitude();&lt;/p&gt;
-
-&lt;p&gt;// 経度を取得&lt;/p&gt;
-
-&lt;p&gt;location.getLongitude();&lt;/p&gt;
-
-&lt;p&gt;// 精度を取得&lt;/p&gt;
-
-&lt;p&gt;location.getAccuracy();&lt;/p&gt;
-
-&lt;p&gt;// 標高を取得&lt;/p&gt;
-
-&lt;p&gt;location.getAltitude();&lt;/p&gt;
-
-&lt;p&gt;// 取得時間を取得&lt;/p&gt;
-
-&lt;p&gt;location.getTime();&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;// 緯度を取得
+location.getLatitude();
+// 経度を取得
+location.getLongitude();
+// 精度を取得
+location.getAccuracy();
+// 標高を取得
+location.getAltitude();
+// 取得時間を取得
+location.getTime();
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;また、注意点としまして、取得が終わった後やアプリを途中で終了したり、バッググラウンドに移る際は必ず位置情報の計測を停止させて下さい。&lt;/p&gt;
 
 &lt;p&gt;停止させるまではずっと取得状態となってしまい、定期的に上記のメソッドが呼び出されてしまい、バッテリー消費の原因にもなります。&lt;/p&gt;
 
-&lt;p&gt;位置情報取得の終了方法&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;位置情報取得の終了方法&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;locationManager.removeUpdates(this);&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;locationManager.removeUpdates(this);
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;これで停止させる事ができるので、onLocationChangedやActivityのonPauseメソッド内とかでも停止させたほうが良いかと思います。&lt;/p&gt;
 
-&lt;h3 id=&#34;各プロバイダのメリット-デメリット:426ef98a8bb738f2bde1020f7c489130&#34;&gt;各プロバイダのメリット・デメリット&lt;/h3&gt;
+&lt;h2 id=&#34;各プロバイダのメリット-デメリット:426ef98a8bb738f2bde1020f7c489130&#34;&gt;各プロバイダのメリット・デメリット&lt;/h2&gt;
 
 &lt;p&gt;若干体感や主観も混ざってしまっているのですが&lt;/p&gt;
 
-&lt;h4 id=&#34;locationmanager-network-provider:426ef98a8bb738f2bde1020f7c489130&#34;&gt;LocationManager.NETWORK_PROVIDER&lt;/h4&gt;
+&lt;h3 id=&#34;locationmanager-network-provider:426ef98a8bb738f2bde1020f7c489130&#34;&gt;LocationManager.NETWORK_PROVIDER&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;取得するまでの時間が早い&lt;/li&gt;
@@ -556,7 +434,7 @@ public static String getContents(String urlString, String cookies) throws IOExce
 &lt;li&gt;用途としては、ざっくりとした位置を求めるには良いのかなと思いました。&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;locationmanager-gps-provider:426ef98a8bb738f2bde1020f7c489130&#34;&gt;LocationManager.GPS_PROVIDER&lt;/h4&gt;
+&lt;h3 id=&#34;locationmanager-gps-provider:426ef98a8bb738f2bde1020f7c489130&#34;&gt;LocationManager.GPS_PROVIDER&lt;/h3&gt;
 
 &lt;ul&gt;
 &lt;li&gt;取得まで時間がかかる&lt;/li&gt;
@@ -569,9 +447,9 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;用途によってうまく使い分ける必要がありますね。&lt;/p&gt;
 
-&lt;h3 id=&#34;参考:426ef98a8bb738f2bde1020f7c489130&#34;&gt;参考&lt;/h3&gt;
+&lt;h2 id=&#34;参考:426ef98a8bb738f2bde1020f7c489130&#34;&gt;参考&lt;/h2&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://developer.android.com/reference/android/location/LocationManager.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://developer.android.com/reference/android/location/LocationManager.html&#34;&gt;http://developer.android.com/reference/android/location/LocationManager.html&lt;/a&gt;&amp;lt;/&amp;gt;&lt;/p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://developer.android.com/reference/android/location/LocationManager.html&#34; target=&#34;_blank&#34;&gt;LocationManager | Android Developers&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -583,13 +461,11 @@ public static String getContents(String urlString, String cookies) throws IOExce
       <guid>http://intemous9.github.io/2013/03/19/android-sharedpreferences/</guid>
       <description>
 
-&lt;p&gt;[&lt;img src=&#34;http://blog.dtdweb.com/wp-content/uploads/2013/03/SharedPreferencesApp_SS1-180x300.png&#34; alt=&#34;SharedPreferencesApp_SS1&#34; width=&#34;180&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-233&#34; srcset=&#34;http://blog.dtdweb.com/wp-content/uploads/2013/03/SharedPreferencesApp_SS1-180x300.png 180w, http://blog.dtdweb.com/wp-content/uploads/2013/03/SharedPreferencesApp_SS1.png 480w&#34; sizes=&#34;(max-width: 180px) 100vw, 180px&#34; /&gt;][1]&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://intemous9.github.io/images/wp-content/uploads/2013/03/SharedPreferencesApp_SS1.png&#34; alt=&#34;SharedPreferencesApp_SS1&#34; width=&#34;180&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-233&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Androidのデータ永続化手法として、SQLiteやSharedPreferencesとかありますよね。&lt;/p&gt;
 
 &lt;p&gt;自分は比較的簡単に使用することの出来るSharedPreferencesをよく使うんですが、少しでも簡単にコードをシンプルな状態で使えないかなと考え、ラッパークラスの様なものを作成してみました。&lt;/p&gt;
-
-&lt;p&gt;＊ソースコードは&lt;a href=&#34;https://github.com/dtdweb/android/tree/master/SharedPreferencesApp&#34; target=&#34;_blank&#34;&gt;github&lt;/a&gt;で公開しています&lt;/p&gt;
 
 &lt;p&gt;ここでは、簡単な使い方の説明と紹介を載せたいと思います。&lt;/p&gt;
 
@@ -603,85 +479,51 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;キーを登録して、_setや_getを呼び出し保存する仕組みです。&lt;/p&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;package com.dtdweb.sharedpreferences.sample;
 
-&lt;p&gt;package com.dtdweb.sharedpreferences.sample;&lt;/p&gt;
+import android.content.Context;
 
-&lt;p&gt;import android.content.Context;&lt;/p&gt;
+import com.dtdweb.lib.sharedpreferences.SharedPreferencesWrapper;
 
-&lt;p&gt;import com.dtdweb.lib.sharedpreferences.SharedPreferencesWrapper;&lt;/p&gt;
+public class SharedSample extends SharedPreferencesWrapper {
 
-&lt;p&gt;public class SharedSample extends SharedPreferencesWrapper {&lt;/p&gt;
+    private static final String TEXT_CONFIG_KEY_NAME = &amp;quot;text_config_name&amp;quot;;
 
-&lt;p&gt;private static final String TEXT_CONFIG_KEY_NAME = &amp;#8220;text_config_name&amp;#8221;;&lt;/p&gt;
+    public SharedSample(Context context) {
+        super(context);
+    }
 
-&lt;p&gt;public SharedSample(Context context) {&lt;/p&gt;
+    /**
+     * テキストの保存
+     */
+    public void setText(String text) {
+        this._set(SharedSample.TEXT_CONFIG_KEY_NAME, text);
+    }
 
-&lt;p&gt;super(context);&lt;/p&gt;
+    /**
+     * 保存されているテキストデータの取得
+     */
+    public String getText() {
+        return this._get(SharedSample.TEXT_CONFIG_KEY_NAME);
+    }
 
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;/**&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;テキストの保存&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;*/&lt;/p&gt;
-
-&lt;p&gt;public void setText(String text) {&lt;/p&gt;
-
-&lt;p&gt;this._set(SharedSample.TEXT_CONFIG_KEY_NAME, text);&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;/**&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;保存されているテキストデータの取得&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;*/&lt;/p&gt;
-
-&lt;p&gt;public String getText() {&lt;/p&gt;
-
-&lt;p&gt;return this._get(SharedSample.TEXT_CONFIG_KEY_NAME);&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;/**&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;保存されているテキストデータを削除&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;*/&lt;/p&gt;
-
-&lt;p&gt;public void removeText() {&lt;/p&gt;
-
-&lt;p&gt;this._remove(SharedSample.TEXT_CONFIG_KEY_NAME);&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+    /**
+     * 保存されているテキストデータを削除
+     */
+    public void removeText() {
+        this._remove(SharedSample.TEXT_CONFIG_KEY_NAME);
+    }
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;Activity側からの呼び出し方&lt;/p&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;SharedSample sharedSample = new SharedSample(this);&lt;/p&gt;
-
-&lt;p&gt;// テキストの保存&lt;/p&gt;
-
-&lt;p&gt;sharedSample.setText(&amp;#8220;入力されたデータ&amp;#8221;);&lt;/p&gt;
-
-&lt;p&gt;// 保存されているデータの呼び出し&lt;/p&gt;
-
-&lt;p&gt;String dataString = sharedSample.getText();&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;SharedSample sharedSample = new SharedSample(this);
+// テキストの保存
+sharedSample.setText(&amp;quot;入力されたデータ&amp;quot;);
+// 保存されているデータの呼び出し
+String dataString = sharedSample.getText();
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;これだけで、いちいちEditorのインスタンスを作成してput***やcommitを行わずに保存・呼び出しが出来るようにしてみました。&lt;/p&gt;
 
@@ -697,13 +539,8 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;数値や配列データを保存したい場合、parseしたりjson形式にしたりとで、少々不便な点も残っております。この辺は今後改善していけたらと思います！&lt;/p&gt;
 
-&lt;p&gt;ーー&lt;/p&gt;
-
-&lt;p&gt;参考サイト:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://developer.android.com/reference/android/content/SharedPreferences.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;http://developer.android.com/reference/android/content/SharedPreferences.html&#34;&gt;http://developer.android.com/reference/android/content/SharedPreferences.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;[1]: &lt;a href=&#34;http://blog.dtdweb.com/wp-content/uploads/2013/03/SharedPreferencesApp_SS1.png&#34;&gt;http://blog.dtdweb.com/wp-content/uploads/2013/03/SharedPreferencesApp_SS1.png&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考サイト:&lt;br /&gt;
+&lt;a href=&#34;http://developer.android.com/reference/android/content/SharedPreferences.html&#34; target=&#34;_blank&#34;&gt;SharedPreferences | Android Developers&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -723,37 +560,26 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;また、端末によって微妙に挙動が異なったり、WiFi切替まで時間もかかったりと、色々と下記以外にも調整しないといけない事が多かったです。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://developer.android.com/reference/android/net/wifi/WifiManager.html&#34; target=&#34;_blank&#34;&gt;Androidリファレンス:WifiManager&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://developer.android.com/reference/android/net/wifi/WifiConfiguration.html&#34; target=&#34;_blank&#34;&gt;Androidリファレンス:WifiConfiguration&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://developer.android.com/reference/android/net/wifi/WifiManager.html&#34; target=&#34;_blank&#34;&gt;Androidリファレンス:WifiManager&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://developer.android.com/reference/android/net/wifi/WifiConfiguration.html&#34; target=&#34;_blank&#34;&gt;Androidリファレンス:WifiConfiguration&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;使用するために:506278074be7e994baf0f209d1456c13&#34;&gt;使用するために&lt;/h2&gt;
 
 &lt;p&gt;まずAndroidManifest.xmlに下記のパーミッション追加をする必要があります。&lt;/p&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;&lt;uses-permission android:name=&#34;android.permission.CHANGE\_WIFI\_STATE&#34;&gt;&lt;/uses-permission&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;uses-permission android:name=&#34;android.permission.ACCESS\_WIFI\_STATE&#34;&gt;&lt;/uses-permission&gt;&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;uses-permission android:name=&amp;quot;android.permission.CHANGE\_WIFI\_STATE&amp;quot;&amp;gt;&amp;lt;/uses-permission&amp;gt;
+&amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS\_WIFI\_STATE&amp;quot;&amp;gt;&amp;lt;/uses-permission&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;wifi機能をonにする:506278074be7e994baf0f209d1456c13&#34;&gt;WiFi機能をONにする&lt;/h2&gt;
 
 &lt;p&gt;SSID登録の際は、WiFi機能が有効でないと出来ないので、もしプログラム内で有効にするには下記の方法で行う&lt;/p&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);&lt;/p&gt;
-
-&lt;p&gt;if (wifiManager.isWifiEnabled() == false) {&lt;/p&gt;
-
-&lt;p&gt;wifiManager.setWifiEnabled(true);&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+if (wifiManager.isWifiEnabled() == false) {
+    wifiManager.setWifiEnabled(true);
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;上記のコードをActivityのonCreate等で実行しておくと良いかと思います。&lt;/p&gt;
 
@@ -767,183 +593,98 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;h2 id=&#34;セキュリティなしのssidを設定する:506278074be7e994baf0f209d1456c13&#34;&gt;セキュリティなしのSSIDを設定する&lt;/h2&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);&lt;/p&gt;
-
-&lt;p&gt;String ssid = &amp;#8220;SSID_NAME&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;WifiConfiguration config = new WifiConfiguration();&lt;/p&gt;
-
-&lt;p&gt;config.SSID = &amp;#8220;&amp;amp;#8221;&amp;#8221; + ssid + &amp;#8220;&amp;amp;#8221;&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);&lt;/p&gt;
-
-&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);&lt;/p&gt;
-
-&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);&lt;/p&gt;
-
-&lt;p&gt;config.allowedAuthAlgorithms.clear();&lt;/p&gt;
-
-&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);&lt;/p&gt;
-
-&lt;p&gt;int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります&lt;/p&gt;
-
-&lt;p&gt;wifiManager.saveConfiguration();&lt;/p&gt;
-
-&lt;p&gt;wifiManager.updateNetwork(config);&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+String ssid = &amp;quot;SSID_NAME&amp;quot;;
+WifiConfiguration config = new WifiConfiguration();
+config.SSID = &amp;quot;\&amp;quot;&amp;quot; + ssid + &amp;quot;\&amp;quot;&amp;quot;;
+config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
+config.allowedAuthAlgorithms.clear();
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります
+wifiManager.saveConfiguration();
+wifiManager.updateNetwork(config);
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;認証方式-wepのssid設定:506278074be7e994baf0f209d1456c13&#34;&gt;認証方式 : WEPのSSID設定&lt;/h2&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);&lt;/p&gt;
-
-&lt;p&gt;String ssid = &amp;#8220;SSID_NAME&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;WifiConfiguration config = new WifiConfiguration();&lt;/p&gt;
-
-&lt;p&gt;config.SSID = &amp;#8220;&amp;amp;#8221;&amp;#8221; + ssid + &amp;#8220;&amp;amp;#8221;&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);&lt;/p&gt;
-
-&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);&lt;/p&gt;
-
-&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);&lt;/p&gt;
-
-&lt;p&gt;config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);&lt;/p&gt;
-
-&lt;p&gt;config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.SHARED);&lt;/p&gt;
-
-&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);&lt;/p&gt;
-
-&lt;p&gt;config.wepKeys[0] = &amp;#8220;&amp;amp;#8221;password&amp;amp;#8221;&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;config.wepTxKeyIndex = 0;&lt;/p&gt;
-
-&lt;p&gt;int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります&lt;/p&gt;
-
-&lt;p&gt;wifiManager.saveConfiguration();&lt;/p&gt;
-
-&lt;p&gt;wifiManager.updateNetwork(config);&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+String ssid = &amp;quot;SSID_NAME&amp;quot;;
+WifiConfiguration config = new WifiConfiguration();
+config.SSID = &amp;quot;\&amp;quot;&amp;quot; + ssid + &amp;quot;\&amp;quot;&amp;quot;;
+config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
+config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);
+config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.SHARED);
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
+config.wepKeys[0] = &amp;quot;\&amp;quot;password\&amp;quot;&amp;quot;;
+config.wepTxKeyIndex = 0;
+int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります
+wifiManager.saveConfiguration();
+wifiManager.updateNetwork(config);
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;認証方式-wpa-wpa2-pskのssid設定:506278074be7e994baf0f209d1456c13&#34;&gt;認証方式 : WPA/WPA2-PSKのSSID設定&lt;/h2&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);&lt;/p&gt;
-
-&lt;p&gt;String ssid = &amp;#8220;SSID_NAME&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;WifiConfiguration config = new WifiConfiguration();&lt;/p&gt;
-
-&lt;p&gt;config.SSID = &amp;#8220;&amp;amp;#8221;&amp;#8221; + ssid + &amp;#8220;&amp;amp;#8221;&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);&lt;/p&gt;
-
-&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);&lt;/p&gt;
-
-&lt;p&gt;config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);&lt;/p&gt;
-
-&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);&lt;/p&gt;
-
-&lt;p&gt;config.preSharedKey = &amp;#8220;&amp;amp;#8221;password&amp;amp;#8221;&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります&lt;/p&gt;
-
-&lt;p&gt;wifiManager.saveConfiguration();&lt;/p&gt;
-
-&lt;p&gt;wifiManager.updateNetwork(config);&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+String ssid = &amp;quot;SSID_NAME&amp;quot;;
+WifiConfiguration config = new WifiConfiguration();
+config.SSID = &amp;quot;\&amp;quot;&amp;quot; + ssid + &amp;quot;\&amp;quot;&amp;quot;;
+config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
+config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+config.preSharedKey = &amp;quot;\&amp;quot;password\&amp;quot;&amp;quot;;
+int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります
+wifiManager.saveConfiguration();
+wifiManager.updateNetwork(config);
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;上記で作成したssidに接続する:506278074be7e994baf0f209d1456c13&#34;&gt;上記で作成したSSIDに接続する&lt;/h2&gt;
 
 &lt;p&gt;networkIdが正しくとれていれば実際に接続を試してみます。&lt;/p&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);&lt;/p&gt;
-
-&lt;p&gt;int networkId = 0; // 上記設定で取得できたものを使用&lt;/p&gt;
-
-&lt;p&gt;String targetSSID = &amp;#8220;hoge-ssid&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;// WiFi機能が無効の状態で呼び出されるとSSID検索の所でnullとなるので念のため例外処理を行なう&lt;/p&gt;
-
-&lt;p&gt;try {&lt;/p&gt;
-
-&lt;p&gt;// ssidの検索を開始&lt;/p&gt;
-
-&lt;p&gt;wifiManager.startScan();&lt;/p&gt;
-
-&lt;p&gt;for (ScanResult result : wifiManager.getScanResults()) {&lt;/p&gt;
-
-&lt;p&gt;// Android4.2以降よりダブルクォーテーションが付いてくるので除去&lt;/p&gt;
-
-&lt;p&gt;String resultSSID = result.SSID.replace(&amp;#8220;&amp;amp;#8221;&amp;#8221;, &amp;#8220;&amp;#8221;);&lt;/p&gt;
-
-&lt;p&gt;if (resultSSID.equals(targetSSID)) {&lt;/p&gt;
-
-&lt;p&gt;// 接続を行う&lt;/p&gt;
-
-&lt;p&gt;if (networkId &amp;gt; 0) {&lt;/p&gt;
-
-&lt;p&gt;// 先に既存接続先を無効にしてから接続します&lt;/p&gt;
-
-&lt;p&gt;for (WifiConfiguration c0 : wifiManager.getConfiguredNetworks()) {&lt;/p&gt;
-
-&lt;p&gt;wifiManager.enableNetwork(c0.networkId, false);&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;wifiManager.enableNetwork(networkId, true);&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;break;&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;} catch (NullPointerException e) {&lt;/p&gt;
-
-&lt;p&gt;// 適切な例外処理をしてください。&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+int networkId = 0; // 上記設定で取得できたものを使用
+String targetSSID = &amp;quot;hoge-ssid&amp;quot;;
+// WiFi機能が無効の状態で呼び出されるとSSID検索の所でnullとなるので念のため例外処理を行なう
+try {
+    // ssidの検索を開始
+    wifiManager.startScan();
+    for (ScanResult result : wifiManager.getScanResults()) {
+        // Android4.2以降よりダブルクォーテーションが付いてくるので除去
+        String resultSSID = result.SSID.replace(&amp;quot;\&amp;quot;&amp;quot;, &amp;quot;&amp;quot;);
+        if (resultSSID.equals(targetSSID)) {
+            // 接続を行う
+            if (networkId &amp;gt; 0) {
+                // 先に既存接続先を無効にしてから接続します
+                for (WifiConfiguration c0 : wifiManager.getConfiguredNetworks()) {
+                    wifiManager.enableNetwork(c0.networkId, false);
+                }
+                wifiManager.enableNetwork(networkId, true);
+            }
+            break;
+        }
+    }
+} catch (NullPointerException e) {
+   // 適切な例外処理をしてください。
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;これでひと通りSSID設定と、接続まで出来るようになりました。&lt;/p&gt;
 
@@ -967,7 +708,7 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;前回の記事&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://intemous9.github.io/2012/06/26/phonegap-ios-1/&#34;&gt;PhoneGapで始めるスマホアプリ開発~iOS編(セットアップ)~&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[PhoneGapで始めるスマホアプリ開発~iOS編(セットアップ)~][1]&lt;/p&gt;
 
 &lt;p&gt;こちらでPhoneGapでの開発環境を作ったので、引き続き実際にコードを書きながら色々と試してみました。&lt;/p&gt;
 
@@ -983,51 +724,40 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;本当に「Hello World」だけを表示するためindex.htmlの中身を最低限にしてみました。&lt;/p&gt;
 
-&lt;p&gt;index.html&lt;/p&gt;
+&lt;h3 id=&#34;index-html:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;index.html&lt;/h3&gt;
 
-&lt;p&gt;[html]&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;hello-world-phonegap:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;Hello World!! PhoneGap!&lt;/h1&gt;
-
-&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/html&gt;&lt;/p&gt;
-
-&lt;p&gt;[/html]&lt;/p&gt;
-
-&lt;p&gt;実際にシミュレータで実行した結果はこちらになります。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss2.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss2.png&#34; alt=&#34;&#34; title=&#34;ios2-ss2&#34; width=&#34;366&#34; height=&#34;704&#34; class=&#34;aligncenter size-full wp-image-152&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;本当にシンプルなHTMLで表示することが出来ました。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;&amp;quot; /&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;only screen and (max-device-width: 480px)&amp;quot; href=&amp;quot;iphone.css&amp;quot; type=&amp;quot;text/css&amp;quot; /&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot; charset=&amp;quot;utf-8&amp;quot; src=&amp;quot;cordova-1.8.1.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;h1&amp;gt;Hello World!! PhoneGap!&amp;lt;/h1&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;静的な画面を出すだけならHTMLの編集だけで表示することが出来るようですね。&lt;/p&gt;
 
-&lt;h3 id=&#34;apiを呼び出すために覚えたい事:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを呼び出すために覚えたい事&lt;/h3&gt;
+&lt;h2 id=&#34;apiを呼び出すために覚えたい事:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを呼び出すために覚えたい事&lt;/h2&gt;
 
-&lt;h4 id=&#34;アプリケーション上でドラッグを禁止する場合:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;アプリケーション上でドラッグを禁止する場合&lt;/h4&gt;
+&lt;h3 id=&#34;アプリケーション上でドラッグを禁止する場合:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;アプリケーション上でドラッグを禁止する場合&lt;/h3&gt;
 
 &lt;p&gt;禁止する場合は、先程のindex.htmlのhead内に下記のコードを追記する事で設定する事が出来ます。&lt;/p&gt;
 
-&lt;p&gt;index.html&lt;/p&gt;
+&lt;h4 id=&#34;index-html-1:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;index.html&lt;/h4&gt;
 
-&lt;p&gt;[javascript]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function preventBehavior(e) {
+    e.preventDefault();
+}
+document.addEventListener(&amp;quot;touchmove&amp;quot;, preventBehavior, false);
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;function preventBehavior(e)&lt;/p&gt;
-
-&lt;p&gt;{&lt;/p&gt;
-
-&lt;p&gt;e.preventDefault();&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;document.addEventListener(&amp;#8220;touchmove&amp;#8221;, preventBehavior, false);&lt;/p&gt;
-
-&lt;p&gt;[/javascript]&lt;/p&gt;
-
-&lt;h4 id=&#34;phonegapの各種apiを使うために重要な項目:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;PhoneGapの各種APIを使うために重要な項目&lt;/h4&gt;
+&lt;h3 id=&#34;phonegapの各種apiを使うために重要な項目:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;PhoneGapの各種APIを使うために重要な項目&lt;/h3&gt;
 
 &lt;p&gt;PhoneGapのAPIを使用するためには、JavaScriptコードとネイティブコードのロードが完了した時点でAPIの処理を呼び出す必要があります。&lt;/p&gt;
 
@@ -1037,79 +767,76 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;index.html(JS部分)&lt;/p&gt;
 
-&lt;p&gt;[javascript]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// ロード完了時点に呼び出す
+function onBodyLoad() {
+    document.addEventListener(&amp;quot;deviceready&amp;quot;, onDeviceReady, false);
+}
 
-&lt;p&gt;// ロード完了時点に呼び出す&lt;/p&gt;
-
-&lt;p&gt;function onBodyLoad()&lt;/p&gt;
-
-&lt;p&gt;{&lt;/p&gt;
-
-&lt;p&gt;document.addEventListener(&amp;#8220;deviceready&amp;#8221;, onDeviceReady, false);&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;// PhoneGapライブラリ/ネイティブコードのロード後に呼び出す&lt;/p&gt;
-
-&lt;p&gt;function onDeviceReady()&lt;/p&gt;
-
-&lt;p&gt;{&lt;/p&gt;
-
-&lt;p&gt;// この中でAPI処理を扱う&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;[/javascript]&lt;/p&gt;
+// PhoneGapライブラリ/ネイティブコードのロード後に呼び出す
+function onDeviceReady() {
+    // この中でAPI処理を扱う
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;index.html(html部分)&lt;/p&gt;
 
-&lt;p&gt;[html]&lt;/p&gt;
-
-&lt;!-- ロード完了時に呼び出すようにします --&gt;
-
-&lt;p&gt;[/html]&lt;/p&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!-- ロード完了時に呼び出すようにします --&amp;gt;
+&amp;lt;body onload=&amp;quot;onBodyLoad()&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;これで準備は完了となります。&lt;/p&gt;
 
-&lt;h3 id=&#34;apiを試してみました:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを試してみました&lt;/h3&gt;
+&lt;h2 id=&#34;apiを試してみました:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを試してみました&lt;/h2&gt;
 
 &lt;p&gt;せっかくなんで、簡単に使えるAPIを試してみました。&lt;/p&gt;
 
-&lt;h4 id=&#34;端末情報を取得するapi-device-api:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;端末情報を取得するAPI(Device API)&lt;/h4&gt;
+&lt;h3 id=&#34;端末情報を取得するapi-device-api:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;端末情報を取得するAPI(Device API)&lt;/h3&gt;
 
 &lt;p&gt;端末の情報を取得API、Device APIを実験に使用してみました。&lt;/p&gt;
 
-&lt;p&gt;参考:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.phonegap.com/en/1.0.0/phonegap_device_device.md.html#Device&#34; target=&#34;_blank&#34; &gt;Device APIドキュメント&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考： &lt;a href=&#34;http://docs.phonegap.com/en/1.0.0/phonegap_device_device.md.html#Device&#34; target=&#34;_blank&#34; &gt;Device APIドキュメント&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;サンプルコード&lt;/p&gt;
 
-&lt;p&gt;[html]&lt;/p&gt;
-
-&lt;!-- ロード完了時に呼び出すようにします --&gt;
-
-&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;api-test:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;API Test&lt;/h1&gt;
-
-&lt;p id=&#34;deviceDesc&#34;&gt;
-  DeviceInfo
-&lt;/p&gt;
-
-&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/html&gt;&lt;/p&gt;
-
-&lt;p&gt;[/html]&lt;/p&gt;
-
-&lt;p&gt;実際に表示した画面が下記の通りとなります。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss3.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss3.png&#34; alt=&#34;&#34; title=&#34;ios2-ss3&#34; width=&#34;336&#34; height=&#34;656&#34; class=&#34;aligncenter size-full wp-image-175&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+  &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;&amp;quot; /&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;only screen and (max-device-width: 480px)&amp;quot; href=&amp;quot;iphone.css&amp;quot; type=&amp;quot;text/css&amp;quot; /&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot; charset=&amp;quot;utf-8&amp;quot; src=&amp;quot;cordova-1.8.1.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    // ロード完了時点に呼び出す
+    function onBodyLoad()
+    {       
+        document.addEventListener(&amp;quot;deviceready&amp;quot;, onDeviceReady, false);
+    }
+    // PhoneGapライブラリ/ネイティブコードのロード後に呼び出す
+    function onDeviceReady()
+    {
+        // 端末情報を取得して表示する
+        document.getElementById(&#39;deviceDesc&#39;).innerHTML =
+        &#39;&amp;lt;ul&amp;gt;&#39; +
+        &#39;&amp;lt;li&amp;gt;device=&#39; + device.name + &#39;&amp;lt;/li&amp;gt;&#39; +
+        &#39;&amp;lt;li&amp;gt;platform=&#39; + device.platform + &#39;&amp;lt;/li&amp;gt;&#39; +
+        &#39;&amp;lt;li&amp;gt;UUID=&#39; + device.uuid + &#39;&amp;lt;/li&amp;gt;&#39; +
+        &#39;&amp;lt;li&amp;gt;version=&#39; + device.version + &#39;&amp;lt;/li&amp;gt;&#39; +
+        &#39;&amp;lt;/ul&amp;gt;&#39;;
+    }
+    &amp;lt;/script&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;!-- ロード完了時に呼び出すようにします --&amp;gt;
+  &amp;lt;body onload=&amp;quot;onBodyLoad()&amp;quot;&amp;gt;
+      &amp;lt;h1&amp;gt;API Test&amp;lt;/h1&amp;gt;
+      &amp;lt;p id=&amp;quot;deviceDesc&amp;quot;&amp;gt;DeviceInfo&amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;呼び出し方もとても簡単で、すぐに使用することが出来ました。&lt;/p&gt;
 
-&lt;h3 id=&#34;まとめ:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;まとめ&lt;/h3&gt;
+&lt;h2 id=&#34;まとめ:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;まだまだ、これだけでは全然アプリを作れる状態ではないのですがAPIの呼び出し方と簡単ですが記述方法も覚える事が出来たので、引き続き色々と実験しながらやっていきたいと思います。&lt;/p&gt;
 
@@ -1187,7 +914,7 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;この2つとなります。&lt;/p&gt;
 
-&lt;h3 id=&#34;開発準備-ダウンロードとインストール:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(ダウンロードとインストール)&lt;/h3&gt;
+&lt;h2 id=&#34;開発準備-ダウンロードとインストール:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(ダウンロードとインストール)&lt;/h2&gt;
 
 &lt;p&gt;それでは公式サイトよりダウンロードしてみます。&lt;/p&gt;
 
@@ -1223,7 +950,7 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;インストールを行なうことでXcodeを使って開発する準備が整いました。&lt;/p&gt;
 
-&lt;h3 id=&#34;開発準備-xcode:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(Xcode)&lt;/h3&gt;
+&lt;h2 id=&#34;開発準備-xcode:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(Xcode)&lt;/h2&gt;
 
 &lt;p&gt;インストールが完了したので、早速Xcodeを起動してみます。&lt;/p&gt;
 
@@ -1275,9 +1002,9 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;サイドメニューはもちろん、デザインも多少のWordPressのお作法を覚えれば自分でカスタマイズ出来るので面白い！&lt;/p&gt;
 
-&lt;p&gt;とはいえ、自分はデザインが1から出来る訳ではないので、他の方が作ったデザインをベースに自分好みに直すしかできないのですが&amp;#8230;（泣）&lt;/p&gt;
+&lt;p&gt;とはいえ、自分はデザインが1から出来る訳ではないので、他の方が作ったデザインをベースに自分好みに直すしかできないのですが&amp;hellip;。&lt;/p&gt;
 
-&lt;p&gt;デザインも自分で出来るようになりたいです！これを先の目標にしつつ&amp;#8230;。&lt;/p&gt;
+&lt;p&gt;デザインも自分で出来るようになりたいです！これを先の目標にしつつ&amp;hellip;。&lt;/p&gt;
 
 &lt;p&gt;今回はテーマを編集する際に調べた内容、またテーマ内の共通となるテンプレートの意味について理解した部分をまとめておこうと思います。&lt;/p&gt;
 

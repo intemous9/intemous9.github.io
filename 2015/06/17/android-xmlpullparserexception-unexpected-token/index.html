@@ -77,30 +77,22 @@
 
 <p>Androidアプリ開発の際、リソースファイルやHttp経由で取得したUTF-8なxmlファイルをStringReaderで読み込むと、下記の様なエラーが発生する場合、読み込んだファイルの先頭にBOMが付いている可能性があります。</p>
 
-<pre>XmlPullParserException
-org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in java.io.StringReader@***) 
+<pre><code>XmlPullParserException
+org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in java.io.StringReader@***)
      at org.kxml2.io.KXmlParser.next(KXmlParser.java:432)
      at org.kxml2.io.KXmlParser.next(KXmlParser.java:313)
 ・
 ・
 ・
-</pre>
+</code></pre>
 
-<h4 id="解決方法:7d33596006e6af95dde9f6df20e5121e">解決方法</h4>
+<h2 id="解決方法:7d33596006e6af95dde9f6df20e5121e">解決方法</h2>
 
 <p>StringReaderで読み込む前にBOM付きかチェックして除去することで回避できました。</p>
 
-<h5 id="サンプルコード:7d33596006e6af95dde9f6df20e5121e">サンプルコード</h5>
+<h3 id="サンプルコード:7d33596006e6af95dde9f6df20e5121e">サンプルコード</h3>
 
-<noscript>
-  <pre><code class="language-java java">public static String rmBom(String xmlString) {
-    if (Integer.toHexString(xmlString.charAt(0)).equals("feff")) {
-        // 先頭一文字を除く
-        xmlString = xmlString.substring(1);
-    }
-    return xmlString;
-}</code></pre>
-</noscript>
+<script src="https://gist.github.com/dtdweb/b0fe8d1c1b7580fb0345.js"></script>
 
       
       

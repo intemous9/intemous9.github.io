@@ -79,7 +79,7 @@
 
 <p>前回の記事</p>
 
-<p><a href="/2012/06/26/phonegap-ios-1/">PhoneGapで始めるスマホアプリ開発~iOS編(セットアップ)~</a></p>
+<p>[PhoneGapで始めるスマホアプリ開発~iOS編(セットアップ)~][1]</p>
 
 <p>こちらでPhoneGapでの開発環境を作ったので、引き続き実際にコードを書きながら色々と試してみました。</p>
 
@@ -95,51 +95,40 @@
 
 <p>本当に「Hello World」だけを表示するためindex.htmlの中身を最低限にしてみました。</p>
 
-<p>index.html</p>
+<h3 id="index-html:1be1945f749a4b2342d7edd66c6a7749">index.html</h3>
 
-<p>[html]</p>
-
-<p></p></p>
-
-<h1 id="hello-world-phonegap:1be1945f749a4b2342d7edd66c6a7749">Hello World!! PhoneGap!</h1>
-
-<p></body></p>
-
-<p></html></p>
-
-<p>[/html]</p>
-
-<p>実際にシミュレータで実行した結果はこちらになります。</p>
-
-<p><a href="http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss2.png"><img src="http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss2.png" alt="" title="ios2-ss2" width="366" height="704" class="aligncenter size-full wp-image-152" /></a></p>
-
-<p>本当にシンプルなHTMLで表示することが出来ました。</p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; media=&quot;only screen and (max-device-width: 480px)&quot; href=&quot;iphone.css&quot; type=&quot;text/css&quot; /&gt;
+    &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;cordova-1.8.1.js&quot;&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello World!! PhoneGap!&lt;/h1&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
 <p>静的な画面を出すだけならHTMLの編集だけで表示することが出来るようですね。</p>
 
-<h3 id="apiを呼び出すために覚えたい事:1be1945f749a4b2342d7edd66c6a7749">APIを呼び出すために覚えたい事</h3>
+<h2 id="apiを呼び出すために覚えたい事:1be1945f749a4b2342d7edd66c6a7749">APIを呼び出すために覚えたい事</h2>
 
-<h4 id="アプリケーション上でドラッグを禁止する場合:1be1945f749a4b2342d7edd66c6a7749">アプリケーション上でドラッグを禁止する場合</h4>
+<h3 id="アプリケーション上でドラッグを禁止する場合:1be1945f749a4b2342d7edd66c6a7749">アプリケーション上でドラッグを禁止する場合</h3>
 
 <p>禁止する場合は、先程のindex.htmlのhead内に下記のコードを追記する事で設定する事が出来ます。</p>
 
-<p>index.html</p>
+<h4 id="index-html-1:1be1945f749a4b2342d7edd66c6a7749">index.html</h4>
 
-<p>[javascript]</p>
+<pre><code class="language-javascript">function preventBehavior(e) {
+    e.preventDefault();
+}
+document.addEventListener(&quot;touchmove&quot;, preventBehavior, false);
+</code></pre>
 
-<p>function preventBehavior(e)</p>
-
-<p>{</p>
-
-<p>e.preventDefault();</p>
-
-<p>}</p>
-
-<p>document.addEventListener(&#8220;touchmove&#8221;, preventBehavior, false);</p>
-
-<p>[/javascript]</p>
-
-<h4 id="phonegapの各種apiを使うために重要な項目:1be1945f749a4b2342d7edd66c6a7749">PhoneGapの各種APIを使うために重要な項目</h4>
+<h3 id="phonegapの各種apiを使うために重要な項目:1be1945f749a4b2342d7edd66c6a7749">PhoneGapの各種APIを使うために重要な項目</h3>
 
 <p>PhoneGapのAPIを使用するためには、JavaScriptコードとネイティブコードのロードが完了した時点でAPIの処理を呼び出す必要があります。</p>
 
@@ -149,79 +138,76 @@
 
 <p>index.html(JS部分)</p>
 
-<p>[javascript]</p>
+<pre><code class="language-javascript">// ロード完了時点に呼び出す
+function onBodyLoad() {
+    document.addEventListener(&quot;deviceready&quot;, onDeviceReady, false);
+}
 
-<p>// ロード完了時点に呼び出す</p>
-
-<p>function onBodyLoad()</p>
-
-<p>{</p>
-
-<p>document.addEventListener(&#8220;deviceready&#8221;, onDeviceReady, false);</p>
-
-<p>}</p>
-
-<p>// PhoneGapライブラリ/ネイティブコードのロード後に呼び出す</p>
-
-<p>function onDeviceReady()</p>
-
-<p>{</p>
-
-<p>// この中でAPI処理を扱う</p>
-
-<p>}</p>
-
-<p>[/javascript]</p>
+// PhoneGapライブラリ/ネイティブコードのロード後に呼び出す
+function onDeviceReady() {
+    // この中でAPI処理を扱う
+}
+</code></pre>
 
 <p>index.html(html部分)</p>
 
-<p>[html]</p>
-
-<!-- ロード完了時に呼び出すようにします -->
-
-<p>[/html]</p></p>
+<pre><code class="language-html">&lt;!-- ロード完了時に呼び出すようにします --&gt;
+&lt;body onload=&quot;onBodyLoad()&quot;&gt;
+</code></pre>
 
 <p>これで準備は完了となります。</p>
 
-<h3 id="apiを試してみました:1be1945f749a4b2342d7edd66c6a7749">APIを試してみました</h3>
+<h2 id="apiを試してみました:1be1945f749a4b2342d7edd66c6a7749">APIを試してみました</h2>
 
 <p>せっかくなんで、簡単に使えるAPIを試してみました。</p>
 
-<h4 id="端末情報を取得するapi-device-api:1be1945f749a4b2342d7edd66c6a7749">端末情報を取得するAPI(Device API)</h4>
+<h3 id="端末情報を取得するapi-device-api:1be1945f749a4b2342d7edd66c6a7749">端末情報を取得するAPI(Device API)</h3>
 
 <p>端末の情報を取得API、Device APIを実験に使用してみました。</p>
 
-<p>参考:</p>
-
-<p><a href="http://docs.phonegap.com/en/1.0.0/phonegap_device_device.md.html#Device" target="_blank" >Device APIドキュメント</a></p>
+<p>参考： <a href="http://docs.phonegap.com/en/1.0.0/phonegap_device_device.md.html#Device" target="_blank" >Device APIドキュメント</a></p>
 
 <p>サンプルコード</p>
 
-<p>[html]</p>
-
-<!-- ロード完了時に呼び出すようにします -->
-
-<p></p></p>
-
-<h1 id="api-test:1be1945f749a4b2342d7edd66c6a7749">API Test</h1>
-
-<p id="deviceDesc">
-  DeviceInfo
-</p>
-
-<p></body></p>
-
-<p></html></p>
-
-<p>[/html]</p>
-
-<p>実際に表示した画面が下記の通りとなります。</p>
-
-<p><a href="http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss3.png"><img src="http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss3.png" alt="" title="ios2-ss3" width="336" height="656" class="aligncenter size-full wp-image-175" /></a></p>
+<pre><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+  &lt;title&gt;&lt;/title&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;&quot; /&gt;
+    &lt;link rel=&quot;stylesheet&quot; media=&quot;only screen and (max-device-width: 480px)&quot; href=&quot;iphone.css&quot; type=&quot;text/css&quot; /&gt;
+    &lt;script type=&quot;text/javascript&quot; charset=&quot;utf-8&quot; src=&quot;cordova-1.8.1.js&quot;&gt;&lt;/script&gt;
+    &lt;script type=&quot;text/javascript&quot;&gt;
+    // ロード完了時点に呼び出す
+    function onBodyLoad()
+    {       
+        document.addEventListener(&quot;deviceready&quot;, onDeviceReady, false);
+    }
+    // PhoneGapライブラリ/ネイティブコードのロード後に呼び出す
+    function onDeviceReady()
+    {
+        // 端末情報を取得して表示する
+        document.getElementById('deviceDesc').innerHTML =
+        '&lt;ul&gt;' +
+        '&lt;li&gt;device=' + device.name + '&lt;/li&gt;' +
+        '&lt;li&gt;platform=' + device.platform + '&lt;/li&gt;' +
+        '&lt;li&gt;UUID=' + device.uuid + '&lt;/li&gt;' +
+        '&lt;li&gt;version=' + device.version + '&lt;/li&gt;' +
+        '&lt;/ul&gt;';
+    }
+    &lt;/script&gt;
+  &lt;/head&gt;
+  &lt;!-- ロード完了時に呼び出すようにします --&gt;
+  &lt;body onload=&quot;onBodyLoad()&quot;&gt;
+      &lt;h1&gt;API Test&lt;/h1&gt;
+      &lt;p id=&quot;deviceDesc&quot;&gt;DeviceInfo&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
 
 <p>呼び出し方もとても簡単で、すぐに使用することが出来ました。</p>
 
-<h3 id="まとめ:1be1945f749a4b2342d7edd66c6a7749">まとめ</h3>
+<h2 id="まとめ:1be1945f749a4b2342d7edd66c6a7749">まとめ</h2>
 
 <p>まだまだ、これだけでは全然アプリを作れる状態ではないのですがAPIの呼び出し方と簡単ですが記述方法も覚える事が出来たので、引き続き色々と実験しながらやっていきたいと思います。</p>
 

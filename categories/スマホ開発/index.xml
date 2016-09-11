@@ -17,7 +17,7 @@
       <guid>http://intemous9.github.io/2015/06/16/url-connection-redirect/</guid>
       <description>&lt;p&gt;org.apache.httpパッケージとAndroidHttpClientクラスがAndroid5.1(API Level 22)から非推奨になりましたね。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://developer.android.com/about/versions/android-5.1.html&#34; target=&#34;_blank&#34;&gt;&lt;a href=&#34;https://developer.android.com/about/versions/android-5.1.html&#34;&gt;https://developer.android.com/about/versions/android-5.1.html&lt;/a&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://developer.android.com/about/versions/android-5.1.html&#34; target=&#34;_blank&#34;&gt;Android 5.1 APIs | Android Developers&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;これまでHttpClientで実装していたアプリはURLConnectionクラスを利用・変更しましょうとの事で。&lt;/p&gt;
 
@@ -27,70 +27,11 @@
 
 &lt;p&gt;ということで30系でも動作するように対応したサンプルメソッド&lt;/p&gt;
 
-&lt;noscript&gt;
-  &lt;pre&gt;&lt;code class=&#34;language-java java&#34;&gt;/**
- * urlとcookieからbodyを取得する
- */
-public static String getContents(String urlString, String cookies) throws IOException {
- 
-    URL url = new URL(urlString);
-    HttpURLConnection conn = (HttpURLConnection) url.openConnection();
- 
-    conn.setRequestMethod(&#34;GET&#34;);
-    conn.setConnectTimeout(5000);
-    conn.setDoOutput(true);
-    if (cookies != null) {
-        conn.setRequestProperty(&#34;Cookie&#34;, cookies);
-    }
- 
-    try {
- 
-        conn.connect();
-        int statuscode = conn.getResponseCode();
- 
-        // check 20x
-        if (statuscode != HttpURLConnection.HTTP_OK
-                &amp;&amp; statuscode != HttpURLConnection.HTTP_CREATED) {
-            // check 30x
-            if (statuscode == HttpURLConnection.HTTP_MOVED_TEMP
-                    || statuscode == HttpURLConnection.HTTP_MOVED_PERM
-                    || statuscode == HttpURLConnection.HTTP_SEE_OTHER) {
- 
-                String newUrlString = conn.getHeaderField(&#34;Location&#34;);
-                cookies = conn.getHeaderField(&#34;Set-Cookie&#34;);
-                conn = (HttpURLConnection) new URL(newUrlString).openConnection();
- 
-                if (cookies != null) {
-                    conn.setRequestProperty(&#34;Cookie&#34;, cookies);
-                }
- 
-            } else {
-                // 20x or 30x系でないので例外を送出
-                throw new IOException(&#34;Response code is &#34; + Integer.toString(statuscode));
-            }
-        }
- 
-    } catch (RuntimeException e) {
-        throw e;
-    }
- 
-    InputStream inputStream = new BufferedInputStream(conn.getInputStream());
-    BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, &#34;UTF-8&#34;));
-    StringBuilder stringBuilder = new StringBuilder();
-    String line = &#34;&#34;;
- 
-    while ((line = bufferedReader.readLine()) != null) {
-        stringBuilder.append(line);
-    }
-    bufferedReader.close();
- 
-    return stringBuilder.toString();
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/noscript&gt;
+&lt;script src=&#34;https://gist.github.com/dtdweb/13e25365a827df07ce07.js&#34;&gt;&lt;/script&gt;
 
 &lt;p&gt;一度レスポンスコードを受け取り、20x系なら正常処理、30x系の場合は再度connクラスを再生成して対応しました。&lt;/p&gt;
 
-&lt;p&gt;にしても、IO系クラス扱うのも少し苦手だ&amp;#8230;。&lt;/p&gt;
+&lt;p&gt;にしても、IO系クラス扱うのも少し苦手だ&amp;hellip;。&lt;/p&gt;
 </description>
     </item>
     
@@ -110,37 +51,26 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;また、端末によって微妙に挙動が異なったり、WiFi切替まで時間もかかったりと、色々と下記以外にも調整しないといけない事が多かったです。&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://developer.android.com/reference/android/net/wifi/WifiManager.html&#34; target=&#34;_blank&#34;&gt;Androidリファレンス:WifiManager&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://developer.android.com/reference/android/net/wifi/WifiConfiguration.html&#34; target=&#34;_blank&#34;&gt;Androidリファレンス:WifiConfiguration&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://developer.android.com/reference/android/net/wifi/WifiManager.html&#34; target=&#34;_blank&#34;&gt;Androidリファレンス:WifiManager&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://developer.android.com/reference/android/net/wifi/WifiConfiguration.html&#34; target=&#34;_blank&#34;&gt;Androidリファレンス:WifiConfiguration&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2 id=&#34;使用するために:506278074be7e994baf0f209d1456c13&#34;&gt;使用するために&lt;/h2&gt;
 
 &lt;p&gt;まずAndroidManifest.xmlに下記のパーミッション追加をする必要があります。&lt;/p&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;&lt;uses-permission android:name=&#34;android.permission.CHANGE\_WIFI\_STATE&#34;&gt;&lt;/uses-permission&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;uses-permission android:name=&#34;android.permission.ACCESS\_WIFI\_STATE&#34;&gt;&lt;/uses-permission&gt;&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-xml&#34;&gt;&amp;lt;uses-permission android:name=&amp;quot;android.permission.CHANGE\_WIFI\_STATE&amp;quot;&amp;gt;&amp;lt;/uses-permission&amp;gt;
+&amp;lt;uses-permission android:name=&amp;quot;android.permission.ACCESS\_WIFI\_STATE&amp;quot;&amp;gt;&amp;lt;/uses-permission&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;wifi機能をonにする:506278074be7e994baf0f209d1456c13&#34;&gt;WiFi機能をONにする&lt;/h2&gt;
 
 &lt;p&gt;SSID登録の際は、WiFi機能が有効でないと出来ないので、もしプログラム内で有効にするには下記の方法で行う&lt;/p&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);&lt;/p&gt;
-
-&lt;p&gt;if (wifiManager.isWifiEnabled() == false) {&lt;/p&gt;
-
-&lt;p&gt;wifiManager.setWifiEnabled(true);&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+if (wifiManager.isWifiEnabled() == false) {
+    wifiManager.setWifiEnabled(true);
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;上記のコードをActivityのonCreate等で実行しておくと良いかと思います。&lt;/p&gt;
 
@@ -154,183 +84,98 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;h2 id=&#34;セキュリティなしのssidを設定する:506278074be7e994baf0f209d1456c13&#34;&gt;セキュリティなしのSSIDを設定する&lt;/h2&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);&lt;/p&gt;
-
-&lt;p&gt;String ssid = &amp;#8220;SSID_NAME&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;WifiConfiguration config = new WifiConfiguration();&lt;/p&gt;
-
-&lt;p&gt;config.SSID = &amp;#8220;&amp;amp;#8221;&amp;#8221; + ssid + &amp;#8220;&amp;amp;#8221;&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);&lt;/p&gt;
-
-&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);&lt;/p&gt;
-
-&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);&lt;/p&gt;
-
-&lt;p&gt;config.allowedAuthAlgorithms.clear();&lt;/p&gt;
-
-&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);&lt;/p&gt;
-
-&lt;p&gt;int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります&lt;/p&gt;
-
-&lt;p&gt;wifiManager.saveConfiguration();&lt;/p&gt;
-
-&lt;p&gt;wifiManager.updateNetwork(config);&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+String ssid = &amp;quot;SSID_NAME&amp;quot;;
+WifiConfiguration config = new WifiConfiguration();
+config.SSID = &amp;quot;\&amp;quot;&amp;quot; + ssid + &amp;quot;\&amp;quot;&amp;quot;;
+config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
+config.allowedAuthAlgorithms.clear();
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります
+wifiManager.saveConfiguration();
+wifiManager.updateNetwork(config);
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;認証方式-wepのssid設定:506278074be7e994baf0f209d1456c13&#34;&gt;認証方式 : WEPのSSID設定&lt;/h2&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);&lt;/p&gt;
-
-&lt;p&gt;String ssid = &amp;#8220;SSID_NAME&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;WifiConfiguration config = new WifiConfiguration();&lt;/p&gt;
-
-&lt;p&gt;config.SSID = &amp;#8220;&amp;amp;#8221;&amp;#8221; + ssid + &amp;#8220;&amp;amp;#8221;&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);&lt;/p&gt;
-
-&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);&lt;/p&gt;
-
-&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);&lt;/p&gt;
-
-&lt;p&gt;config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);&lt;/p&gt;
-
-&lt;p&gt;config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.SHARED);&lt;/p&gt;
-
-&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);&lt;/p&gt;
-
-&lt;p&gt;config.wepKeys[0] = &amp;#8220;&amp;amp;#8221;password&amp;amp;#8221;&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;config.wepTxKeyIndex = 0;&lt;/p&gt;
-
-&lt;p&gt;int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります&lt;/p&gt;
-
-&lt;p&gt;wifiManager.saveConfiguration();&lt;/p&gt;
-
-&lt;p&gt;wifiManager.updateNetwork(config);&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+String ssid = &amp;quot;SSID_NAME&amp;quot;;
+WifiConfiguration config = new WifiConfiguration();
+config.SSID = &amp;quot;\&amp;quot;&amp;quot; + ssid + &amp;quot;\&amp;quot;&amp;quot;;
+config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.NONE);
+config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
+config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.OPEN);
+config.allowedAuthAlgorithms.set(WifiConfiguration.AuthAlgorithm.SHARED);
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
+config.wepKeys[0] = &amp;quot;\&amp;quot;password\&amp;quot;&amp;quot;;
+config.wepTxKeyIndex = 0;
+int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります
+wifiManager.saveConfiguration();
+wifiManager.updateNetwork(config);
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;認証方式-wpa-wpa2-pskのssid設定:506278074be7e994baf0f209d1456c13&#34;&gt;認証方式 : WPA/WPA2-PSKのSSID設定&lt;/h2&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);&lt;/p&gt;
-
-&lt;p&gt;String ssid = &amp;#8220;SSID_NAME&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;WifiConfiguration config = new WifiConfiguration();&lt;/p&gt;
-
-&lt;p&gt;config.SSID = &amp;#8220;&amp;amp;#8221;&amp;#8221; + ssid + &amp;#8220;&amp;amp;#8221;&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);&lt;/p&gt;
-
-&lt;p&gt;config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);&lt;/p&gt;
-
-&lt;p&gt;config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);&lt;/p&gt;
-
-&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);&lt;/p&gt;
-
-&lt;p&gt;config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);&lt;/p&gt;
-
-&lt;p&gt;config.preSharedKey = &amp;#8220;&amp;amp;#8221;password&amp;amp;#8221;&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります&lt;/p&gt;
-
-&lt;p&gt;wifiManager.saveConfiguration();&lt;/p&gt;
-
-&lt;p&gt;wifiManager.updateNetwork(config);&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+String ssid = &amp;quot;SSID_NAME&amp;quot;;
+WifiConfiguration config = new WifiConfiguration();
+config.SSID = &amp;quot;\&amp;quot;&amp;quot; + ssid + &amp;quot;\&amp;quot;&amp;quot;;
+config.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+config.allowedProtocols.set(WifiConfiguration.Protocol.WPA);
+config.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+config.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP40);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.WEP104);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+config.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+config.preSharedKey = &amp;quot;\&amp;quot;password\&amp;quot;&amp;quot;;
+int networkId = wifiManager.addNetwork(config); // 失敗した場合は-1となります
+wifiManager.saveConfiguration();
+wifiManager.updateNetwork(config);
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;h2 id=&#34;上記で作成したssidに接続する:506278074be7e994baf0f209d1456c13&#34;&gt;上記で作成したSSIDに接続する&lt;/h2&gt;
 
 &lt;p&gt;networkIdが正しくとれていれば実際に接続を試してみます。&lt;/p&gt;
 
-&lt;p&gt;[java]&lt;/p&gt;
-
-&lt;p&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);&lt;/p&gt;
-
-&lt;p&gt;int networkId = 0; // 上記設定で取得できたものを使用&lt;/p&gt;
-
-&lt;p&gt;String targetSSID = &amp;#8220;hoge-ssid&amp;#8221;;&lt;/p&gt;
-
-&lt;p&gt;// WiFi機能が無効の状態で呼び出されるとSSID検索の所でnullとなるので念のため例外処理を行なう&lt;/p&gt;
-
-&lt;p&gt;try {&lt;/p&gt;
-
-&lt;p&gt;// ssidの検索を開始&lt;/p&gt;
-
-&lt;p&gt;wifiManager.startScan();&lt;/p&gt;
-
-&lt;p&gt;for (ScanResult result : wifiManager.getScanResults()) {&lt;/p&gt;
-
-&lt;p&gt;// Android4.2以降よりダブルクォーテーションが付いてくるので除去&lt;/p&gt;
-
-&lt;p&gt;String resultSSID = result.SSID.replace(&amp;#8220;&amp;amp;#8221;&amp;#8221;, &amp;#8220;&amp;#8221;);&lt;/p&gt;
-
-&lt;p&gt;if (resultSSID.equals(targetSSID)) {&lt;/p&gt;
-
-&lt;p&gt;// 接続を行う&lt;/p&gt;
-
-&lt;p&gt;if (networkId &amp;gt; 0) {&lt;/p&gt;
-
-&lt;p&gt;// 先に既存接続先を無効にしてから接続します&lt;/p&gt;
-
-&lt;p&gt;for (WifiConfiguration c0 : wifiManager.getConfiguredNetworks()) {&lt;/p&gt;
-
-&lt;p&gt;wifiManager.enableNetwork(c0.networkId, false);&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;wifiManager.enableNetwork(networkId, true);&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;break;&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;} catch (NullPointerException e) {&lt;/p&gt;
-
-&lt;p&gt;// 適切な例外処理をしてください。&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;[/java]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;WifiManager wifiManager = (WifiManager)getSystemService(Context.WIFI_SERVICE);
+int networkId = 0; // 上記設定で取得できたものを使用
+String targetSSID = &amp;quot;hoge-ssid&amp;quot;;
+// WiFi機能が無効の状態で呼び出されるとSSID検索の所でnullとなるので念のため例外処理を行なう
+try {
+    // ssidの検索を開始
+    wifiManager.startScan();
+    for (ScanResult result : wifiManager.getScanResults()) {
+        // Android4.2以降よりダブルクォーテーションが付いてくるので除去
+        String resultSSID = result.SSID.replace(&amp;quot;\&amp;quot;&amp;quot;, &amp;quot;&amp;quot;);
+        if (resultSSID.equals(targetSSID)) {
+            // 接続を行う
+            if (networkId &amp;gt; 0) {
+                // 先に既存接続先を無効にしてから接続します
+                for (WifiConfiguration c0 : wifiManager.getConfiguredNetworks()) {
+                    wifiManager.enableNetwork(c0.networkId, false);
+                }
+                wifiManager.enableNetwork(networkId, true);
+            }
+            break;
+        }
+    }
+} catch (NullPointerException e) {
+   // 適切な例外処理をしてください。
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;これでひと通りSSID設定と、接続まで出来るようになりました。&lt;/p&gt;
 
@@ -354,7 +199,7 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;前回の記事&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;http://intemous9.github.io/2012/06/26/phonegap-ios-1/&#34;&gt;PhoneGapで始めるスマホアプリ開発~iOS編(セットアップ)~&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;[PhoneGapで始めるスマホアプリ開発~iOS編(セットアップ)~][1]&lt;/p&gt;
 
 &lt;p&gt;こちらでPhoneGapでの開発環境を作ったので、引き続き実際にコードを書きながら色々と試してみました。&lt;/p&gt;
 
@@ -370,51 +215,40 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;本当に「Hello World」だけを表示するためindex.htmlの中身を最低限にしてみました。&lt;/p&gt;
 
-&lt;p&gt;index.html&lt;/p&gt;
+&lt;h3 id=&#34;index-html:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;index.html&lt;/h3&gt;
 
-&lt;p&gt;[html]&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;hello-world-phonegap:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;Hello World!! PhoneGap!&lt;/h1&gt;
-
-&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/html&gt;&lt;/p&gt;
-
-&lt;p&gt;[/html]&lt;/p&gt;
-
-&lt;p&gt;実際にシミュレータで実行した結果はこちらになります。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss2.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss2.png&#34; alt=&#34;&#34; title=&#34;ios2-ss2&#34; width=&#34;366&#34; height=&#34;704&#34; class=&#34;aligncenter size-full wp-image-152&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;本当にシンプルなHTMLで表示することが出来ました。&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+    &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;&amp;quot; /&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;only screen and (max-device-width: 480px)&amp;quot; href=&amp;quot;iphone.css&amp;quot; type=&amp;quot;text/css&amp;quot; /&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot; charset=&amp;quot;utf-8&amp;quot; src=&amp;quot;cordova-1.8.1.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;body&amp;gt;
+    &amp;lt;h1&amp;gt;Hello World!! PhoneGap!&amp;lt;/h1&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;静的な画面を出すだけならHTMLの編集だけで表示することが出来るようですね。&lt;/p&gt;
 
-&lt;h3 id=&#34;apiを呼び出すために覚えたい事:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを呼び出すために覚えたい事&lt;/h3&gt;
+&lt;h2 id=&#34;apiを呼び出すために覚えたい事:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを呼び出すために覚えたい事&lt;/h2&gt;
 
-&lt;h4 id=&#34;アプリケーション上でドラッグを禁止する場合:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;アプリケーション上でドラッグを禁止する場合&lt;/h4&gt;
+&lt;h3 id=&#34;アプリケーション上でドラッグを禁止する場合:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;アプリケーション上でドラッグを禁止する場合&lt;/h3&gt;
 
 &lt;p&gt;禁止する場合は、先程のindex.htmlのhead内に下記のコードを追記する事で設定する事が出来ます。&lt;/p&gt;
 
-&lt;p&gt;index.html&lt;/p&gt;
+&lt;h4 id=&#34;index-html-1:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;index.html&lt;/h4&gt;
 
-&lt;p&gt;[javascript]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;function preventBehavior(e) {
+    e.preventDefault();
+}
+document.addEventListener(&amp;quot;touchmove&amp;quot;, preventBehavior, false);
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;function preventBehavior(e)&lt;/p&gt;
-
-&lt;p&gt;{&lt;/p&gt;
-
-&lt;p&gt;e.preventDefault();&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;document.addEventListener(&amp;#8220;touchmove&amp;#8221;, preventBehavior, false);&lt;/p&gt;
-
-&lt;p&gt;[/javascript]&lt;/p&gt;
-
-&lt;h4 id=&#34;phonegapの各種apiを使うために重要な項目:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;PhoneGapの各種APIを使うために重要な項目&lt;/h4&gt;
+&lt;h3 id=&#34;phonegapの各種apiを使うために重要な項目:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;PhoneGapの各種APIを使うために重要な項目&lt;/h3&gt;
 
 &lt;p&gt;PhoneGapのAPIを使用するためには、JavaScriptコードとネイティブコードのロードが完了した時点でAPIの処理を呼び出す必要があります。&lt;/p&gt;
 
@@ -424,79 +258,76 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;index.html(JS部分)&lt;/p&gt;
 
-&lt;p&gt;[javascript]&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-javascript&#34;&gt;// ロード完了時点に呼び出す
+function onBodyLoad() {
+    document.addEventListener(&amp;quot;deviceready&amp;quot;, onDeviceReady, false);
+}
 
-&lt;p&gt;// ロード完了時点に呼び出す&lt;/p&gt;
-
-&lt;p&gt;function onBodyLoad()&lt;/p&gt;
-
-&lt;p&gt;{&lt;/p&gt;
-
-&lt;p&gt;document.addEventListener(&amp;#8220;deviceready&amp;#8221;, onDeviceReady, false);&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;// PhoneGapライブラリ/ネイティブコードのロード後に呼び出す&lt;/p&gt;
-
-&lt;p&gt;function onDeviceReady()&lt;/p&gt;
-
-&lt;p&gt;{&lt;/p&gt;
-
-&lt;p&gt;// この中でAPI処理を扱う&lt;/p&gt;
-
-&lt;p&gt;}&lt;/p&gt;
-
-&lt;p&gt;[/javascript]&lt;/p&gt;
+// PhoneGapライブラリ/ネイティブコードのロード後に呼び出す
+function onDeviceReady() {
+    // この中でAPI処理を扱う
+}
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;index.html(html部分)&lt;/p&gt;
 
-&lt;p&gt;[html]&lt;/p&gt;
-
-&lt;!-- ロード完了時に呼び出すようにします --&gt;
-
-&lt;p&gt;[/html]&lt;/p&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!-- ロード完了時に呼び出すようにします --&amp;gt;
+&amp;lt;body onload=&amp;quot;onBodyLoad()&amp;quot;&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;これで準備は完了となります。&lt;/p&gt;
 
-&lt;h3 id=&#34;apiを試してみました:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを試してみました&lt;/h3&gt;
+&lt;h2 id=&#34;apiを試してみました:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;APIを試してみました&lt;/h2&gt;
 
 &lt;p&gt;せっかくなんで、簡単に使えるAPIを試してみました。&lt;/p&gt;
 
-&lt;h4 id=&#34;端末情報を取得するapi-device-api:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;端末情報を取得するAPI(Device API)&lt;/h4&gt;
+&lt;h3 id=&#34;端末情報を取得するapi-device-api:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;端末情報を取得するAPI(Device API)&lt;/h3&gt;
 
 &lt;p&gt;端末の情報を取得API、Device APIを実験に使用してみました。&lt;/p&gt;
 
-&lt;p&gt;参考:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://docs.phonegap.com/en/1.0.0/phonegap_device_device.md.html#Device&#34; target=&#34;_blank&#34; &gt;Device APIドキュメント&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;参考： &lt;a href=&#34;http://docs.phonegap.com/en/1.0.0/phonegap_device_device.md.html#Device&#34; target=&#34;_blank&#34; &gt;Device APIドキュメント&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;サンプルコード&lt;/p&gt;
 
-&lt;p&gt;[html]&lt;/p&gt;
-
-&lt;!-- ロード完了時に呼び出すようにします --&gt;
-
-&lt;p&gt;&lt;/p&gt;&lt;/p&gt;
-
-&lt;h1 id=&#34;api-test:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;API Test&lt;/h1&gt;
-
-&lt;p id=&#34;deviceDesc&#34;&gt;
-  DeviceInfo
-&lt;/p&gt;
-
-&lt;p&gt;&lt;/body&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;/html&gt;&lt;/p&gt;
-
-&lt;p&gt;[/html]&lt;/p&gt;
-
-&lt;p&gt;実際に表示した画面が下記の通りとなります。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss3.png&#34;&gt;&lt;img src=&#34;http://dtdweb.com/wp-content/uploads/2012/07/ios2-ss3.png&#34; alt=&#34;&#34; title=&#34;ios2-ss3&#34; width=&#34;336&#34; height=&#34;656&#34; class=&#34;aligncenter size-full wp-image-175&#34; /&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code class=&#34;language-html&#34;&gt;&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html&amp;gt;
+  &amp;lt;head&amp;gt;
+  &amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;
+    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;&amp;gt;
+    &amp;lt;meta name=&amp;quot;viewport&amp;quot; content=&amp;quot;width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no;&amp;quot; /&amp;gt;
+    &amp;lt;link rel=&amp;quot;stylesheet&amp;quot; media=&amp;quot;only screen and (max-device-width: 480px)&amp;quot; href=&amp;quot;iphone.css&amp;quot; type=&amp;quot;text/css&amp;quot; /&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot; charset=&amp;quot;utf-8&amp;quot; src=&amp;quot;cordova-1.8.1.js&amp;quot;&amp;gt;&amp;lt;/script&amp;gt;
+    &amp;lt;script type=&amp;quot;text/javascript&amp;quot;&amp;gt;
+    // ロード完了時点に呼び出す
+    function onBodyLoad()
+    {       
+        document.addEventListener(&amp;quot;deviceready&amp;quot;, onDeviceReady, false);
+    }
+    // PhoneGapライブラリ/ネイティブコードのロード後に呼び出す
+    function onDeviceReady()
+    {
+        // 端末情報を取得して表示する
+        document.getElementById(&#39;deviceDesc&#39;).innerHTML =
+        &#39;&amp;lt;ul&amp;gt;&#39; +
+        &#39;&amp;lt;li&amp;gt;device=&#39; + device.name + &#39;&amp;lt;/li&amp;gt;&#39; +
+        &#39;&amp;lt;li&amp;gt;platform=&#39; + device.platform + &#39;&amp;lt;/li&amp;gt;&#39; +
+        &#39;&amp;lt;li&amp;gt;UUID=&#39; + device.uuid + &#39;&amp;lt;/li&amp;gt;&#39; +
+        &#39;&amp;lt;li&amp;gt;version=&#39; + device.version + &#39;&amp;lt;/li&amp;gt;&#39; +
+        &#39;&amp;lt;/ul&amp;gt;&#39;;
+    }
+    &amp;lt;/script&amp;gt;
+  &amp;lt;/head&amp;gt;
+  &amp;lt;!-- ロード完了時に呼び出すようにします --&amp;gt;
+  &amp;lt;body onload=&amp;quot;onBodyLoad()&amp;quot;&amp;gt;
+      &amp;lt;h1&amp;gt;API Test&amp;lt;/h1&amp;gt;
+      &amp;lt;p id=&amp;quot;deviceDesc&amp;quot;&amp;gt;DeviceInfo&amp;lt;/p&amp;gt;
+  &amp;lt;/body&amp;gt;
+&amp;lt;/html&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
 
 &lt;p&gt;呼び出し方もとても簡単で、すぐに使用することが出来ました。&lt;/p&gt;
 
-&lt;h3 id=&#34;まとめ:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;まとめ&lt;/h3&gt;
+&lt;h2 id=&#34;まとめ:1be1945f749a4b2342d7edd66c6a7749&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;まだまだ、これだけでは全然アプリを作れる状態ではないのですがAPIの呼び出し方と簡単ですが記述方法も覚える事が出来たので、引き続き色々と実験しながらやっていきたいと思います。&lt;/p&gt;
 
@@ -574,7 +405,7 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;この2つとなります。&lt;/p&gt;
 
-&lt;h3 id=&#34;開発準備-ダウンロードとインストール:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(ダウンロードとインストール)&lt;/h3&gt;
+&lt;h2 id=&#34;開発準備-ダウンロードとインストール:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(ダウンロードとインストール)&lt;/h2&gt;
 
 &lt;p&gt;それでは公式サイトよりダウンロードしてみます。&lt;/p&gt;
 
@@ -610,7 +441,7 @@ public static String getContents(String urlString, String cookies) throws IOExce
 
 &lt;p&gt;インストールを行なうことでXcodeを使って開発する準備が整いました。&lt;/p&gt;
 
-&lt;h3 id=&#34;開発準備-xcode:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(Xcode)&lt;/h3&gt;
+&lt;h2 id=&#34;開発準備-xcode:cd02f337e2fe8fb590505b5861d064de&#34;&gt;開発準備(Xcode)&lt;/h2&gt;
 
 &lt;p&gt;インストールが完了したので、早速Xcodeを起動してみます。&lt;/p&gt;
 

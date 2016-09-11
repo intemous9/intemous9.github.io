@@ -23,9 +23,11 @@
 
 &lt;p&gt;それでずっと何かいい方法はないかなと探してたのですが、仕事でもちょくちょく使ってたgistをブログ用にも利用して載せてみた所すごいしっくりきました！&lt;/p&gt;
 
-&lt;p&gt;いやgistっていいですね。&lt;/p&gt;
+&lt;h2 id=&#34;gistの利点:b41cec40607b190c9a070cc7ab260625&#34;&gt;gistの利点&lt;/h2&gt;
 
-&lt;p&gt;githubとは異なり、ファイル単位で扱えるので手軽に追加出来ますし。gitなんでメンテもしやすい。もっと早く利用しておけば良かった…。&lt;/p&gt;
+&lt;p&gt;githubとは異なり、ファイル単位で扱えるので手軽に追加出来ますし。gitなんでメンテもしやすい。&lt;/p&gt;
+
+&lt;p&gt;もっと早く利用しておけば良かった…。&lt;/p&gt;
 
 &lt;p&gt;まだブログでの利用は始めたばかりですがメリットも多々ありそうです。&lt;/p&gt;
 
@@ -36,7 +38,7 @@
 &lt;li&gt;記事に載せているソースコードもメンテしやすくなった&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h4 id=&#34;ブログに貼り付けやすい:b41cec40607b190c9a070cc7ab260625&#34;&gt;ブログに貼り付けやすい&lt;/h4&gt;
+&lt;h2 id=&#34;ブログに貼り付けやすい:b41cec40607b190c9a070cc7ab260625&#34;&gt;ブログに貼り付けやすい&lt;/h2&gt;
 
 &lt;p&gt;これもすごい変わりそうです。&lt;/p&gt;
 
@@ -44,32 +46,24 @@
 
 &lt;p&gt;gistの方でもブログ貼り付け用のHTMLが発行されるのですが、WordPressではそのまま利用出来ないようなんで、プラグインを使うといいみたいです。&lt;/p&gt;
 
-&lt;p&gt;[Embed GitHub Gist][1]&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://wordpress.org/plugins/embed-github-gist/&#34; target=&#34;_blank&#34;&gt;Embed GitHub Gist&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;あとは記事の中で下記の様なタグを入れるだけで完了でした。&lt;/p&gt;
 
-&lt;pre&gt;&amp;#091;gist id=gistのIDを設定する&amp;#093;
-&lt;/pre&gt;
+&lt;pre&gt;&lt;code&gt;[gist id=gistのIDを設定する]
+&lt;/code&gt;&lt;/pre&gt;
 
-&lt;h4 id=&#34;ブログ上でコードが見やすい:b41cec40607b190c9a070cc7ab260625&#34;&gt;ブログ上でコードが見やすい&lt;/h4&gt;
+&lt;h2 id=&#34;ブログ上でコードが見やすい:b41cec40607b190c9a070cc7ab260625&#34;&gt;ブログ上でコードが見やすい&lt;/h2&gt;
 
 &lt;p&gt;下記は別記事用に書いたサンプルなんですが、行間がシンタックスハイライトのプラグインよりも見やすいですし、ファイル種別によって色分けもされていい感じで。&lt;/p&gt;
 
-&lt;noscript&gt;
-  &lt;pre&gt;&lt;code class=&#34;language-java java&#34;&gt;public static String rmBom(String xmlString) {
-    if (Integer.toHexString(xmlString.charAt(0)).equals(&#34;feff&#34;)) {
-        // 先頭一文字を除く
-        xmlString = xmlString.substring(1);
-    }
-    return xmlString;
-}&lt;/code&gt;&lt;/pre&gt;
-&lt;/noscript&gt;
+&lt;script src=&#34;https://gist.github.com/dtdweb/b0fe8d1c1b7580fb0345.js&#34;&gt;&lt;/script&gt;
 
-&lt;h4 id=&#34;記事の読み込み速度も多少良くなった:b41cec40607b190c9a070cc7ab260625&#34;&gt;記事の読み込み速度も多少良くなった&lt;/h4&gt;
+&lt;h2 id=&#34;記事の読み込み速度も多少良くなった:b41cec40607b190c9a070cc7ab260625&#34;&gt;記事の読み込み速度も多少良くなった&lt;/h2&gt;
 
 &lt;p&gt;これは正確に測ったわけではないんですが…、気のせいかシンタックスハイライトのプラグインよりも体感で読み込み速度が早くなった感じがします。&lt;/p&gt;
 
-&lt;h4 id=&#34;記事に乗せているソースコードもメンテしやくなった:b41cec40607b190c9a070cc7ab260625&#34;&gt;記事に乗せているソースコードもメンテしやくなった&lt;/h4&gt;
+&lt;h2 id=&#34;記事に乗せているソースコードもメンテしやくなった:b41cec40607b190c9a070cc7ab260625&#34;&gt;記事に乗せているソースコードもメンテしやくなった&lt;/h2&gt;
 
 &lt;p&gt;なんだかんだで、一番のメリットはこれなのかなと思いました。&lt;/p&gt;
 
@@ -79,7 +73,7 @@
 
 &lt;p&gt;便利です。&lt;/p&gt;
 
-&lt;h3 id=&#34;まとめ:b41cec40607b190c9a070cc7ab260625&#34;&gt;まとめ&lt;/h3&gt;
+&lt;h2 id=&#34;まとめ:b41cec40607b190c9a070cc7ab260625&#34;&gt;まとめ&lt;/h2&gt;
 
 &lt;p&gt;WordPressで技術ブログを書いていたらgist使うと楽になりますね。&lt;/p&gt;
 
@@ -88,8 +82,6 @@
 &lt;p&gt;関係ないですけど、qiitaとブログの使い分けもどうするか悩み中です。&lt;/p&gt;
 
 &lt;p&gt;自分の中ではqiitaは、使い回し可能な作業の記録とかで、ブログでは色々検証とかサンプルも載せていきたいなと考えてます。&lt;/p&gt;
-
-&lt;p&gt;[1]: &lt;a href=&#34;https://wordpress.org/plugins/embed-github-gist/&#34;&gt;https://wordpress.org/plugins/embed-github-gist/&lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     
@@ -107,9 +99,9 @@
 
 &lt;p&gt;サイドメニューはもちろん、デザインも多少のWordPressのお作法を覚えれば自分でカスタマイズ出来るので面白い！&lt;/p&gt;
 
-&lt;p&gt;とはいえ、自分はデザインが1から出来る訳ではないので、他の方が作ったデザインをベースに自分好みに直すしかできないのですが&amp;#8230;（泣）&lt;/p&gt;
+&lt;p&gt;とはいえ、自分はデザインが1から出来る訳ではないので、他の方が作ったデザインをベースに自分好みに直すしかできないのですが&amp;hellip;。&lt;/p&gt;
 
-&lt;p&gt;デザインも自分で出来るようになりたいです！これを先の目標にしつつ&amp;#8230;。&lt;/p&gt;
+&lt;p&gt;デザインも自分で出来るようになりたいです！これを先の目標にしつつ&amp;hellip;。&lt;/p&gt;
 
 &lt;p&gt;今回はテーマを編集する際に調べた内容、またテーマ内の共通となるテンプレートの意味について理解した部分をまとめておこうと思います。&lt;/p&gt;
 
