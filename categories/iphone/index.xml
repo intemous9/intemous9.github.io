@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Iphone on T.Muroiのblog</title>
-    <link>http://intemous9.github.io/categories/iphone/</link>
+    <link>http://blog.dtdweb.com/categories/iphone/</link>
     <description>Recent content in Iphone on T.Muroiのblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 08 Jul 2012 17:12:39 +0000</lastBuildDate>
-    <atom:link href="http://intemous9.github.io/categories/iphone/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.dtdweb.com/categories/iphone/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>PhoneGapで始めるスマホアプリ開発-iOS編　HelloWorldを表示！各種APIを試すまで</title>
-      <link>http://intemous9.github.io/2012/07/09/phonegap-ios-2/</link>
+      <link>http://blog.dtdweb.com/2012/07/09/phonegap-ios-2/</link>
       <pubDate>Sun, 08 Jul 2012 17:12:39 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2012/07/09/phonegap-ios-2/</guid>
+      <guid>http://blog.dtdweb.com/2012/07/09/phonegap-ios-2/</guid>
       <description>
 
 &lt;p&gt;こんにちは！&lt;/p&gt;
@@ -165,10 +165,10 @@ function onDeviceReady() {
     
     <item>
       <title>PhoneGapで始めるスマホアプリ開発~iOS編(セットアップ)~</title>
-      <link>http://intemous9.github.io/2012/06/26/phonegap-ios-1/</link>
+      <link>http://blog.dtdweb.com/2012/06/26/phonegap-ios-1/</link>
       <pubDate>Tue, 26 Jun 2012 00:32:09 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2012/06/26/phonegap-ios-1/</guid>
+      <guid>http://blog.dtdweb.com/2012/06/26/phonegap-ios-1/</guid>
       <description>
 
 &lt;p&gt;&lt;span style=&#34;font-size:10px;&#34;&gt;&lt;img src=&#34;http://farm6.static.flickr.com/5224/5682929553_7930aabc82_m.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;build.phonegap / doctorserone&lt;/span&gt;&lt;/p&gt;

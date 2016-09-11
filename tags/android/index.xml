@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Android on T.Muroiのblog</title>
-    <link>http://intemous9.github.io/tags/android/</link>
+    <link>http://blog.dtdweb.com/tags/android/</link>
     <description>Recent content in Android on T.Muroiのblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 23 Dec 2015 10:09:01 +0000</lastBuildDate>
-    <atom:link href="http://intemous9.github.io/tags/android/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.dtdweb.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>Androidのwebviewで画像が正しく表示されない時の対処法</title>
-      <link>http://intemous9.github.io/2015/12/23/android-mixed-content-mode/</link>
+      <link>http://blog.dtdweb.com/2015/12/23/android-mixed-content-mode/</link>
       <pubDate>Wed, 23 Dec 2015 10:09:01 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2015/12/23/android-mixed-content-mode/</guid>
+      <guid>http://blog.dtdweb.com/2015/12/23/android-mixed-content-mode/</guid>
       <description>
 
 &lt;p&gt;最近Androidアプリを開発している時に発生したのですが、webviewを表示する画面で一部画像が正しく表示されない問題が発生しました。&lt;/p&gt;
@@ -54,10 +54,10 @@
     
     <item>
       <title>[Android]XmlPullParserException: Unexpected tokenが発生した時の対処方法</title>
-      <link>http://intemous9.github.io/2015/06/17/android-xmlpullparserexception-unexpected-token/</link>
+      <link>http://blog.dtdweb.com/2015/06/17/android-xmlpullparserexception-unexpected-token/</link>
       <pubDate>Tue, 16 Jun 2015 23:33:03 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2015/06/17/android-xmlpullparserexception-unexpected-token/</guid>
+      <guid>http://blog.dtdweb.com/2015/06/17/android-xmlpullparserexception-unexpected-token/</guid>
       <description>
 
 &lt;p&gt;Androidアプリ開発の際、リソースファイルやHttp経由で取得したUTF-8なxmlファイルをStringReaderで読み込むと、下記の様なエラーが発生する場合、読み込んだファイルの先頭にBOMが付いている可能性があります。&lt;/p&gt;
@@ -83,10 +83,10 @@ org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in 
     
     <item>
       <title>[Android]URLConnectionでリダイレクトにも対応してみた</title>
-      <link>http://intemous9.github.io/2015/06/16/url-connection-redirect/</link>
+      <link>http://blog.dtdweb.com/2015/06/16/url-connection-redirect/</link>
       <pubDate>Mon, 15 Jun 2015 23:52:57 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2015/06/16/url-connection-redirect/</guid>
+      <guid>http://blog.dtdweb.com/2015/06/16/url-connection-redirect/</guid>
       <description>&lt;p&gt;org.apache.httpパッケージとAndroidHttpClientクラスがAndroid5.1(API Level 22)から非推奨になりましたね。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://developer.android.com/about/versions/android-5.1.html&#34; target=&#34;_blank&#34;&gt;Android 5.1 APIs | Android Developers&lt;/a&gt;&lt;/p&gt;
@@ -109,10 +109,10 @@ org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in 
     
     <item>
       <title>[Android]FragmentでMapViewを使った時の問題と解決策</title>
-      <link>http://intemous9.github.io/2015/03/31/fragment-mapview-v2/</link>
+      <link>http://blog.dtdweb.com/2015/03/31/fragment-mapview-v2/</link>
       <pubDate>Mon, 30 Mar 2015 15:18:57 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2015/03/31/fragment-mapview-v2/</guid>
+      <guid>http://blog.dtdweb.com/2015/03/31/fragment-mapview-v2/</guid>
       <description>
 
 &lt;p&gt;久しぶりの更新です。最近ぜんぜん更新しないまま、だいぶ経ってしまいました。&lt;/p&gt;
@@ -167,7 +167,7 @@ org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in 
 &lt;li&gt;完成画面:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://intemous9.github.io/images/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png&#34; alt=&#34;20150331_fragment_mapview_sample&#34; width=&#34;180&#34; height=&#34;300&#34; class=&#34;alignnone size-medium&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://blog.dtdweb.com/images/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png&#34; alt=&#34;20150331_fragment_mapview_sample&#34; width=&#34;180&#34; height=&#34;300&#34; class=&#34;alignnone size-medium&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;画面の通り見かけ上は変わらず、またFragmentを切り替えた際も画面のチラつきを抑える事が出来ました。&lt;/p&gt;
 
@@ -189,13 +189,13 @@ org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in 
     
     <item>
       <title>[Android]GPSの使い方、プロバイダのメリット・デメリットと使い分け</title>
-      <link>http://intemous9.github.io/2013/04/06/gps_desc/</link>
+      <link>http://blog.dtdweb.com/2013/04/06/gps_desc/</link>
       <pubDate>Sat, 06 Apr 2013 03:03:02 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2013/04/06/gps_desc/</guid>
+      <guid>http://blog.dtdweb.com/2013/04/06/gps_desc/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://intemous9.github.io/images/wp-content/uploads/2013/04/ss1.png&#34; alt=&#34;Gps ss1&#34; title=&#34;gps_ss1.png&#34; border=&#34;0&#34; width=&#34;360&#34; height=&#34;600&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://blog.dtdweb.com/images/wp-content/uploads/2013/04/ss1.png&#34; alt=&#34;Gps ss1&#34; title=&#34;gps_ss1.png&#34; border=&#34;0&#34; width=&#34;360&#34; height=&#34;600&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;GPS機能を使ったアプリを開発する機会があったんですが、調べてみると結構複雑でして。&lt;/p&gt;
 
@@ -331,13 +331,13 @@ location.getTime();
     
     <item>
       <title>[Android]SharedPreferencesを簡単に使うためのラッパークラスを作成してみました</title>
-      <link>http://intemous9.github.io/2013/03/19/android-sharedpreferences/</link>
+      <link>http://blog.dtdweb.com/2013/03/19/android-sharedpreferences/</link>
       <pubDate>Tue, 19 Mar 2013 14:40:12 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2013/03/19/android-sharedpreferences/</guid>
+      <guid>http://blog.dtdweb.com/2013/03/19/android-sharedpreferences/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://intemous9.github.io/images/wp-content/uploads/2013/03/SharedPreferencesApp_SS1.png&#34; alt=&#34;SharedPreferencesApp_SS1&#34; width=&#34;180&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-233&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://blog.dtdweb.com/images/wp-content/uploads/2013/03/SharedPreferencesApp_SS1.png&#34; alt=&#34;SharedPreferencesApp_SS1&#34; width=&#34;180&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-233&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Androidのデータ永続化手法として、SQLiteやSharedPreferencesとかありますよね。&lt;/p&gt;
 
@@ -422,10 +422,10 @@ String dataString = sharedSample.getText();
     
     <item>
       <title>[Android]WiFi接続まわりで苦戦したのでメモ</title>
-      <link>http://intemous9.github.io/2013/03/08/android-wifi-network/</link>
+      <link>http://blog.dtdweb.com/2013/03/08/android-wifi-network/</link>
       <pubDate>Fri, 08 Mar 2013 13:51:10 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2013/03/08/android-wifi-network/</guid>
+      <guid>http://blog.dtdweb.com/2013/03/08/android-wifi-network/</guid>
       <description>
 
 &lt;p&gt;AndroidのWiFi設定や変更において、色々と苦戦したのでその時の記録をメモ。&lt;/p&gt;

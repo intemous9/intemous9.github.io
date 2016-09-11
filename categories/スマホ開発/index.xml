@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>スマホ開発 on T.Muroiのblog</title>
-    <link>http://intemous9.github.io/categories/%E3%82%B9%E3%83%9E%E3%83%9B%E9%96%8B%E7%99%BA/</link>
+    <link>http://blog.dtdweb.com/categories/%E3%82%B9%E3%83%9E%E3%83%9B%E9%96%8B%E7%99%BA/</link>
     <description>Recent content in スマホ開発 on T.Muroiのblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Mon, 15 Jun 2015 23:52:57 +0000</lastBuildDate>
-    <atom:link href="http://intemous9.github.io/categories/%E3%82%B9%E3%83%9E%E3%83%9B%E9%96%8B%E7%99%BA/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.dtdweb.com/categories/%E3%82%B9%E3%83%9E%E3%83%9B%E9%96%8B%E7%99%BA/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[Android]URLConnectionでリダイレクトにも対応してみた</title>
-      <link>http://intemous9.github.io/2015/06/16/url-connection-redirect/</link>
+      <link>http://blog.dtdweb.com/2015/06/16/url-connection-redirect/</link>
       <pubDate>Mon, 15 Jun 2015 23:52:57 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2015/06/16/url-connection-redirect/</guid>
+      <guid>http://blog.dtdweb.com/2015/06/16/url-connection-redirect/</guid>
       <description>&lt;p&gt;org.apache.httpパッケージとAndroidHttpClientクラスがAndroid5.1(API Level 22)から非推奨になりましたね。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://developer.android.com/about/versions/android-5.1.html&#34; target=&#34;_blank&#34;&gt;Android 5.1 APIs | Android Developers&lt;/a&gt;&lt;/p&gt;
@@ -37,10 +37,10 @@
     
     <item>
       <title>[Android]WiFi接続まわりで苦戦したのでメモ</title>
-      <link>http://intemous9.github.io/2013/03/08/android-wifi-network/</link>
+      <link>http://blog.dtdweb.com/2013/03/08/android-wifi-network/</link>
       <pubDate>Fri, 08 Mar 2013 13:51:10 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2013/03/08/android-wifi-network/</guid>
+      <guid>http://blog.dtdweb.com/2013/03/08/android-wifi-network/</guid>
       <description>
 
 &lt;p&gt;AndroidのWiFi設定や変更において、色々と苦戦したのでその時の記録をメモ。&lt;/p&gt;
@@ -189,10 +189,10 @@ try {
     
     <item>
       <title>PhoneGapで始めるスマホアプリ開発-iOS編　HelloWorldを表示！各種APIを試すまで</title>
-      <link>http://intemous9.github.io/2012/07/09/phonegap-ios-2/</link>
+      <link>http://blog.dtdweb.com/2012/07/09/phonegap-ios-2/</link>
       <pubDate>Sun, 08 Jul 2012 17:12:39 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2012/07/09/phonegap-ios-2/</guid>
+      <guid>http://blog.dtdweb.com/2012/07/09/phonegap-ios-2/</guid>
       <description>
 
 &lt;p&gt;こんにちは！&lt;/p&gt;
@@ -343,10 +343,10 @@ function onDeviceReady() {
     
     <item>
       <title>PhoneGapで始めるスマホアプリ開発~iOS編(セットアップ)~</title>
-      <link>http://intemous9.github.io/2012/06/26/phonegap-ios-1/</link>
+      <link>http://blog.dtdweb.com/2012/06/26/phonegap-ios-1/</link>
       <pubDate>Tue, 26 Jun 2012 00:32:09 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2012/06/26/phonegap-ios-1/</guid>
+      <guid>http://blog.dtdweb.com/2012/06/26/phonegap-ios-1/</guid>
       <description>
 
 &lt;p&gt;&lt;span style=&#34;font-size:10px;&#34;&gt;&lt;img src=&#34;http://farm6.static.flickr.com/5224/5682929553_7930aabc82_m.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;build.phonegap / doctorserone&lt;/span&gt;&lt;/p&gt;

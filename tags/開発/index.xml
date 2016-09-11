@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>開発 on T.Muroiのblog</title>
-    <link>http://intemous9.github.io/tags/%E9%96%8B%E7%99%BA/</link>
+    <link>http://blog.dtdweb.com/tags/%E9%96%8B%E7%99%BA/</link>
     <description>Recent content in 開発 on T.Muroiのblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 11 Aug 2016 05:32:42 +0000</lastBuildDate>
-    <atom:link href="http://intemous9.github.io/tags/%E9%96%8B%E7%99%BA/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.dtdweb.com/tags/%E9%96%8B%E7%99%BA/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>GitHub緑化活動経過報告(1ヶ月くらい)</title>
-      <link>http://intemous9.github.io/2016/08/11/github-green-1-month/</link>
+      <link>http://blog.dtdweb.com/2016/08/11/github-green-1-month/</link>
       <pubDate>Thu, 11 Aug 2016 05:32:42 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2016/08/11/github-green-1-month/</guid>
+      <guid>http://blog.dtdweb.com/2016/08/11/github-green-1-month/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green.png&#34; alt=&#34;github_green&#34; width=&#34;90%&#34; class=&#34;alignnone size-medium&#34; /&gt;&lt;/p&gt;
@@ -59,10 +59,10 @@
     
     <item>
       <title>[Android]XmlPullParserException: Unexpected tokenが発生した時の対処方法</title>
-      <link>http://intemous9.github.io/2015/06/17/android-xmlpullparserexception-unexpected-token/</link>
+      <link>http://blog.dtdweb.com/2015/06/17/android-xmlpullparserexception-unexpected-token/</link>
       <pubDate>Tue, 16 Jun 2015 23:33:03 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2015/06/17/android-xmlpullparserexception-unexpected-token/</guid>
+      <guid>http://blog.dtdweb.com/2015/06/17/android-xmlpullparserexception-unexpected-token/</guid>
       <description>
 
 &lt;p&gt;Androidアプリ開発の際、リソースファイルやHttp経由で取得したUTF-8なxmlファイルをStringReaderで読み込むと、下記の様なエラーが発生する場合、読み込んだファイルの先頭にBOMが付いている可能性があります。&lt;/p&gt;
@@ -88,10 +88,10 @@ org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in 
     
     <item>
       <title>[Android]URLConnectionでリダイレクトにも対応してみた</title>
-      <link>http://intemous9.github.io/2015/06/16/url-connection-redirect/</link>
+      <link>http://blog.dtdweb.com/2015/06/16/url-connection-redirect/</link>
       <pubDate>Mon, 15 Jun 2015 23:52:57 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2015/06/16/url-connection-redirect/</guid>
+      <guid>http://blog.dtdweb.com/2015/06/16/url-connection-redirect/</guid>
       <description>&lt;p&gt;org.apache.httpパッケージとAndroidHttpClientクラスがAndroid5.1(API Level 22)から非推奨になりましたね。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://developer.android.com/about/versions/android-5.1.html&#34; target=&#34;_blank&#34;&gt;Android 5.1 APIs | Android Developers&lt;/a&gt;&lt;/p&gt;

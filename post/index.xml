@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on T.Muroiのblog</title>
-    <link>http://intemous9.github.io/post/</link>
+    <link>http://blog.dtdweb.com/post/</link>
     <description>Recent content in Posts on T.Muroiのblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Thu, 11 Aug 2016 05:32:42 +0000</lastBuildDate>
-    <atom:link href="http://intemous9.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.dtdweb.com/post/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>GitHub緑化活動経過報告(1ヶ月くらい)</title>
-      <link>http://intemous9.github.io/2016/08/11/github-green-1-month/</link>
+      <link>http://blog.dtdweb.com/2016/08/11/github-green-1-month/</link>
       <pubDate>Thu, 11 Aug 2016 05:32:42 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2016/08/11/github-green-1-month/</guid>
+      <guid>http://blog.dtdweb.com/2016/08/11/github-green-1-month/</guid>
       <description>
 
 &lt;p&gt;&lt;img src=&#34;http://blog.dtdweb.com/wp-content/uploads/2016/08/github_green.png&#34; alt=&#34;github_green&#34; width=&#34;90%&#34; class=&#34;alignnone size-medium&#34; /&gt;&lt;/p&gt;
@@ -59,10 +59,10 @@
     
     <item>
       <title>Androidのwebviewで画像が正しく表示されない時の対処法</title>
-      <link>http://intemous9.github.io/2015/12/23/android-mixed-content-mode/</link>
+      <link>http://blog.dtdweb.com/2015/12/23/android-mixed-content-mode/</link>
       <pubDate>Wed, 23 Dec 2015 10:09:01 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2015/12/23/android-mixed-content-mode/</guid>
+      <guid>http://blog.dtdweb.com/2015/12/23/android-mixed-content-mode/</guid>
       <description>
 
 &lt;p&gt;最近Androidアプリを開発している時に発生したのですが、webviewを表示する画面で一部画像が正しく表示されない問題が発生しました。&lt;/p&gt;
@@ -102,10 +102,10 @@
     
     <item>
       <title>[WordPress]今更ながらgistを使い始めました</title>
-      <link>http://intemous9.github.io/2015/06/28/use_wp_gist/</link>
+      <link>http://blog.dtdweb.com/2015/06/28/use_wp_gist/</link>
       <pubDate>Sun, 28 Jun 2015 00:37:31 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2015/06/28/use_wp_gist/</guid>
+      <guid>http://blog.dtdweb.com/2015/06/28/use_wp_gist/</guid>
       <description>
 
 &lt;p&gt;ブログを書く際に記事にソースコードを載せるのですが、これまではシンタックスハイライトのプラグインを使っていたのですが、中々しっくり来るプラグインがなく。&lt;/p&gt;
@@ -178,10 +178,10 @@
     
     <item>
       <title>[Android]XmlPullParserException: Unexpected tokenが発生した時の対処方法</title>
-      <link>http://intemous9.github.io/2015/06/17/android-xmlpullparserexception-unexpected-token/</link>
+      <link>http://blog.dtdweb.com/2015/06/17/android-xmlpullparserexception-unexpected-token/</link>
       <pubDate>Tue, 16 Jun 2015 23:33:03 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2015/06/17/android-xmlpullparserexception-unexpected-token/</guid>
+      <guid>http://blog.dtdweb.com/2015/06/17/android-xmlpullparserexception-unexpected-token/</guid>
       <description>
 
 &lt;p&gt;Androidアプリ開発の際、リソースファイルやHttp経由で取得したUTF-8なxmlファイルをStringReaderで読み込むと、下記の様なエラーが発生する場合、読み込んだファイルの先頭にBOMが付いている可能性があります。&lt;/p&gt;
@@ -207,10 +207,10 @@ org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in 
     
     <item>
       <title>[Android]URLConnectionでリダイレクトにも対応してみた</title>
-      <link>http://intemous9.github.io/2015/06/16/url-connection-redirect/</link>
+      <link>http://blog.dtdweb.com/2015/06/16/url-connection-redirect/</link>
       <pubDate>Mon, 15 Jun 2015 23:52:57 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2015/06/16/url-connection-redirect/</guid>
+      <guid>http://blog.dtdweb.com/2015/06/16/url-connection-redirect/</guid>
       <description>&lt;p&gt;org.apache.httpパッケージとAndroidHttpClientクラスがAndroid5.1(API Level 22)から非推奨になりましたね。&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://developer.android.com/about/versions/android-5.1.html&#34; target=&#34;_blank&#34;&gt;Android 5.1 APIs | Android Developers&lt;/a&gt;&lt;/p&gt;
@@ -233,10 +233,10 @@ org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in 
     
     <item>
       <title>[Android]FragmentでMapViewを使った時の問題と解決策</title>
-      <link>http://intemous9.github.io/2015/03/31/fragment-mapview-v2/</link>
+      <link>http://blog.dtdweb.com/2015/03/31/fragment-mapview-v2/</link>
       <pubDate>Mon, 30 Mar 2015 15:18:57 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2015/03/31/fragment-mapview-v2/</guid>
+      <guid>http://blog.dtdweb.com/2015/03/31/fragment-mapview-v2/</guid>
       <description>
 
 &lt;p&gt;久しぶりの更新です。最近ぜんぜん更新しないまま、だいぶ経ってしまいました。&lt;/p&gt;
@@ -291,7 +291,7 @@ org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in 
 &lt;li&gt;完成画面:&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;&lt;img src=&#34;http://intemous9.github.io/images/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png&#34; alt=&#34;20150331_fragment_mapview_sample&#34; width=&#34;180&#34; height=&#34;300&#34; class=&#34;alignnone size-medium&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://blog.dtdweb.com/images/wp-content/uploads/2015/03/20150331_fragment_mapview_sample.png&#34; alt=&#34;20150331_fragment_mapview_sample&#34; width=&#34;180&#34; height=&#34;300&#34; class=&#34;alignnone size-medium&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;画面の通り見かけ上は変わらず、またFragmentを切り替えた際も画面のチラつきを抑える事が出来ました。&lt;/p&gt;
 
@@ -313,13 +313,13 @@ org.xmlpull.v1.XmlPullParserException: Unexpected token (position:TEXT ?@1:2 in 
     
     <item>
       <title>[Android]GPSの使い方、プロバイダのメリット・デメリットと使い分け</title>
-      <link>http://intemous9.github.io/2013/04/06/gps_desc/</link>
+      <link>http://blog.dtdweb.com/2013/04/06/gps_desc/</link>
       <pubDate>Sat, 06 Apr 2013 03:03:02 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2013/04/06/gps_desc/</guid>
+      <guid>http://blog.dtdweb.com/2013/04/06/gps_desc/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://intemous9.github.io/images/wp-content/uploads/2013/04/ss1.png&#34; alt=&#34;Gps ss1&#34; title=&#34;gps_ss1.png&#34; border=&#34;0&#34; width=&#34;360&#34; height=&#34;600&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://blog.dtdweb.com/images/wp-content/uploads/2013/04/ss1.png&#34; alt=&#34;Gps ss1&#34; title=&#34;gps_ss1.png&#34; border=&#34;0&#34; width=&#34;360&#34; height=&#34;600&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;GPS機能を使ったアプリを開発する機会があったんですが、調べてみると結構複雑でして。&lt;/p&gt;
 
@@ -455,13 +455,13 @@ location.getTime();
     
     <item>
       <title>[Android]SharedPreferencesを簡単に使うためのラッパークラスを作成してみました</title>
-      <link>http://intemous9.github.io/2013/03/19/android-sharedpreferences/</link>
+      <link>http://blog.dtdweb.com/2013/03/19/android-sharedpreferences/</link>
       <pubDate>Tue, 19 Mar 2013 14:40:12 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2013/03/19/android-sharedpreferences/</guid>
+      <guid>http://blog.dtdweb.com/2013/03/19/android-sharedpreferences/</guid>
       <description>
 
-&lt;p&gt;&lt;img src=&#34;http://intemous9.github.io/images/wp-content/uploads/2013/03/SharedPreferencesApp_SS1.png&#34; alt=&#34;SharedPreferencesApp_SS1&#34; width=&#34;180&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-233&#34; /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;http://blog.dtdweb.com/images/wp-content/uploads/2013/03/SharedPreferencesApp_SS1.png&#34; alt=&#34;SharedPreferencesApp_SS1&#34; width=&#34;180&#34; height=&#34;300&#34; class=&#34;alignnone size-medium wp-image-233&#34; /&gt;&lt;/p&gt;
 
 &lt;p&gt;Androidのデータ永続化手法として、SQLiteやSharedPreferencesとかありますよね。&lt;/p&gt;
 
@@ -546,10 +546,10 @@ String dataString = sharedSample.getText();
     
     <item>
       <title>[Android]WiFi接続まわりで苦戦したのでメモ</title>
-      <link>http://intemous9.github.io/2013/03/08/android-wifi-network/</link>
+      <link>http://blog.dtdweb.com/2013/03/08/android-wifi-network/</link>
       <pubDate>Fri, 08 Mar 2013 13:51:10 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2013/03/08/android-wifi-network/</guid>
+      <guid>http://blog.dtdweb.com/2013/03/08/android-wifi-network/</guid>
       <description>
 
 &lt;p&gt;AndroidのWiFi設定や変更において、色々と苦戦したのでその時の記録をメモ。&lt;/p&gt;
@@ -698,10 +698,10 @@ try {
     
     <item>
       <title>PhoneGapで始めるスマホアプリ開発-iOS編　HelloWorldを表示！各種APIを試すまで</title>
-      <link>http://intemous9.github.io/2012/07/09/phonegap-ios-2/</link>
+      <link>http://blog.dtdweb.com/2012/07/09/phonegap-ios-2/</link>
       <pubDate>Sun, 08 Jul 2012 17:12:39 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2012/07/09/phonegap-ios-2/</guid>
+      <guid>http://blog.dtdweb.com/2012/07/09/phonegap-ios-2/</guid>
       <description>
 
 &lt;p&gt;こんにちは！&lt;/p&gt;
@@ -852,10 +852,10 @@ function onDeviceReady() {
     
     <item>
       <title>PhoneGapで始めるスマホアプリ開発~iOS編(セットアップ)~</title>
-      <link>http://intemous9.github.io/2012/06/26/phonegap-ios-1/</link>
+      <link>http://blog.dtdweb.com/2012/06/26/phonegap-ios-1/</link>
       <pubDate>Tue, 26 Jun 2012 00:32:09 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2012/06/26/phonegap-ios-1/</guid>
+      <guid>http://blog.dtdweb.com/2012/06/26/phonegap-ios-1/</guid>
       <description>
 
 &lt;p&gt;&lt;span style=&#34;font-size:10px;&#34;&gt;&lt;img src=&#34;http://farm6.static.flickr.com/5224/5682929553_7930aabc82_m.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;build.phonegap / doctorserone&lt;/span&gt;&lt;/p&gt;
@@ -990,10 +990,10 @@ function onDeviceReady() {
     
     <item>
       <title>WordPressのデザインを変更する際に知っておくと良さそうな事</title>
-      <link>http://intemous9.github.io/2012/04/24/wordpress-customize/</link>
+      <link>http://blog.dtdweb.com/2012/04/24/wordpress-customize/</link>
       <pubDate>Tue, 24 Apr 2012 02:04:30 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2012/04/24/wordpress-customize/</guid>
+      <guid>http://blog.dtdweb.com/2012/04/24/wordpress-customize/</guid>
       <description>
 
 &lt;p&gt;&lt;span style=&#34;font-size:10px;&#34;&gt;&lt;img src=&#34;http://farm7.static.flickr.com/6030/5965186458_bf20305722_m.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;WordPress Pencil and Pins-05 / thisismyurl&lt;/span&gt;&lt;/p&gt;
@@ -1096,10 +1096,10 @@ function onDeviceReady() {
     
     <item>
       <title>WordPressを使ってブログを作成する</title>
-      <link>http://intemous9.github.io/2012/04/22/start-wordpress-blog/</link>
+      <link>http://blog.dtdweb.com/2012/04/22/start-wordpress-blog/</link>
       <pubDate>Sun, 22 Apr 2012 00:34:10 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2012/04/22/start-wordpress-blog/</guid>
+      <guid>http://blog.dtdweb.com/2012/04/22/start-wordpress-blog/</guid>
       <description>
 
 &lt;p&gt;&lt;span style=&#34;font-size:10px;&#34;&gt;&lt;img src=&#34;http://farm5.static.flickr.com/4099/4919659112_70f8836dfa_m.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;WordPress Logo / Phil Oakley&lt;/span&gt;&lt;/p&gt;

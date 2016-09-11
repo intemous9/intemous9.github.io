@@ -2,19 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Wordpress on T.Muroiのblog</title>
-    <link>http://intemous9.github.io/categories/wordpress/</link>
+    <link>http://blog.dtdweb.com/categories/wordpress/</link>
     <description>Recent content in Wordpress on T.Muroiのblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Sun, 28 Jun 2015 00:37:31 +0000</lastBuildDate>
-    <atom:link href="http://intemous9.github.io/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.dtdweb.com/categories/wordpress/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>[WordPress]今更ながらgistを使い始めました</title>
-      <link>http://intemous9.github.io/2015/06/28/use_wp_gist/</link>
+      <link>http://blog.dtdweb.com/2015/06/28/use_wp_gist/</link>
       <pubDate>Sun, 28 Jun 2015 00:37:31 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2015/06/28/use_wp_gist/</guid>
+      <guid>http://blog.dtdweb.com/2015/06/28/use_wp_gist/</guid>
       <description>
 
 &lt;p&gt;ブログを書く際に記事にソースコードを載せるのですが、これまではシンタックスハイライトのプラグインを使っていたのですが、中々しっくり来るプラグインがなく。&lt;/p&gt;
@@ -87,10 +87,10 @@
     
     <item>
       <title>WordPressのデザインを変更する際に知っておくと良さそうな事</title>
-      <link>http://intemous9.github.io/2012/04/24/wordpress-customize/</link>
+      <link>http://blog.dtdweb.com/2012/04/24/wordpress-customize/</link>
       <pubDate>Tue, 24 Apr 2012 02:04:30 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2012/04/24/wordpress-customize/</guid>
+      <guid>http://blog.dtdweb.com/2012/04/24/wordpress-customize/</guid>
       <description>
 
 &lt;p&gt;&lt;span style=&#34;font-size:10px;&#34;&gt;&lt;img src=&#34;http://farm7.static.flickr.com/6030/5965186458_bf20305722_m.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;WordPress Pencil and Pins-05 / thisismyurl&lt;/span&gt;&lt;/p&gt;
@@ -193,10 +193,10 @@
     
     <item>
       <title>WordPressを使ってブログを作成する</title>
-      <link>http://intemous9.github.io/2012/04/22/start-wordpress-blog/</link>
+      <link>http://blog.dtdweb.com/2012/04/22/start-wordpress-blog/</link>
       <pubDate>Sun, 22 Apr 2012 00:34:10 +0000</pubDate>
       
-      <guid>http://intemous9.github.io/2012/04/22/start-wordpress-blog/</guid>
+      <guid>http://blog.dtdweb.com/2012/04/22/start-wordpress-blog/</guid>
       <description>
 
 &lt;p&gt;&lt;span style=&#34;font-size:10px;&#34;&gt;&lt;img src=&#34;http://farm5.static.flickr.com/4099/4919659112_70f8836dfa_m.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;WordPress Logo / Phil Oakley&lt;/span&gt;&lt;/p&gt;
