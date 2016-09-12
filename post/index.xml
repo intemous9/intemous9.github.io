@@ -6,8 +6,101 @@
     <description>Recent content in Posts on T.Muroiのblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Thu, 11 Aug 2016 05:32:42 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 11 Sep 2016 22:27:03 +0900</lastBuildDate>
     <atom:link href="http://blog.dtdweb.com/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>ブログをWordPressからHugoに移行した</title>
+      <link>http://blog.dtdweb.com/post/2016/09/migration-to-hugo/</link>
+      <pubDate>Sun, 11 Sep 2016 22:27:03 +0900</pubDate>
+      
+      <guid>http://blog.dtdweb.com/post/2016/09/migration-to-hugo/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://blog.dtdweb.com/images/post/2016-09-11-migration-to-hugo/hugo.png&#34; width=&#34;150&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;これまでWordPressを使ってブログを書いていたんですが、少し気になっていたHugoに移行しました！&lt;/p&gt;
+
+&lt;p&gt;WordPressが使いにくいとかそういった事はなかったのですが、自分の場合そこまでブログを更新していないのにメンテは定期的にしないといけないし、webの管理画面で書くのもちょっと不便だなと思っていた時にHugoを見つけたのがきっかけでした。&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://gohugo.io/&#34; target=&#34;_blank&#34;&gt;Hugo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Hugoは簡単なコマンドを打つだけでローカル環境を手軽に構築する事ができ、記事を書いての確認が簡単に出来ます。&lt;/p&gt;
+
+&lt;p&gt;ブログの運用も、コマンドを打ってHTMLを作成する事ができるので、後はgitにプッシュするだけで終わりというお手軽な運用になりました。&lt;/p&gt;
+
+&lt;p&gt;管理画面もないので、セキュリティ面も気にしなくて済む様になるのは心理的にも楽でいい。&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;ローカルでの確認するためのコマンド&lt;br /&gt;
+(オプションを付けて記事が編集されると自動で反映される様に)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo server -t 利用するテーマ名を指定 -D -w
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;これだけで下記URLにアクセスするだけで確認が可能に。&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;http://localhost:1313/
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;ul&gt;
+&lt;li&gt;公開用のファイルを作成&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre&gt;&lt;code&gt;hugo -t 利用するテーマ名を指定
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id=&#34;これまで:fbc4a0b18ac4e145d36d8596402780c8&#34;&gt;これまで&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;さくらのVPS + WordPress&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;という感じでブログを書いてました。&lt;/p&gt;
+
+&lt;p&gt;VPSを借りた当初は、色々サービスの実験とかでサーバに構築しては試したりをしてたのですが、最近はブログ以外では利用してなく、メンテとか管理が面倒でこれも何とかしたいと思っていたのもありました。&lt;/p&gt;
+
+&lt;p&gt;個人での開発も、Androidアプリの開発が多くなったのと、出来るだけアプリの方はサーバに依存しない様に作っているのもあり、VPS自体ぜんぜん使っていませんでした。&lt;/p&gt;
+
+&lt;h2 id=&#34;これから:fbc4a0b18ac4e145d36d8596402780c8&#34;&gt;これから&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Hugo + GitHub Pages&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;この組み合わせでしばらくやっていこうと思います！&lt;/p&gt;
+
+&lt;p&gt;WordPressで書いていた記事の移行も、エクスポートツールが豊富にあるので特に苦もなく移行出来ました。&lt;br /&gt;
+（そもそも記事自体が少ないから手軽だったというのもあるけど&amp;hellip;）&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;使ったツール&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/SchumacherFM/wordpress-to-hugo-exporter&#34; target=&#34;_blank&#34;&gt;WordPress to Hugo Exporter&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;参考にさせて頂いたブログ:fbc4a0b18ac4e145d36d8596402780c8&#34;&gt;参考にさせて頂いたブログ&lt;/h2&gt;
+
+&lt;p&gt;下記を参考にさせてもらいました！&lt;br /&gt;
+＊おまけにテーマも同じものを利用させてもらっています。&lt;/p&gt;
+
+&lt;p&gt;詳しく手順をまとめてくれているのですごく参考になりました。ありがとうございます！&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;http://tanksuzuki.com/post/hugo-github-pages-1/&#34; target=&#34;_blank&#34;&gt;Hugo + GitHub Pagesでブログを作る#1 | TANKSUZUKI.COM&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&#34;http://tanksuzuki.com/post/hugo-github-pages-2/&#34; target=&#34;_blank&#34;&gt;Hugo + GitHub Pagesでブログを作る#2 | TANKSUZUKI.COM&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ:fbc4a0b18ac4e145d36d8596402780c8&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;とりあえずVPSは解約して、またサーバが必要になったら今度はAWSとか借りて使い方の勉強も兼ねて構築してやってみよう。&lt;/p&gt;
+
+&lt;p&gt;ブログ記事も、Atom等のエディタで手軽に書ける様になったのが快適で仕方ない。&lt;/p&gt;
+
+&lt;p&gt;おまけにMarkDownで書けるし。&lt;/p&gt;
+
+&lt;p&gt;これを機に少しずつ更新を増やしていきたい。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>GitHub緑化活動経過報告(1ヶ月くらい)</title>

@@ -1,0 +1,225 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+
+  
+  <meta charset="UTF-8">
+  <title>
+    ブログをWordPressからHugoに移行した | T.Muroiのblog
+  </title>
+
+
+  
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+
+  
+  <link rel="canonical" href="http://blog.dtdweb.com/post/2016/09/migration-to-hugo/"/>
+
+  
+  <link rel="stylesheet" href="/css/sanitize.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/highlight_monokai.css">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  
+  
+  <link href="http://blog.dtdweb.comindex.xml" rel="alternate" type="application/rss+xml" title="T.Muroiのblog" />
+  <link href="http://blog.dtdweb.comindex.xml" rel="feed" type="application/rss+xml" title="T.Muroiのblog" />
+
+  
+  
+
+
+</head>
+
+
+
+<body>
+<div class="container">
+
+  
+  <header role="banner">
+    <div class="row gutters">
+      <div id="site-title" class="col span_6">
+        <h1><a href="http://blog.dtdweb.com">T.Muroiのblog</a></h1>
+        <h2>Androidやweb関連の事を書いたり、色々書いたり</h2>
+      </div>
+      <div id="social" class="col span_6">
+        <ul>
+          <li><a href="https://twitter.com/intemous9" target="_blank">Twitter</a></li>
+          
+          <li><a href="https://github.com/intemous9" target="_blank">GitHub</a></li>
+          <li><a href="http://blog.dtdweb.comindex.xml" type="application/rss+xml" target="_blank">RSS</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <main id="single" role="main">
+    <div class="article-header">
+      <h1>ブログをWordPressからHugoに移行した</h1>
+      <div class="meta">
+        Sep 11, 2016 &nbsp;
+        
+          #<a href="/tags/blog">blog</a>&nbsp;
+        
+      </div>
+    </div>
+    <article>
+      
+
+<p><img src="/images/post/2016-09-11-migration-to-hugo/hugo.png" width="150" /></p>
+
+<p>これまでWordPressを使ってブログを書いていたんですが、少し気になっていたHugoに移行しました！</p>
+
+<p>WordPressが使いにくいとかそういった事はなかったのですが、自分の場合そこまでブログを更新していないのにメンテは定期的にしないといけないし、webの管理画面で書くのもちょっと不便だなと思っていた時にHugoを見つけたのがきっかけでした。</p>
+
+<p><a href="https://gohugo.io/" target="_blank">Hugo</a></p>
+
+<p>Hugoは簡単なコマンドを打つだけでローカル環境を手軽に構築する事ができ、記事を書いての確認が簡単に出来ます。</p>
+
+<p>ブログの運用も、コマンドを打ってHTMLを作成する事ができるので、後はgitにプッシュするだけで終わりというお手軽な運用になりました。</p>
+
+<p>管理画面もないので、セキュリティ面も気にしなくて済む様になるのは心理的にも楽でいい。</p>
+
+<ul>
+<li>ローカルでの確認するためのコマンド<br />
+(オプションを付けて記事が編集されると自動で反映される様に)</li>
+</ul>
+
+<pre><code>hugo server -t 利用するテーマ名を指定 -D -w
+</code></pre>
+
+<p>これだけで下記URLにアクセスするだけで確認が可能に。</p>
+
+<pre><code>http://localhost:1313/
+</code></pre>
+
+<ul>
+<li>公開用のファイルを作成</li>
+</ul>
+
+<pre><code>hugo -t 利用するテーマ名を指定
+</code></pre>
+
+<h2 id="これまで:fbc4a0b18ac4e145d36d8596402780c8">これまで</h2>
+
+<ul>
+<li>さくらのVPS + WordPress</li>
+</ul>
+
+<p>という感じでブログを書いてました。</p>
+
+<p>VPSを借りた当初は、色々サービスの実験とかでサーバに構築しては試したりをしてたのですが、最近はブログ以外では利用してなく、メンテとか管理が面倒でこれも何とかしたいと思っていたのもありました。</p>
+
+<p>個人での開発も、Androidアプリの開発が多くなったのと、出来るだけアプリの方はサーバに依存しない様に作っているのもあり、VPS自体ぜんぜん使っていませんでした。</p>
+
+<h2 id="これから:fbc4a0b18ac4e145d36d8596402780c8">これから</h2>
+
+<ul>
+<li>Hugo + GitHub Pages</li>
+</ul>
+
+<p>この組み合わせでしばらくやっていこうと思います！</p>
+
+<p>WordPressで書いていた記事の移行も、エクスポートツールが豊富にあるので特に苦もなく移行出来ました。<br />
+（そもそも記事自体が少ないから手軽だったというのもあるけど&hellip;）</p>
+
+<ul>
+<li>使ったツール</li>
+</ul>
+
+<p><a href="https://github.com/SchumacherFM/wordpress-to-hugo-exporter" target="_blank">WordPress to Hugo Exporter</a></p>
+
+<h2 id="参考にさせて頂いたブログ:fbc4a0b18ac4e145d36d8596402780c8">参考にさせて頂いたブログ</h2>
+
+<p>下記を参考にさせてもらいました！<br />
+＊おまけにテーマも同じものを利用させてもらっています。</p>
+
+<p>詳しく手順をまとめてくれているのですごく参考になりました。ありがとうございます！</p>
+
+<p><a href="http://tanksuzuki.com/post/hugo-github-pages-1/" target="_blank">Hugo + GitHub Pagesでブログを作る#1 | TANKSUZUKI.COM</a><br />
+<a href="http://tanksuzuki.com/post/hugo-github-pages-2/" target="_blank">Hugo + GitHub Pagesでブログを作る#2 | TANKSUZUKI.COM</a></p>
+
+<h2 id="まとめ:fbc4a0b18ac4e145d36d8596402780c8">まとめ</h2>
+
+<p>とりあえずVPSは解約して、またサーバが必要になったら今度はAWSとか借りて使い方の勉強も兼ねて構築してやってみよう。</p>
+
+<p>ブログ記事も、Atom等のエディタで手軽に書ける様になったのが快適で仕方ない。</p>
+
+<p>おまけにMarkDownで書けるし。</p>
+
+<p>これを機に少しずつ更新を増やしていきたい。</p>
+
+
+      
+      
+    </article>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9166086732640770"
+     data-ad-slot="6576557475"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+ <aside><div id="disqus_thread"></div></aside>
+
+<script type="text/javascript">
+     
+    var disqus_shortname = 'blog-dtdweb-com';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+  </main>
+
+  <nav class="pagination-single">
+    
+      <span class="previous">&larr; <a href="http://blog.dtdweb.com/2016/08/11/github-green-1-month/" rel="prev">GitHub緑化活動経過報告(1ヶ月くらい)</a></span>
+    
+    
+  </nav>
+
+
+  
+  <footer role="contentinfo">
+    <div style="text-align:center;">
+      <img src="/images/profile.png" width="64" height="64"><br>
+      Written by T.Muroi
+    </div>
+  </footer>
+
+
+</div>
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-39497186-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+</body>
+</html>
+
