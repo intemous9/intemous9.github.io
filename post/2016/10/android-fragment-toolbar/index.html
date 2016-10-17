@@ -1,0 +1,197 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  
+  <meta charset="UTF-8">
+  <title>
+    AndroidのFragmentでActivityのToolbarを利用する | T.Muroiのblog
+  </title>
+  
+  <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+  
+  <link rel="canonical" href="http://blog.dtdweb.com/post/2016/10/android-fragment-toolbar/"/>
+  
+  <link rel="stylesheet" href="/css/sanitize.css">
+  <link rel="stylesheet" href="/css/responsive.css">
+  <link rel="stylesheet" href="/css/highlight_monokai.css">
+  <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/css/theme.css">
+  <link rel="stylesheet" href="/css/custom.css">
+  
+  <link href="http://blog.dtdweb.comindex.xml" rel="alternate" type="application/rss+xml" title="T.Muroiのblog" />
+  <link href="http://blog.dtdweb.comindex.xml" rel="feed" type="application/rss+xml" title="T.Muroiのblog" />
+  
+  
+</head>
+<body>
+<div class="container">
+
+  
+  <header role="banner">
+    <div class="row gutters">
+      <div id="site-title" class="col span_6">
+        <h1><a href="http://blog.dtdweb.com">T.Muroiのblog</a></h1>
+        <h2>Androidやweb関連の事を書いたり、色々書いたり</h2>
+      </div>
+      <div id="social" class="col span_6">
+        <ul>
+          
+            <li>
+              <a href="https://twitter.com/intemous9" target="_blank">
+                <i class="fa fa-twitter"></i>
+                Twitter
+              </a>
+            </li>
+          
+          
+          
+            <li>
+              <a href="https://github.com/intemous9" target="_blank">
+                <i class="fa fa-github"></i>
+                GitHub
+              </a>
+            </li>
+          
+          
+        </ul>
+      </div>
+    </div>
+  </header>
+
+
+  
+  <main id="single" role="main">
+    <div class="article-header">
+      <h1>AndroidのFragmentでActivityのToolbarを利用する</h1>
+      <div class="meta">
+        Oct 16, 2016 &nbsp;
+        
+          #<a href="/tags/android">Android</a>&nbsp;
+        
+          #<a href="/tags/dev">dev</a>&nbsp;
+        
+          #<a href="/tags/memo">memo</a>&nbsp;
+        
+      </div>
+    </div>
+    <article>
+      <p>Activityは1つでFragmentは複数あり、1つのActivityの中でView切替をしてます。</p>
+
+<p>その中で、あるFragmentでは検索バーを出したいなと思いToolbarを呼び出してみたのですが、inflateMenuした後にFragment切替をするとそのままMenuが残ってしまい。</p>
+
+<p>Fragmentを切り替えたときは検索バーを消したいなと思い下記の対応で消してみました。</p>
+
+<ul>
+<li>FragmentのonCreateView内で検索バーを追加</li>
+</ul>
+
+<pre><code class="language-java">@Override
+public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                         Bundle savedInstanceState) {
+    View view = inflater.inflate(R.layout.fragment_memo_list, container, false);
+
+    Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
+    toolbar.inflateMenu(R.menu.search);
+
+    SearchView searchView = (SearchView) toolbar.getMenu().findItem(R.id.menu_search).getActionView();
+    searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+        @Override
+        public boolean onQueryTextSubmit(String query) {
+            return false;
+        }
+
+        @Override
+        public boolean onQueryTextChange(String newText) {
+            return false;
+        }
+    });
+
+    return view;
+}
+</code></pre>
+
+<p>getActivity().findViewByIdでActivityのViewからToolbarのインスタンスを取得し追加</p>
+
+<ul>
+<li>FragmentのonDestroyView内で検索バーをクリアする</li>
+</ul>
+
+<pre><code class="language-java">@Override
+public void onDestroyView() {
+    Toolbar toolbar = (Toolbar)getActivity().findViewById(R.id.toolbar);
+    toolbar.getMenu().clear();
+
+    super.onDestroyView();
+}
+</code></pre>
+
+
+      
+      
+    </article>
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-9166086732640770"
+     data-ad-slot="6576557475"
+     data-ad-format="auto"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+    
+ <aside><div id="disqus_thread"></div></aside>
+
+<script type="text/javascript">
+     
+    var disqus_shortname = 'blog-dtdweb-com';
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+
+  </main>
+
+  <nav class="pagination-single">
+    
+      <span class="previous">&larr; <a href="http://blog.dtdweb.com/post/2016/09/migration-to-hugo/" rel="prev">ブログをWordPressからHugoに移行した</a></span>
+    
+    
+  </nav>
+
+
+  
+  <footer role="contentinfo">
+    <div style="text-align:center;">
+      <img src="/images/profile.png" width="64" height="64"><br>
+      Written by T.Muroi
+    </div>
+  </footer>
+
+
+</div>
+
+<script src="/js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-39497186-1', 'auto');
+	ga('send', 'pageview');
+</script>
+
+</body>
+</html>
+
