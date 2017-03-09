@@ -6,8 +6,61 @@
     <description>Recent content in Dev on T.Muroiのblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Sun, 16 Oct 2016 10:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 08 Mar 2017 23:39:05 +0900</lastBuildDate>
     <atom:link href="http://blog.dtdweb.com/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>[Android]地図メモというアプリをリリースしました</title>
+      <link>http://blog.dtdweb.com/post/2017/03/android-mapmemo/</link>
+      <pubDate>Wed, 08 Mar 2017 23:39:05 +0900</pubDate>
+      
+      <guid>http://blog.dtdweb.com/post/2017/03/android-mapmemo/</guid>
+      <description>
+
+&lt;p&gt;&lt;img src=&#34;http://blog.dtdweb.com/images/post/2017/03/ss_08_ss1.png&#34; /&gt;&lt;/p&gt;
+
+&lt;p&gt;実際にリリースしたのは昨年なんですけどね。&lt;/p&gt;
+
+&lt;p&gt;いい加減このブログでも記事を残しておきたいなと思い書いてみました。&lt;/p&gt;
+
+&lt;p&gt;実際に作ったアプリは下記URLから落とせますので、よかったらDLしてください。お願いします！！&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.dtdweb.mapmemo&#34;&gt;https://play.google.com/store/apps/details?id=com.dtdweb.mapmemo&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;アプリのコンセプトとしては、地図に手軽にメモを残したい。複雑な機能はいらないからシンプルにメモだけを残しておきたい。&lt;/p&gt;
+
+&lt;p&gt;そんな感じのアプリがほしいなと考え、アプリの企画と設計なんかを1ヶ月弱くらいで考え、開発は1週間くらいで何とかリリースまで持っていきました。&lt;/p&gt;
+
+&lt;p&gt;個人で作るアプリは途中で飽きてリリースまで行かないというのをどこかで聞いた事があるので、とりあえず2日以上の開発日数がかかるアプリは作らない。
+どうしても工数がかかる場合はフェーズをわけてアップデートをしてこうというルールを決めておき、何とかリリースまで持っていけました。&lt;/p&gt;
+
+&lt;p&gt;※実際は1週間かかったけど、仕事終わりの夜とか土日の手が空いた時間を使ってだから、一応セーフかなと自分の中では思ってます。&lt;/p&gt;
+
+&lt;h2 id=&#34;作ってみて良かったこと:388e88fa766f08c97310badd066c987e&#34;&gt;作ってみて良かったこと&lt;/h2&gt;
+
+&lt;p&gt;個人で開発する上で重要なのは、新しい技術取得やライブラリの使い方ではなく、一番はモチベーション維持だという事がわかりました。&lt;/p&gt;
+
+&lt;p&gt;シンプルに、シンプルにと考えつつも途中で妄想が膨らみ、こんな機能が合ったら便利じゃね。とか考えて色々と手が止まる事がありました。&lt;/p&gt;
+
+&lt;p&gt;逆に、この機能を作った所で誰が使うんだろう…、そもそもこのアプリを使ってくれる人はいるのか？なんてネガティブな事も考えたり。&lt;/p&gt;
+
+&lt;p&gt;とりあえずEvernoteに最初の仕様を書いておき、途中の妄想も次フェーズとかでやれたらやろうとか考えておいてEvernoteにメモして終わり。最初の機能だけに目を向ける！という姿勢を作っておいたのは本当に良かったなと思いました。&lt;/p&gt;
+
+&lt;h2 id=&#34;今後について:388e88fa766f08c97310badd066c987e&#34;&gt;今後について&lt;/h2&gt;
+
+&lt;p&gt;今後は、マップ画面での検索機能や、その他ちょくちょく機能改修しつつ、デザイン周りのブラッシュアップを進めていけたらなと思います。&lt;/p&gt;
+
+&lt;p&gt;というか本当にデザインは力を入れていきたい&amp;hellip;。外注するまででもないので、せっかくだから自分である程度デザインもやってみたいと思ってはいるのですが。&lt;/p&gt;
+
+&lt;p&gt;とりあえずデザインガイドラインを再度確認して、まずは素材以外での修正が可能な箇所のブラッシュアップを進めていきたい。&lt;/p&gt;
+
+&lt;p&gt;後は、業務ではなかなか試せないようなライブラリとかも積極的に取り入れたりしてみたいなと思ってます。&lt;/p&gt;
+
+&lt;p&gt;それから、次に開発するアプリこそKotlinで開発したい。ほんといえばこのアプリもKotlinで開発したかったのですけど、途中開発をしている際にモチベーションの低下を恐れ、とりあえず今回は出す事優先にしてしまいました。。&lt;/p&gt;
+
+&lt;p&gt;出す事が目標だったので次回こそは新しい事に挑戦しながらってみよう。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>AndroidのFragmentでActivityのToolbarを利用する</title>
