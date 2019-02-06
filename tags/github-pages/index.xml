@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Memo on T.Muroiのblog</title>
-    <link>http://blog.dtdweb.com/tags/memo/</link>
-    <description>Recent content in Memo on T.Muroiのblog</description>
+    <title>Github Pages on T.Muroiのblog</title>
+    <link>http://blog.dtdweb.com/tags/github-pages/</link>
+    <description>Recent content in Github Pages on T.Muroiのblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
     <lastBuildDate>Wed, 06 Feb 2019 10:56:35 +0900</lastBuildDate>
-    <atom:link href="http://blog.dtdweb.com/tags/memo/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://blog.dtdweb.com/tags/github-pages/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>GitHub Pagesで作ったカスタムドメインのブログサイトのSSL対応をした</title>
@@ -56,64 +56,6 @@
 &lt;p&gt;実際にやってみると簡単で、作業自体は30分もあれば終わってしまう内容でした。もっと早く対応しておけばよかった…。&lt;/p&gt;
 
 &lt;p&gt;という事でせっかくSSLにも対応したし、今後は更新さぼらずログを残していこうと思います。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>AndroidのFragmentでActivityのToolbarを利用する</title>
-      <link>http://blog.dtdweb.com/post/2016/10/android-fragment-toolbar/</link>
-      <pubDate>Sun, 16 Oct 2016 10:00:00 +0900</pubDate>
-      
-      <guid>http://blog.dtdweb.com/post/2016/10/android-fragment-toolbar/</guid>
-      <description>&lt;p&gt;Activityは1つでFragmentは複数あり、1つのActivityの中でView切替をしてます。&lt;/p&gt;
-
-&lt;p&gt;その中で、あるFragmentでは検索バーを出したいなと思いToolbarを呼び出してみたのですが、inflateMenuした後にFragment切替をするとそのままMenuが残ってしまい。&lt;/p&gt;
-
-&lt;p&gt;Fragmentを切り替えたときは検索バーを消したいなと思い下記の対応で消してみました。&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;FragmentのonCreateView内で検索バーを追加&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Override
-public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                         Bundle savedInstanceState) {
-    View view = inflater.inflate(R.layout.fragment_memo_list, container, false);
-
-    Toolbar toolbar = (Toolbar) getActivity().findViewById(R.id.toolbar);
-    toolbar.inflateMenu(R.menu.search);
-
-    SearchView searchView = (SearchView) toolbar.getMenu().findItem(R.id.menu_search).getActionView();
-    searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-        @Override
-        public boolean onQueryTextSubmit(String query) {
-            return false;
-        }
-
-        @Override
-        public boolean onQueryTextChange(String newText) {
-            return false;
-        }
-    });
-
-    return view;
-}
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;getActivity().findViewByIdでActivityのViewからToolbarのインスタンスを取得し追加&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;FragmentのonDestroyView内で検索バーをクリアする&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;pre&gt;&lt;code class=&#34;language-java&#34;&gt;@Override
-public void onDestroyView() {
-    Toolbar toolbar = (Toolbar)getActivity().findViewById(R.id.toolbar);
-    toolbar.getMenu().clear();
-
-    super.onDestroyView();
-}
-&lt;/code&gt;&lt;/pre&gt;
 </description>
     </item>
     

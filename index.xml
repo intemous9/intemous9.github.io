@@ -6,8 +6,58 @@
     <description>Recent content on T.Muroiのblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 08 Mar 2017 23:39:05 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 Feb 2019 10:56:35 +0900</lastBuildDate>
     <atom:link href="http://blog.dtdweb.com/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GitHub Pagesで作ったカスタムドメインのブログサイトのSSL対応をした</title>
+      <link>http://blog.dtdweb.com/post/2019/02/page-ssl/</link>
+      <pubDate>Wed, 06 Feb 2019 10:56:35 +0900</pubDate>
+      
+      <guid>http://blog.dtdweb.com/post/2019/02/page-ssl/</guid>
+      <description>
+
+&lt;p&gt;実際に対応したのはこのブログ。&lt;/p&gt;
+
+&lt;p&gt;ブログ自体最近更新も全くしていなかったし、きっと対応するのも色々と面倒な作業いるんだろうなと思い後回してにしておりました。&lt;/p&gt;
+
+&lt;p&gt;※サーバ作業の方は仕事やら個人的にも色々とやったりしてほぼ毎日触っているし、apacheやらnginxも普段から触り慣れているのでこっちでSSL化対応ならすぐ出来るのですけど、このブログはGitHub Pagesで運用しているので色々と面倒なんだろうなと調べもせず考えていました。&lt;/p&gt;
+
+&lt;p&gt;実際にやってみたら意外と簡単で一瞬で設定が出来てしまい。少しは調べろよと反省です…。&lt;/p&gt;
+
+&lt;h2 id=&#34;ssl化までの対応方法:67af4d864abd816d01ec831c96158f1d&#34;&gt;SSL化までの対応方法&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://t32k.me/mol/log/secure-and-fast-github-pages/&#34; target=&#34;_blank&#34;&gt;カスタムドメインのGitHub PagesをSSL対応する&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;こちらの記事を参考に、というか構成が一緒のためそのまま流れに合わせて対応する事が出来ました。&lt;/p&gt;
+
+&lt;p&gt;流れとしては下記の通り&lt;/p&gt;
+
+&lt;h3 id=&#34;1-cloudflareでアカウントの作成:67af4d864abd816d01ec831c96158f1d&#34;&gt;1. CloudFlareでアカウントの作成&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.cloudflare.com/&#34; target=&#34;_blank&#34;&gt;Cloudflare - The Web Performance &amp;amp; Security Company | Cloudflare&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上記ページでアカウントの作成をし、ドメインの登録とネームサーバ情報を取得する。&lt;/p&gt;
+
+&lt;h3 id=&#34;2-ネームサーバ設定変更:67af4d864abd816d01ec831c96158f1d&#34;&gt;2. ネームサーバ設定変更&lt;/h3&gt;
+
+&lt;p&gt;CloudFlareでDNSの取得が出来たら取得できたネームサーバをドメイン管理画面で設定し反映する。&lt;/p&gt;
+
+&lt;p&gt;この設定についても、ネームサーバ情報取得の際に、合わせて手順を示してくれるので手順に従って進めていくだけで問題なく設定を行う事が出来ました。&lt;/p&gt;
+
+&lt;h3 id=&#34;3-hhtpアクセスを全てhttpsアクセスになるようルール設定:67af4d864abd816d01ec831c96158f1d&#34;&gt;3. hhtpアクセスを全てhttpsアクセスになるようルール設定&lt;/h3&gt;
+
+&lt;p&gt;最後に、CloudFlareのPage Rules設定でhttpsを使用するように設定する事で対応完了しました。&lt;/p&gt;
+
+&lt;p&gt;後は反映されるまで待っておしまい。&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ:67af4d864abd816d01ec831c96158f1d&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;実際にやってみると簡単で、作業自体は30分もあれば終わってしまう内容でした。もっと早く対応しておけばよかった…。&lt;/p&gt;
+
+&lt;p&gt;という事でせっかくSSLにも対応したし、今後は更新さぼらずログを残していこうと思います。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>[Android]地図メモというアプリをリリースしました</title>
@@ -1189,112 +1239,6 @@ function onDeviceReady() {
 &lt;p&gt;これでエミュレータを起動してみるとエラーも出ずに正常に起動することが出来ました。&lt;/p&gt;
 
 &lt;p&gt;ここまででiOSでの開発準備も出来ましたので、次回よりHello Worldの表示や実際にAPIなども使って色々と実験していきたいと思います。&lt;/p&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>WordPressのデザインを変更する際に知っておくと良さそうな事</title>
-      <link>http://blog.dtdweb.com/2012/04/24/wordpress-customize/</link>
-      <pubDate>Tue, 24 Apr 2012 02:04:30 +0000</pubDate>
-      
-      <guid>http://blog.dtdweb.com/2012/04/24/wordpress-customize/</guid>
-      <description>
-
-&lt;p&gt;&lt;span style=&#34;font-size:10px;&#34;&gt;&lt;img src=&#34;http://farm7.static.flickr.com/6030/5965186458_bf20305722_m.jpg&#34; alt=&#34;&#34; /&gt;&lt;br /&gt;WordPress Pencil and Pins-05 / thisismyurl&lt;/span&gt;&lt;/p&gt;
-
-&lt;p&gt;WordPress、他ブログサービスと異なるのはカスタマイズのしやすさでしょうか。&lt;/p&gt;
-
-&lt;p&gt;サイドメニューはもちろん、デザインも多少のWordPressのお作法を覚えれば自分でカスタマイズ出来るので面白い！&lt;/p&gt;
-
-&lt;p&gt;とはいえ、自分はデザインが1から出来る訳ではないので、他の方が作ったデザインをベースに自分好みに直すしかできないのですが&amp;hellip;。&lt;/p&gt;
-
-&lt;p&gt;デザインも自分で出来るようになりたいです！これを先の目標にしつつ&amp;hellip;。&lt;/p&gt;
-
-&lt;p&gt;今回はテーマを編集する際に調べた内容、またテーマ内の共通となるテンプレートの意味について理解した部分をまとめておこうと思います。&lt;/p&gt;
-
-&lt;p&gt;まだまだ勉強中でもあるので、間違っている箇所等があれば教えて頂けますと幸いです。&lt;/p&gt;
-
-&lt;p&gt;随時情報は更新していきたいと思います。&lt;/p&gt;
-
-&lt;h2 id=&#34;目次:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;目次&lt;/h2&gt;
-
-&lt;ol&gt;
-&lt;li&gt;テーマを作るのに必要な最小構成ファイル&lt;/li&gt;
-&lt;li&gt;index.php&lt;/li&gt;
-&lt;li&gt;style.css&lt;/li&gt;
-&lt;li&gt;page.php&lt;/li&gt;
-&lt;li&gt;single.php&lt;/li&gt;
-&lt;li&gt;functions.php&lt;/li&gt;
-&lt;li&gt;まとめ&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h2 id=&#34;テーマをつくるのに必要な最小構成ファイル:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;テーマをつくるのに必要な最小構成ファイル&lt;/h2&gt;
-
-&lt;p&gt;他の方が作った色々なテーマを見てみると分かるのですが、テーマ毎に入っているファイル、またテーマ用で作成されたファイル等があり、1から作るには最低限何が必要か分かりませんでした。&lt;/p&gt;
-
-&lt;p&gt;そこで調べていき分かったのが、テーマを作成する際に必要最小限なファイルは&lt;/p&gt;
-
-&lt;p&gt;・index.php&lt;/p&gt;
-
-&lt;p&gt;・style.css&lt;/p&gt;
-
-&lt;p&gt;この2つがあればとりあえずのテーマインストールは行なう事ができました。&lt;/p&gt;
-
-&lt;p&gt;とはいえ、この2つだけだと投稿記事等を表示はできず、あくまでTOPページを表示するだけしかできません。&lt;/p&gt;
-
-&lt;p&gt;テーマをインスールするために必要な最低限のファイルですね。&lt;/p&gt;
-
-&lt;h2 id=&#34;index-php:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;index.php&lt;/h2&gt;
-
-&lt;p&gt;TOPページにあたるテンプレートとなります。&lt;/p&gt;
-
-&lt;p&gt;WordPressで作成されたページにアクセスすると初回はこのテンプレートが呼び出されます。&lt;/p&gt;
-
-&lt;p&gt;一番カスタマイズされるファイルとなりますね。&lt;/p&gt;
-
-&lt;p&gt;またheader.phpやfooter.phpなど、共通部分などを別途ファイルに切りだしておくと、下記に説明があります固定ページ、投稿用ページなどでも使い回す事ができ便利となります。&lt;/p&gt;
-
-&lt;h2 id=&#34;style-css:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;style.css&lt;/h2&gt;
-
-&lt;p&gt;これもテーマを構成する際に必須なファイルとなりますが、別にこれだけでCSSを定義する必要はなく&amp;#8230;(自分で好きにCSSファイルを追加することも可)&lt;/p&gt;
-
-&lt;p&gt;WordPress内部で共通に呼び出される等で必要になるのでしょうかね。&lt;/p&gt;
-
-&lt;p&gt;style.cssがないとテーマをインストールすることはできませんでした。&lt;/p&gt;
-
-&lt;h2 id=&#34;page-php:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;page.php&lt;/h2&gt;
-
-&lt;p&gt;このテンプレートは、WordPressで固定ページ(WordPress Ver3以降で追加されたもの)を使用すると呼び出されるファイルとなります。&lt;/p&gt;
-
-&lt;p&gt;固定ページとは、投稿記事とは異なり時系列に影響しないページを制作する際に使用するページとなるようです。&lt;/p&gt;
-
-&lt;p&gt;自己紹介など頻繁に更新のありそうなページを制作する際に使用されるものなんでしょうかね。まだ自分では使い分けができておりません。&lt;/p&gt;
-
-&lt;p&gt;この固定ページを使用したページにアクセスするとpage.phpが呼び出されるので、ページデザインを変更するにはこのファイルを編集します。&lt;/p&gt;
-
-&lt;h2 id=&#34;single-php:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;single.php&lt;/h2&gt;
-
-&lt;p&gt;これは、各記事(投稿毎)の単体ページ用のテンプレートとなります。&lt;/p&gt;
-
-&lt;p&gt;記事ページにアクセスするとこのテンプレートが呼び出されます。&lt;/p&gt;
-
-&lt;h2 id=&#34;functions-php:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;functions.php&lt;/h2&gt;
-
-&lt;p&gt;これがなかなか便利だなと思いました。&lt;/p&gt;
-
-&lt;p&gt;テンプレート内で独自の関数が必要になった際にこのファイルに定義しておくとテンプレート内で呼び出す事ができます。&lt;/p&gt;
-
-&lt;p&gt;既にWordPressでも沢山の関数は用意されてますが、それ以外でも例えばある特定の文字を別の文字に置換したい、またその処理は他のテンプレートでも使いそう、といった時にこのファイルはとても便利に使えました。&lt;/p&gt;
-
-&lt;h2 id=&#34;まとめ:b1a896fe031ff7b87c73704c2494f42b&#34;&gt;まとめ&lt;/h2&gt;
-
-&lt;p&gt;まだまだWordPressのテーマをカスタマイズするには覚える事も沢山あり、苦戦しそうですが、自分で好きにブログを作れると面白いですね！&lt;/p&gt;
-
-&lt;p&gt;また、カスタマイズする際は下記サイトを参考にさせて頂きました。&lt;/p&gt;
-
-&lt;p&gt;ファイル毎の詳細な説明もデモテーマを使いながら紹介があるのでとても分かりやすいです。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&#34;http://www.webcreatorbox.com/tech/wordpress3-original-theme/&#34; title=&#34;WordPress オリジナルテーマの作り方 3.0+ &#34; target=&#34;_blank&#34;&gt;WordPress オリジナルテーマの作り方 3.0+ &lt;/a&gt;&lt;/p&gt;
 </description>
     </item>
     

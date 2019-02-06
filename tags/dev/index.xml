@@ -6,8 +6,58 @@
     <description>Recent content in Dev on T.Muroiのblog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ja</language>
-    <lastBuildDate>Wed, 08 Mar 2017 23:39:05 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 06 Feb 2019 10:56:35 +0900</lastBuildDate>
     <atom:link href="http://blog.dtdweb.com/tags/dev/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>GitHub Pagesで作ったカスタムドメインのブログサイトのSSL対応をした</title>
+      <link>http://blog.dtdweb.com/post/2019/02/page-ssl/</link>
+      <pubDate>Wed, 06 Feb 2019 10:56:35 +0900</pubDate>
+      
+      <guid>http://blog.dtdweb.com/post/2019/02/page-ssl/</guid>
+      <description>
+
+&lt;p&gt;実際に対応したのはこのブログ。&lt;/p&gt;
+
+&lt;p&gt;ブログ自体最近更新も全くしていなかったし、きっと対応するのも色々と面倒な作業いるんだろうなと思い後回してにしておりました。&lt;/p&gt;
+
+&lt;p&gt;※サーバ作業の方は仕事やら個人的にも色々とやったりしてほぼ毎日触っているし、apacheやらnginxも普段から触り慣れているのでこっちでSSL化対応ならすぐ出来るのですけど、このブログはGitHub Pagesで運用しているので色々と面倒なんだろうなと調べもせず考えていました。&lt;/p&gt;
+
+&lt;p&gt;実際にやってみたら意外と簡単で一瞬で設定が出来てしまい。少しは調べろよと反省です…。&lt;/p&gt;
+
+&lt;h2 id=&#34;ssl化までの対応方法:67af4d864abd816d01ec831c96158f1d&#34;&gt;SSL化までの対応方法&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://t32k.me/mol/log/secure-and-fast-github-pages/&#34; target=&#34;_blank&#34;&gt;カスタムドメインのGitHub PagesをSSL対応する&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;こちらの記事を参考に、というか構成が一緒のためそのまま流れに合わせて対応する事が出来ました。&lt;/p&gt;
+
+&lt;p&gt;流れとしては下記の通り&lt;/p&gt;
+
+&lt;h3 id=&#34;1-cloudflareでアカウントの作成:67af4d864abd816d01ec831c96158f1d&#34;&gt;1. CloudFlareでアカウントの作成&lt;/h3&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://www.cloudflare.com/&#34; target=&#34;_blank&#34;&gt;Cloudflare - The Web Performance &amp;amp; Security Company | Cloudflare&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;上記ページでアカウントの作成をし、ドメインの登録とネームサーバ情報を取得する。&lt;/p&gt;
+
+&lt;h3 id=&#34;2-ネームサーバ設定変更:67af4d864abd816d01ec831c96158f1d&#34;&gt;2. ネームサーバ設定変更&lt;/h3&gt;
+
+&lt;p&gt;CloudFlareでDNSの取得が出来たら取得できたネームサーバをドメイン管理画面で設定し反映する。&lt;/p&gt;
+
+&lt;p&gt;この設定についても、ネームサーバ情報取得の際に、合わせて手順を示してくれるので手順に従って進めていくだけで問題なく設定を行う事が出来ました。&lt;/p&gt;
+
+&lt;h3 id=&#34;3-hhtpアクセスを全てhttpsアクセスになるようルール設定:67af4d864abd816d01ec831c96158f1d&#34;&gt;3. hhtpアクセスを全てhttpsアクセスになるようルール設定&lt;/h3&gt;
+
+&lt;p&gt;最後に、CloudFlareのPage Rules設定でhttpsを使用するように設定する事で対応完了しました。&lt;/p&gt;
+
+&lt;p&gt;後は反映されるまで待っておしまい。&lt;/p&gt;
+
+&lt;h2 id=&#34;まとめ:67af4d864abd816d01ec831c96158f1d&#34;&gt;まとめ&lt;/h2&gt;
+
+&lt;p&gt;実際にやってみると簡単で、作業自体は30分もあれば終わってしまう内容でした。もっと早く対応しておけばよかった…。&lt;/p&gt;
+
+&lt;p&gt;という事でせっかくSSLにも対応したし、今後は更新さぼらずログを残していこうと思います。&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>[Android]地図メモというアプリをリリースしました</title>
