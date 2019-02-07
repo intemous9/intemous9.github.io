@@ -41,7 +41,7 @@
 
 &lt;h3 id=&#34;2-ネームサーバ設定変更:67af4d864abd816d01ec831c96158f1d&#34;&gt;2. ネームサーバ設定変更&lt;/h3&gt;
 
-&lt;p&gt;CloudFlareでDNSの取得が出来たら取得できたネームサーバをドメイン管理画面で設定し反映する。&lt;/p&gt;
+&lt;p&gt;CloudFlareでネームサーバ情報の取得が出来たら取得できたネームサーバをドメイン管理画面で設定し反映する。&lt;/p&gt;
 
 &lt;p&gt;この設定についても、ネームサーバ情報取得の際に、合わせて手順を示してくれるので手順に従って進めていくだけで問題なく設定を行う事が出来ました。&lt;/p&gt;
 
@@ -75,7 +75,7 @@
 
 &lt;p&gt;実際に作ったアプリは下記URLから落とせますので、よかったらDLしてください。お願いします！！&lt;/p&gt;
 
-&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.dtdweb.mapmemo&#34;&gt;https://play.google.com/store/apps/details?id=com.dtdweb.mapmemo&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://play.google.com/store/apps/details?id=com.dtdweb.mapmemo&#34; target=&#34;_blank&#34;&gt;地図メモ - シンプル・無料・お手軽で簡単に地図をメモ帳にしよう！ - Google Play のアプリ&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;アプリのコンセプトとしては、地図に手軽にメモを残したい。複雑な機能はいらないからシンプルにメモだけを残しておきたい。&lt;/p&gt;
 
